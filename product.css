@@ -1,0 +1,86 @@
+/* Import Bootstrap CSS */
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css");
+
+/* Custom CSS */
+body, html{
+    font-family: "Gilroy", sans-serif;
+    background-color: #f8f9fa; /* Light background color for the page */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.img-fluid {
+    width: 100%; /* Make the image take full width */
+    height: 100%; /* Make the image take full height */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.logo {
+    max-width: 350px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%;
+    object-fit: contain; /* Ensure the logo maintains its aspect ratio */
+}
+
+.container {
+    max-width: 600px; /* Limit the width of the content */
+    margin: auto; /* Center the container */
+    padding: 0 px; /* Add padding on mobile */
+    background-color: #e0c46b; /* Yellow background for the container */
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #eed584; /* Yellow background for cards */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    margin: 0 auto; /* Center the card within the container */
+    margin-bottom: 1rem; /* Space between cards */
+    text-decoration: none;
+    max-width: calc(95% - 2rem); /* Reduce width equally from both sides */
+    padding: 0 1rem; /* Add padding inside the card */
+    height: 100px;
+}
+
+.card-body {
+    padding: rem;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.ingredients {
+    font-style: italic;
+}
+
+.back {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #ffc107; /* Bootstrap warning color */
+}
+
+.btn-warning {
+    background-color: #ffc107;
+}
+
+.btn-warning.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
