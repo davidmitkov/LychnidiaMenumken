@@ -34,20 +34,19 @@ body, html{
     padding: 0 px; /* Add padding on mobile */
     background-color: #e0c46b; /* Yellow background for the container */
 }
-
 .card {
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #eed584; /* Yellow background for cards */
-    display: flex; /* Flexbox layout */
-    align-items: center; /* Center items vertically */
-    margin: 0 auto; /* Center the card within the container */
-    margin-bottom: 1rem; /* Space between cards */
+    background-color: #eed584;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    margin: 0 auto;
+    margin-bottom: 1rem;
     text-decoration: none;
-    max-width: calc(95% - 2rem); /* Reduce width equally from both sides */
-    padding: 0 1rem; /* Add padding inside the card */
-    height: 100px;
+    max-width: calc(95% - 2rem); /* Flexible width */
+    padding: 1rem; /* Add padding inside the card */
+    height: auto; /* Remove fixed height */
 }
 
 .card-body {
@@ -84,3 +83,10 @@ body, html{
 .btn-warning.shadow {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.fw-bold{
+    font-family: 'Gilroy', sans-serif;
+    font-size: 1.2rem; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Text color */
+}
+
