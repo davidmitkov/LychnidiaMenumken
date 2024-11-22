@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container pb-5">
+        <!-- Header Image -->
+        <div class="text-center mb-4">
+            <img src="images/back.jpg" class="img-fluid rounded-5" alt="Product List Header">
+        </div>
+        <!-- Logo -->
+        <div class="text-center mb-4">
+            <img src="images/temno.png" class="logo" alt="Product Logo">
+        </div>
+        <!-- Back Button -->
+        <a href="indexturkey.html" class="mb-4 back btn btn-warning shadow border-radius-14px fw-bold px-3">
+            &lt; Назад кон менито
+        </a>
+        <!-- Product List -->
+        <div id="product-list"></div>
+        <!-- Back Button -->
+        <a href="indexturkey.html" class="back mb-2 btn btn-warning shadow border-radius-14px fw-bold px-3">
+            &lt; Назад кон менито
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const products = [
+                // SOFT DRINKS
+                [
+                
+    {
+        "name": "Su (Büyük) 0.75",
+        "price": "120",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Su (Küçük) 0.25",
+        "price": "80",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Pepsi",
+        "price": "120",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Pepsi Max",
+        "price": "120",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Gazoza",
+        "price": "100",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Soğuk Çay",
+        "price": "120",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "7Up",
+        "price": "120",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Meyve Suyu",
+        "price": "140",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Taze Limon Suyu",
+        "price": "90",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Taze Portakal Suyu",
+        "price": "180",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Mirinda",
+        "price": "120",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Ev Yapımı Limonata",
+        "price": "160",
+        "ingredients": "Alkolsüz İçecekler"
+    },
+    {
+        "name": "Meyve Soda",
+        "price": "140",
+        "ingredients": "Alkolsüz İçecekler"
+    }
+],
+// BEER
+[
+    {
+        "name": "King Marko 0.5",
+        "price": "140",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Golden Dab 0.33",
+        "price": "130",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Golden Dab Fıçı 0.33",
+        "price": "140",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Golden Dab Fıçı 0.5",
+        "price": "170",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Fox Pale Ale Fıçı 0.5",
+        "price": "240",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Veda White IPA Fıçı 0.5",
+        "price": "260",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Corona",
+        "price": "250",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Kalesh-Black IPA 0.33",
+        "price": "250",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Tuborg 0.33",
+        "price": "170",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Tuborg Fıçı 0.4",
+        "price": "220",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Carlsberg 0.33",
+        "price": "190",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Holsten 0.5",
+        "price": "260",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Kozel 0.5",
+        "price": "220",
+        "ingredients": "Bira"
+    },
+    {
+        "name": "Franziskaner 0.5",
+        "price": "280",
+        "ingredients": "Bira"
+    },
+],
+
+        // WINES
+        [
+    {
+        "name": "Synthesis Cuvee Barrique (Kuru)",
+        "price": "1900",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Dionis Vranec Barrique (Kuru)",
+        "price": "2200",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Hermes Vranec (Kuru)",
+        "price": "1300",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Hermes Cabernet Sauvignon (Kuru)",
+        "price": "1300",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Amfora Vranec (Yarı Kuru)",
+        "price": "900",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Chardonnay Barrique Fermented (Kuru)",
+        "price": "2400",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Muscat Temjanika (Yarı Kuru)",
+        "price": "1350",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Elegija Chardonnay (Kuru)",
+        "price": "1300",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Elegija Traminer (Kuru)",
+        "price": "1300",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Elegija Zupljanka (Kuru)",
+        "price": "1300",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Amphora Cuvee (Yarı Kuru)",
+        "price": "900",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Temjanika (Kuru)",
+        "price": "1400",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Chardonnay (Kuru)",
+        "price": "1400",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Sauvignon Blanc (Kuru)",
+        "price": "1400",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Amfora Rose (Kuru)",
+        "price": "900",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Elegija Syrah (Kuru)",
+        "price": "1200",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Muscat Rolinger (Kuru)",
+        "price": "1250",
+        "ingredients": "Şarap"
+    },
+    {
+        "name": "Muscat Rolinger Kırmızı (Yarı Kuru)",
+        "price": "1250",
+        "ingredients": "Şarap"
+    },
+],
+// KAHVE VE ÇAY/COFFEE AND TEA
+[
+    {
+        "name": "Çay",
+        "price": "80",
+        "ingredients": "Sıcak İçecekler"
+    },
+    {
+        "name": "Espresso",
+        "price": "90",
+        "ingredients": "Sıcak İçecekler"
+    },
+    {
+        "name": "Macchiato",
+        "price": "100",
+        "ingredients": "Sıcak İçecekler"
+    },
+    {
+        "name": "Büyük Macchiato",
+        "price": "110",
+        "ingredients": "Sıcak İçecekler"
+    },
+    {
+        "name": "Latte Macchiato",
+        "price": "160",
+        "ingredients": "Sıcak İçecekler"
+    },
+    {
+        "name": "Nescafe",
+        "price": "140",
+        "ingredients": "Sıcak İçecekler"
+    },
+    {
+        "name": "Cappuccino",
+        "price": "120",
+        "ingredients": "Sıcak İçecekler"
+    },
+    {
+        "name": "Soğuk Macchiato",
+        "price": "110",
+        "ingredients": "Sıcak İçecekler"
+    },
+    {
+        "name": "İrlanda Kahvesi",
+        "price": "260",
+        "ingredients": "Sıcak İçecekler"
+    },
+    {
+        "name": "Americano",
+        "price": "120",
+        "ingredients": "Sıcak İçecekler"
+    },
+    {
+        "name": "Makedon Kahvesi",
+        "price": "90",
+        "ingredients": "Sıcak İçecekler"
+    },
+],
+    
+       //Alkoholi
+       [
+    {
+        "name": "Sarı Rakija",
+        "price": "120",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Beyaz Rakija",
+        "price": "120",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Mastika",
+        "price": "120",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Rakija Azbuka",
+        "price": "130",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Gordion Amber Rakija",
+        "price": "160",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Badel Williams Rakija",
+        "price": "170",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Cin Badel",
+        "price": "120",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Smidgin",
+        "price": "250",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Cin Beefeater",
+        "price": "170",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Cin Gordons",
+        "price": "190",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Cin Pembe Gordons",
+        "price": "180",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Cin Bombay",
+        "price": "240",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Votka Badel",
+        "price": "120",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Baileys",
+        "price": "180",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Feneys",
+        "price": "150",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Krushkovac Armut Likörü",
+        "price": "140",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Tekila",
+        "price": "130",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Amaretto",
+        "price": "150",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Korlat Erik Rakısı",
+        "price": "220",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Korlat Maraska",
+        "price": "220",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Shot",
+        "price": "100",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Smirnoff",
+        "price": "160",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Jack Daniels",
+        "price": "280",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Jameson",
+        "price": "180",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Jameson Siyah",
+        "price": "290",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Johnny Red",
+        "price": "160",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Johnny Black",
+        "price": "260",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "4 Roses",
+        "price": "200",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "William Peel",
+        "price": "150",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Rum Morgan",
+        "price": "160",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Jagermeister",
+        "price": "210",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Pelinkovac Badel",
+        "price": "120",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Pelinkovac Antik",
+        "price": "170",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Konyak Badel",
+        "price": "120",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Konyak Badel Siyah",
+        "price": "160",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Rum Badel",
+        "price": "120",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Stock 84",
+        "price": "150",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Tekila Olmeca",
+        "price": "170",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Aperol",
+        "price": "160",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Korlat Lozova",
+        "price": "220",
+        "ingredients": "Alkollü İçecekler"
+    },
+    {
+        "name": "Campari",
+        "price": "160",
+        "ingredients": "Alkollü İçecekler"
+    },
+],
+
+        // САЛАТИ
+        [
+    {
+        "name": "Şopska Salatası",
+        "price": "220",
+        "ingredients": "Domates, salatalık, soğan, peynir"
+    },
+    {
+        "name": "Ege Salatası",
+        "price": "220",
+        "ingredients": "Domates, salatalık, soğan halkası, küp peynir, kekik"
+    },
+    {
+        "name": "Rakija Salatası",
+        "price": "170",
+        "ingredients": "Lahana, salatalık, zeytin"
+    },
+    {
+        "name": "Makedon Salatası",
+        "price": "200",
+        "ingredients": "Domates, soğan, közlenmiş biber"
+    },
+    {
+        "name": "Karışık Salata",
+        "price": "190",
+        "ingredients": "Pancar, havuç, salatalık, domates, lahana"
+    },
+    {
+        "name": "Sezar Salatası",
+        "price": "250",
+        "ingredients": "Marul, tavuk, kruton, domates, parmesan, sos"
+    },
+    {
+        "name": "Ton Balıklı Salata",
+        "price": "260",
+        "ingredients": "Marul, ton balığı, mısır, soğan, zeytin"
+    },
+    {
+        "name": "Deniz Ürünleri Salatası",
+        "price": "360",
+        "ingredients": "Marul, deniz ürünleri, avokado, salatalık, domates, hardallı ve limonlu sos"
+    },
+],
+
+        //daski
+        [
+    {
+        "name": "Karışık Tabak (4 Kişilik)",
+        "price": "1350",
+        "ingredients": "5 kebap, 100g köfte, 100g tavuk biftek, 100g pastırma, sosis, tavuk dürüm, 150g tavuk fingers, kızarmış zdenka, 150g ızgara peynir, patates kızartması, sos"
+    },
+    {
+        "name": "Şarap Tabak",
+        "price": "1650",
+        "ingredients": "Gorgonzola, füme kaşar peyniri, ev yapımı inek peyniri, koyun peyniri, sarı peynir, ezilmiş peynir, pastırma, mortadella, prosciutto"
+    },
+    {
+        "name": "Makedon Meze Tabak",
+        "price": "890",
+        "ingredients": "Ajvar, lutenitsa, sarımsaklı sos, ızgara kabak, 200g ev yapımı peynir, ızgara ekmek"
+    },
+],
+
+        //prilozi dorucek
+        [
+    {
+        "name": "Avokado Tortilla",
+        "price": "250",
+        "ingredients": "2 yumurta, tortilla, avokado ezmesi, domates, ekşi krema"
+    },
+    {
+        "name": "Ohri Omleti",
+        "price": "240",
+        "ingredients": "3 yumurta, domates, közlenmiş biber, peynir"
+    },
+    {
+        "name": "Pastırmalı Sahanda Yumurta",
+        "price": "230",
+        "ingredients": "3 yumurta, 100g pastırma, ekmek"
+    },
+    {
+        "name": "Sabah Quesadilla",
+        "price": "260",
+        "ingredients": "Tortilla, kaşar peyniri, cheddar, 1 sahanda yumurta, pastırma, domates"
+    },
+    {
+        "name": "Lihnidia Kahvaltı",
+        "price": "360",
+        "ingredients": "Yumurtalı kızarmış ekmek, kaşar peyniri, pastırma, sosis, ev yapımı inek peyniri, ajvar"
+    },
+    {
+        "name": "Omlet",
+        "price": "250",
+        "ingredients": "Tercih ettiğiniz kombinasyon"
+    },
+    {
+        "name": "Jambonlu Sahanda Yumurta",
+        "price": "220",
+        "ingredients": "3 yumurta, 100g jambon, ekmek"
+    },
+    {
+        "name": "Çikolatalı Tost",
+        "price": "190",
+        "ingredients": "Fıstık ezmesi, Nutella, bal, mevsim meyveleri"
+    },
+    {
+        "name": "Balık Çorbası",
+        "price": "240",
+        "ingredients": "Yan yemekler ve kahvaltı"
+    },
+    {
+        "name": "Dana Çorbası",
+        "price": "230",
+        "ingredients": "Yan yemekler ve kahvaltı"
+    },
+],
+
+        //minced meat
+        [
+    {
+        "name": "Köfte 250g",
+        "price": "280",
+        "ingredients": "Kıyma yemekleri"
+    },
+    {
+        "name": "Sharska Köfte 350g",
+        "price": "320",
+        "ingredients": "Kıyma 250g, kaşar peyniri 100g"
+    },
+    {
+        "name": "Kaymaklı Kebap",
+        "price": "360",
+        "ingredients": "Kıyma yemekleri"
+    },
+    {
+        "name": "Domates Soslu Köfte",
+        "price": "340",
+        "ingredients": "Kıyma 250g, pelati sos, parmesan, fesleğen"
+    },
+    {
+        "name": "Peynir Soslu Köfte 1kg",
+        "price": "950",
+        "ingredients": "Kıyma yemekleri"
+    },
+    {
+        "name": "İçli Köfte",
+        "price": "380",
+        "ingredients": "Kıyma 300g, kaşar peyniri, zdenka, mantar, jambon"
+    },
+    {
+        "name": "Kebap",
+        "price": "320",
+        "ingredients": "Kıyma yemekleri"
+    },
+    {
+        "name": "Lihnidia Köfte 500g",
+        "price": "390",
+        "ingredients": "Kıyma 300g, pastırma 100g, kaymak, yumurta"
+    },
+],
+
+        //Veal dishes
+        [
+    {
+        "name": "Tereyağı ve Biberiyeli Dana Biftek 250g",
+        "price": "1150",
+        "ingredients": "Dana yemekleri"
+    },
+    {
+        "name": "Yumurtalı Dana Biftek 250g",
+        "price": "1220",
+        "ingredients": "Dana yemekleri"
+    },
+    {
+        "name": "Dana Tava 250g",
+        "price": "850",
+        "ingredients": "Dana eti 200g, soğan, domates, biber"
+    },
+    {
+        "name": "Biber Soslu Dana Biftek 250g",
+        "price": "1250",
+        "ingredients": "Dana yemekleri"
+    },
+],
+
+        //pork dishes
+        [
+    {
+        "name": "Peynir ve Mantar Soslu Domuz Fileto 200g",
+        "price": "390",
+        "ingredients": "Domuz yemekleri"
+    },
+    {
+        "name": "Izgara Soslu ve Susamlı Kare 200g",
+        "price": "350",
+        "ingredients": "Domuz yemekleri"
+    },
+    {
+        "name": "Domuz Veşalica 200g",
+        "price": "370",
+        "ingredients": "Domuz yemekleri"
+    },
+    {
+        "name": "Ev Yapımı Sosis 250g",
+        "price": "330",
+        "ingredients": "Domuz yemekleri"
+    },
+    {
+        "name": "Domuz Kaburga 300g",
+        "price": "380",
+        "ingredients": "Domuz yemekleri"
+    },
+    {
+        "name": "Domuz Diz 1kg",
+        "price": "990",
+        "ingredients": "Domuz yemekleri"
+    },
+    {
+        "name": "Pastırma 200g",
+        "price": "340",
+        "ingredients": "Domuz yemekleri"
+    },
+],
+
+        //Chicken dishes
+        [
+    {
+        "name": "Lihnidia Tavuk",
+        "price": "360",
+        "ingredients": "Tavuk fileto 200g, pastırma, zeytinyağı, parmesan, tereyağı, kurutulmuş domates, kekik, kekik, garnitür"
+    },
+    {
+        "name": "Izgara Tavuk Biftek 200g",
+        "price": "260",
+        "ingredients": "Tavuk yemekleri"
+    },
+    {
+        "name": "Crispy Tavuk Biftek 250g",
+        "price": "280",
+        "ingredients": "Tavuk yemekleri"
+    },
+    {
+        "name": "Asya Usulü Tavuk Biftek 250g",
+        "price": "290",
+        "ingredients": "Kabak, mantar, soğan, beyaz şarap, köri"
+    },
+    {
+        "name": "Izgara Tavuk Kanatları Soslu 500g",
+        "price": "280",
+        "ingredients": "Tavuk yemekleri"
+    },
+    {
+        "name": "Tavuk Parmakları 300g",
+        "price": "320",
+        "ingredients": "Tavuk yemekleri"
+    },
+],
+
+        //dishes in a pan 
+        [
+    {
+        "name": "Köy Yemeği",
+        "price": "440",
+        "ingredients": "Domuz, tavuk, peynir, mantar, soğan, sarımsak, biber, domates"
+    },
+    {
+        "name": "Lihnidia Tavada",
+        "price": "480",
+        "ingredients": "Domuz, tavuk, pastırma, domates, biber, soğan, sarımsak, şampiyon, tütsülenmiş peynir"
+    },
+    {
+        "name": "Tavada Fasulye/Tavče Gravče",
+        "price": "250",
+        "ingredients": "Tavada yemekler"
+    },
+    {
+        "name": "Tavada Fasulye/Tavče Gravče ile Biftek/Sosis",
+        "price": "320",
+        "ingredients": "Tavada yemekler"
+    },
+    {
+        "name": "Pastırmalı ve Peynirli Mantarlar",
+        "price": "370",
+        "ingredients": "Tavada yemekler"
+    },
+],
+
+        //БУРГЕРИ
+        [
+    {
+        "name": "Hamburger",
+        "price": "240",
+        "ingredients": "150g kıyma, marull, lahana, salatalık, soğan, patates kızartması"
+    },
+    {
+        "name": "Tavuk Burger",
+        "price": "260",
+        "ingredients": "150g tavuk, marull, lahana, salatalık, patates kızartması"
+    },
+    {
+        "name": "Smoked Burger",
+        "price": "320",
+        "ingredients": "150g kıyma, tütsülenmiş peynir, pastırma, marull, lahana, salatalık, soğan, burger sosu"
+    },
+    {
+        "name": "Mavi Tavuk Burger",
+        "price": "310",
+        "ingredients": "150g tavuk, gorgonzola sosu, marull, lahana, salatalık, patates kızartması, sos"
+    },
+],
+
+        //risotto pasta
+        [
+    {
+        "name": "Porcini Mantarlı Risotto",
+        "price": "420",
+        "ingredients": "Pirinç, porcini mantarları, soğan, beyaz şarap, süt, tereyağı, parmesan"
+    },
+    {
+        "name": "Spaghetti Carbonara",
+        "price": "380",
+        "ingredients": "Spaghetti, pastırma, parmesan, yumurta sarısı, karabiber"
+    },
+    {
+        "name": "Gorgonzola Risotto",
+        "price": "390",
+        "ingredients": "Pirinç, tereyağı, zeytinyağı, beyaz şarap, gorgonzola"
+    },
+    {
+        "name": "Deniz Mahsullü Risotto",
+        "price": "490",
+        "ingredients": "Pirinç, kabuklular, karides, soğan, zeytinyağı, beyaz şarap, dereotu"
+    },
+    {
+        "name": "Gorgonzola ve Fıstıklı Tortellini",
+        "price": "370",
+        "ingredients": "Pirinç, fıstık, zeytinyağı, beyaz şarap, gorgonzola"
+    },
+    {
+        "name": "Deniz Mahsullü Spaghetti",
+        "price": "460",
+        "ingredients": "Kabuklular, karides, soğan, sarımsak, zeytinyağı, maydanoz, dereotu"
+    },
+],
+
+        // Appetizers
+        [
+    {
+        "name": "Domates, Mozzarella ve Pesto ile Bruschetta",
+        "price": "220",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Izgara Peynir 200g",
+        "price": "240",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Tereyağında Mantar 250g",
+        "price": "240",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Pastırma Cipsi 200g",
+        "price": "290",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Kaymaklı Dolma Biber",
+        "price": "170",
+        "ingredients": "Biber, kaymak, yumurta, peynir"
+    },
+    {
+        "name": "Sarımsaklı Ekmek",
+        "price": "170",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Kaymaklı Ekmek",
+        "price": "140",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Izgara Kabak 200g",
+        "price": "180",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Sarımsaklı Dip Sos/Makalo",
+        "price": "140",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Ajvar",
+        "price": "140",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Biene Peyniri ile Pastırma 150g",
+        "price": "280",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Ev Yapımı Süt Peyniri 200g",
+        "price": "250",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Doldurulmuş Mantarlar",
+        "price": "260",
+        "ingredients": "Mantar, peynir, domuz boynu"
+    },
+    {
+        "name": "Erimiş Peynir 300g",
+        "price": "270",
+        "ingredients": "Feta peyniri, domates sosu, ekşi krema, pastırma, peynir"
+    },
+    {
+        "name": "Kızarmış Peynir 100g",
+        "price": "170",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Kızarmış Zdenki 150g",
+        "price": "180",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Kızarmış Soğan 200g",
+        "price": "240",
+        "ingredients": "Atıştırmalıklar"
+    },
+    {
+        "name": "Lutenica",
+        "price": "140",
+        "ingredients": "Atıştırmalıklar"
+    },
+],
+
+        //fish
+        [
+    {
+        "name": "Alabalık 1kg.",
+        "price": "1200",
+        "ingredients": "Balık"
+    },
+    {
+        "name": "Ohrid Usulü Alabalık 1kg.",
+        "price": "1600",
+        "ingredients": "Balık"
+    },
+    {
+        "name": "Beyaz Şarap Soslu Somon 1kg.",
+        "price": "1350",
+        "ingredients": "Balık"
+    },
+    {
+        "name": "Sazan Pirzolası 1kg.",
+        "price": "1400",
+        "ingredients": "Balık"
+    },
+    {
+        "name": "Sebzeli Fırınlanmış Sazan 1kg (Siparişle)",
+        "price": "1550",
+        "ingredients": "Balık"
+    },
+    {
+        "name": "Belvica 1kg.",
+        "price": "2400",
+        "ingredients": "Balık"
+    },
+],
+
+        // ДЕСЕРТ
+        [
+    {
+        "name": "Nutella, Plazma ve Muzlu Krep",
+        "price": "180",
+        "ingredients": "Tatlılar"
+    },
+    {
+        "name": "Çikolatalı Mus",
+        "price": "160",
+        "ingredients": "Tatlılar"
+    },
+    {
+        "name": "Mevsim Meyveleri ile Meyve Salatası",
+        "price": "220",
+        "ingredients": "Tatlılar"
+    },
+    {
+        "name": "Baklava",
+        "price": "170",
+        "ingredients": "Tatlılar"
+    },
+],
+
+        //sides
+        [
+    {
+        "name": "Biber (adet)",
+        "price": "50",
+        "ingredients": "Yan Yemekler"
+    },
+    {
+        "name": "Acı Biber (adet)",
+        "price": "50",
+        "ingredients": "Yan Yemekler"
+    },
+    {
+        "name": "Peynirli Ekmek",
+        "price": "150",
+        "ingredients": "Yan Yemekler"
+    },
+    {
+        "name": "Zeytin 100g",
+        "price": "80",
+        "ingredients": "Yan Yemekler"
+    },
+    {
+        "name": "Ekmek",
+        "price": "50",
+        "ingredients": "Yan Yemekler"
+    },
+    {
+        "name": "Yumurta",
+        "price": "30",
+        "ingredients": "Yan Yemekler"
+    },
+    {
+        "name": "Patates Kızartması 100g",
+        "price": "70",
+        "ingredients": "Yan Yemekler"
+    },
+    {
+        "name": "Sos",
+        "price": "40",
+        "ingredients": "Yan Yemekler"
+    },
+],
+
+        //КОКТЕЛИ
+        [
+    {
+        "name": "Margarita",
+        "price": "300",
+        "ingredients": "Tekila, triple sec, limon suyu"
+    },
+    {
+        "name": "Tequila Sunrise",
+        "price": "270",
+        "ingredients": "Tekila, grenadin, portakal suyu"
+    },
+    {
+        "name": "Cuba Libre",
+        "price": "290",
+        "ingredients": "Rom, cola, taze lime"
+    },
+    {
+        "name": "Mojito",
+        "price": "320",
+        "ingredients": "Beyaz rom, esmer şeker, nane, buz, soda"
+    },
+    {
+        "name": "Sex on the Beach",
+        "price": "300",
+        "ingredients": "Votka, Archers, yaban mersini suyu, portakal suyu"
+    },
+    {
+        "name": "Mai Tai",
+        "price": "350",
+        "ingredients": "Beyaz rom, koyu rom, lime suyu, portakal suyu"
+    },
+    {
+        "name": "Cosmopolitan",
+        "price": "320",
+        "ingredients": "Votka, triple sec, lime suyu, yaban mersini suyu"
+    },
+    {
+        "name": "Hurricane",
+        "price": "390",
+        "ingredients": "Hafif ve koyu rom, passion fruit suyu, lime suyu, grenadin, şeker şurubu"
+    },
+    {
+        "name": "Long Island Iced Tea",
+        "price": "380",
+        "ingredients": "Beyaz rom, votka, cin, tekila, limon suyu, cola, şeker şurubu"
+    },
+    {
+        "name": "AMF",
+        "price": "370",
+        "ingredients": "Votka, beyaz rom, tekila, cin, mavi curaçao, limon, şeker şurubu"
+    },
+    {
+        "name": "Pinacolada",
+        "price": "350",
+        "ingredients": "Beyaz rom, hindistancevizi kreması, ananas suyu"
+    },
+    {
+        "name": "Gin Fizz",
+        "price": "260",
+        "ingredients": "Cin, limon suyu, şeker şurubu, soda"
+    },
+    {
+        "name": "Blue Lagoon",
+        "price": "320",
+        "ingredients": "Votka, mavi curaçao, 7Up"
+    },
+    {
+        "name": "Bahama Mama",
+        "price": "350",
+        "ingredients": "Beyaz rom, Malibu, kiraz brendi, portakal suyu, limon suyu, şeker şurubu"
+    },
+    {
+        "name": "Aperol Spritz",
+        "price": "300",
+        "ingredients": "Aperol, prosecco, soda"
+    },
+    {
+        "name": "Blue Hawaii",
+        "price": "340",
+        "ingredients": "Beyaz rom, votka, mavi curaçao, ananas suyu, limon suyu, şeker şurubu"
+    },
+    {
+        "name": "Bloody Mary",
+        "price": "390",
+        "ingredients": "Votka, domates suyu, limon suyu, Tabasco, Worcestershire sosu, tuz, karabiber"
+    },
+],
+
+
+        
+                // Add other categories here...
+            ];
+
+            const productListElement = document.getElementById('product-list');
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryId = parseInt(urlParams.get('id'), 10);
+
+            if (isNaN(categoryId) || !products[categoryId]) {
+                productListElement.innerHTML = '<p>Category not found.</p>';
+                return;
+            }
+
+            products[categoryId].forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'card mb-4 p-4 shadow';
+                productCard.innerHTML = `
+                    <div class="d-flex flex-row align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                            <div class="fw-bold">${product.name}</div>
+                            <div class="fst-italic ingredients">${product.ingredients}</div>
+                        </div>
+                        <div class="fw-bold fst-italic text-nowrap">${product.price} ден.</div>
+                    </div>
+                `;
+                productListElement.appendChild(productCard);
+            });
+        });
+    </script>
+</body>
+</html>
