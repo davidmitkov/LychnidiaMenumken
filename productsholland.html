@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container pb-5">
+        <!-- Header Image -->
+        <div class="text-center mb-4">
+            <img src="images/back.jpg" class="img-fluid rounded-5" alt="Product List Header">
+        </div>
+        <!-- Logo -->
+        <div class="text-center mb-4">
+            <img src="images/temno.png" class="logo" alt="Product Logo">
+        </div>
+        <!-- Back Button -->
+        <a href="indexholland.html" class="mb-4 back btn btn-warning shadow border-radius-14px fw-bold px-3">
+            &lt; Назад кон менито
+        </a>
+        <!-- Product List -->
+        <div id="product-list"></div>
+        <!-- Back Button -->
+        <a href="indexholland.html" class="back mb-2 btn btn-warning shadow border-radius-14px fw-bold px-3">
+            &lt; Назад кон менито
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const products = [
+                // SOFT DRINKS
+                [
+    {
+        "name": "Water (Groot) 0.75",
+        "price": "120",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "Water (Klein) 0.25",
+        "price": "80",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "Pepsi",
+        "price": "120",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "Pepsi Max",
+        "price": "120",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "Gazoza",
+        "price": "100",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "IJsthee",
+        "price": "120",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "7Up",
+        "price": "120",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "Sap",
+        "price": "140",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "Vers Citroensap",
+        "price": "90",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "Vers Geperst Sinaasappelsap",
+        "price": "180",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "Mirinda",
+        "price": "120",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "Huisgemaakte Limonade",
+        "price": "160",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+    {
+        "name": "Vruchtensoda",
+        "price": "140",
+        "ingredients": "Alcoholvrije Dranken",
+    },
+],
+                //beer
+                [
+    {
+        "name": "King Marko 0.5",
+        "price": "140",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Golden Dab 0.33",
+        "price": "130",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Golden Dab van het Vat 0.33",
+        "price": "140",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Golden Dab van het Vat 0.5",
+        "price": "170",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Fox Pale Ale van het Vat 0.5",
+        "price": "240",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Veda White IPA van het Vat 0.5",
+        "price": "260",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Corona",
+        "price": "250",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Kalesh-Black IPA 0.33",
+        "price": "250",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Tuborg 0.33",
+        "price": "170",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Tuborg van het Vat 0.4",
+        "price": "220",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Carlsberg 0.33",
+        "price": "190",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Holsten 0.5",
+        "price": "260",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Kozel 0.5",
+        "price": "220",
+        "ingredients": "Bier",
+    },
+    {
+        "name": "Franziskaner 0.5",
+        "price": "280",
+        "ingredients": "Bier",
+    },
+], 
+
+        // WINES
+        [
+    {
+        "name": "Synthesis Cuvee Barrique (Droog)",
+        "price": "1900",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Dionis Vranec Barrique (Droog)",
+        "price": "2200",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Hermes Vranec (Droog)",
+        "price": "1300",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Hermes Cabernet Sauvignon (Droog)",
+        "price": "1300",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Amfora Vranec (Halfdroog)",
+        "price": "900",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Chardonnay Barrique Gefermenteerd (Droog)",
+        "price": "2400",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Muscat Temjanika (Halfdroog)",
+        "price": "1350",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Elegija Chardonnay (Droog)",
+        "price": "1300",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Elegija Traminer (Droog)",
+        "price": "1300",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Elegija Zupljanka (Droog)",
+        "price": "1300",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Amphora Cuvee (Halfdroog)",
+        "price": "900",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Temjanika (Droog)",
+        "price": "1400",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Chardonnay (Droog)",
+        "price": "1400",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Sauvignon Blanc (Droog)",
+        "price": "1400",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Amfora Rosé (Droog)",
+        "price": "900",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Elegija Syrah (Droog)",
+        "price": "1200",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Muscat Rolinger (Droog)",
+        "price": "1250",
+        "ingredients": "Wijn",
+    },
+    {
+        "name": "Muscat Rolinger Rood (Halfdroog)",
+        "price": "1250",
+        "ingredients": "Wijn",
+    },
+],
+        //kafecaj
+        [
+    {
+        "name": "Thee",
+        "price": "80",
+        "ingredients": "Warme Dranken",
+    },
+    {
+        "name": "Espresso",
+        "price": "90",
+        "ingredients": "Warme Dranken",
+    },
+    {
+        "name": "Macchiato",
+        "price": "100",
+        "ingredients": "Warme Dranken",
+    },
+    {
+        "name": "Grote Macchiato",
+        "price": "110",
+        "ingredients": "Warme Dranken",
+    },
+    {
+        "name": "Latte Macchiato",
+        "price": "160",
+        "ingredients": "Warme Dranken",
+    },
+    {
+        "name": "Nescafe",
+        "price": "140",
+        "ingredients": "Warme Dranken",
+    },
+    {
+        "name": "Cappuccino",
+        "price": "120",
+        "ingredients": "Warme Dranken",
+    },
+    {
+        "name": "Koude Macchiato",
+        "price": "110",
+        "ingredients": "Warme Dranken",
+    },
+    {
+        "name": "Ierse Koffie",
+        "price": "260",
+        "ingredients": "Warme Dranken",
+    },
+    {
+        "name": "Americano",
+        "price": "120",
+        "ingredients": "Warme Dranken",
+    },
+    {
+        "name": "Macedonische Koffie",
+        "price": "90",
+        "ingredients": "Warme Dranken",
+    },
+],
+        // Alcoholic beverages
+        [
+    {
+        "name": "Gele Rakija",
+        "price": "120",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Witte Rakija",
+        "price": "120",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Mastika",
+        "price": "120",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Rakija Azbuka",
+        "price": "130",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Gordion Amber Rakija",
+        "price": "160",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Badel Williams Rakija",
+        "price": "170",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Gin Badel",
+        "price": "120",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Smidgin",
+        "price": "250",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Gin Beefeater",
+        "price": "170",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Gin Gordons",
+        "price": "190",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Gin Pink Gordons",
+        "price": "180",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Gin Bombay",
+        "price": "240",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Vodka Badel",
+        "price": "120",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Baileys",
+        "price": "180",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Feneys",
+        "price": "150",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Krushkovac Perenlikeur",
+        "price": "140",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Tequila",
+        "price": "130",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Amaretto",
+        "price": "150",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Korlat Slivovitsj",
+        "price": "220",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Korlat Maraska",
+        "price": "220",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Shot",
+        "price": "100",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Smirnoff",
+        "price": "160",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Jack Daniels",
+        "price": "280",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Jameson",
+        "price": "180",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Jameson Black",
+        "price": "290",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Johnny Red",
+        "price": "160",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Johnny Black",
+        "price": "260",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "4 Roses",
+        "price": "200",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "William Peel",
+        "price": "150",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Rum Morgan",
+        "price": "160",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Jägermeister",
+        "price": "210",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Pelinkovac Badel",
+        "price": "120",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Pelinkovac Antik",
+        "price": "170",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Cognac Badel",
+        "price": "120",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Cognac Badel Black",
+        "price": "160",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Rum Badel",
+        "price": "120",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Stock 84",
+        "price": "150",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Tequila Olmeca",
+        "price": "170",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Aperol",
+        "price": "160",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Korlat Lozova",
+        "price": "220",
+        "ingredients": "Alcoholische Dranken",
+    },
+    {
+        "name": "Campari",
+        "price": "160",
+        "ingredients": "Alcoholische Dranken",
+    },
+],
+
+      
+        
+        // САЛАТИ
+        [
+    {
+        "name": "Shopska Salade",
+        "price": "220",
+        "ingredients": "Tomaat, Komkommer, Ui, Kaas",
+    },
+    {
+        "name": "Egeïsche Salade",
+        "price": "220",
+        "ingredients": "Tomaat, Komkommer, Uienringen, Blokjes Kaas, Oregano",
+    },
+    {
+        "name": "Rakija Salade",
+        "price": "170",
+        "ingredients": "Kool, Komkommer, Olijven",
+    },
+    {
+        "name": "Macedonische Salade",
+        "price": "200",
+        "ingredients": "Tomaat, Ui, Geroosterde Paprika",
+    },
+    {
+        "name": "Gemengde Salade",
+        "price": "190",
+        "ingredients": "Rode Biet, Wortel, Komkommer, Tomaat, Kool",
+    },
+    {
+        "name": "Caesar Salade",
+        "price": "250",
+        "ingredients": "Sla, Kip, Croutons, Tomaat, Parmezaan, Dressing",
+    },
+    {
+        "name": "Tonijn Salade",
+        "price": "260",
+        "ingredients": "Sla, Tonijn, Mais, Ui, Olijven",
+    },
+    {
+        "name": "Zeevruchten Salade",
+        "price": "360",
+        "ingredients": "Sla, Zeevruchten, Avocado, Komkommer, Tomaat, Mosterd- en Citroendressing",
+    },
+],
+
+        //daski
+        [
+    {
+        "name": "Gemengde Schotel (4 Personen)",
+        "price": "1350",
+        "ingredients": "5 Kebabs, 100g Gehaktbal, 100g Kippensteak, 100g Spek, Worst, Kippenwrap, 150g Kipnuggets, Gefrituurde Zdenka, 150g Gegrilde Kaas, Friet, Saus",
+    },
+    {
+        "name": "Wijntafel Schotel",
+        "price": "1650",
+        "ingredients": "Gorgonzola, Gerookte Gele Kaas, Huisgemaakte Koemelkkaas, Schapenkaas, Gele Kaas, Geslagen Kaas, Spek, Mortadella, Prosciutto",
+    },
+    {
+        "name": "Macedonische Meze Schotel",
+        "price": "890",
+        "ingredients": "Ajvar, Lutenitsa, Knoflookdip, Gegrilde Courgette, 200g Huisgemaakte Kaas, Gegrild Brood",
+    },
+],
+
+       //prilozi
+       [
+    {
+        "name": "Avocado Tortilla",
+        "price": "250",
+        "ingredients": "2 Eieren, Tortilla, Avocadopasta, Tomaat, Zure Room",
+    },
+    {
+        "name": "Ohrid Omelet",
+        "price": "240",
+        "ingredients": "3 Eieren, Tomaten, Geroosterde Paprika, Kaas",
+    },
+    {
+        "name": "Spiegeleieren met Spek",
+        "price": "230",
+        "ingredients": "3 Eieren, 100g Spek, Brood",
+    },
+    {
+        "name": "Ochtend Quesadilla",
+        "price": "260",
+        "ingredients": "Tortilla, Gele Kaas, Cheddar, 1 Spiegelei, Spek, Tomaat",
+    },
+    {
+        "name": "Lihnidia Ontbijt",
+        "price": "360",
+        "ingredients": "Gefrituurd Brood met Eieren, Gele Kaas, Spek, Worst, Huisgemaakte Koemelkkaas, Ajvar",
+    },
+    {
+        "name": "Omelet",
+        "price": "250",
+        "ingredients": "Jouw Keuzecombinatie",
+    },
+    {
+        "name": "Spiegeleieren met Ham",
+        "price": "220",
+        "ingredients": "3 Eieren, 100g Ham, Brood",
+    },
+    {
+        "name": "Choco Toast",
+        "price": "190",
+        "ingredients": "Pindakaas, Nutella, Honing, Seizoensfruit",
+    },
+    {
+        "name": "Visstoofpot",
+        "price": "240",
+        "ingredients": "Bijgerechten en Ontbijt",
+    },
+    {
+        "name": "Kalfsstoofpot",
+        "price": "230",
+        "ingredients": "Bijgerechten en Ontbijt",
+    },
+],
+
+       //minced meat
+       [
+    {
+        "name": "Gehaktbal 250g",
+        "price": "280",
+        "ingredients": "Gerecht met Gehakt",
+    },
+    {
+        "name": "Sharska Gehaktbal 350g",
+        "price": "320",
+        "ingredients": "Gehakt 250g, Gele Kaas 100g",
+    },
+    {
+        "name": "Kebabs met Kaymak",
+        "price": "360",
+        "ingredients": "Gerecht met Gehakt",
+    },
+    {
+        "name": "Köfte in Tomatensaus",
+        "price": "340",
+        "ingredients": "Gehakt 250g, Pelati Saus, Parmezaan, Basilicum",
+    },
+    {
+        "name": "Gehaktbal 1kg met Kaassaus",
+        "price": "950",
+        "ingredients": "Gerecht met Gehakt",
+    },
+    {
+        "name": "Gevulde Gehaktbal",
+        "price": "380",
+        "ingredients": "Gehakt 300g, Kaas, Zdenka, Champignons, Ham",
+    },
+    {
+        "name": "Kebabs",
+        "price": "320",
+        "ingredients": "Gerecht met Gehakt",
+    },
+    {
+        "name": "Lihnidia Gehaktbal 500g",
+        "price": "390",
+        "ingredients": "Gehakt 300g, Spek 100g, Kaymak, Ei",
+    },
+],
+
+        //veal
+        [
+    {
+        "name": "Rundersteak met Boter en Rozemarijn 250g",
+        "price": "1150",
+        "ingredients": "Kalfs Vleesgerechten",
+    },
+    {
+        "name": "Rundersteak met Ei 250g",
+        "price": "1220",
+        "ingredients": "Kalfs Vleesgerechten",
+    },
+    {
+        "name": "Kalfsvlees Tava 250g",
+        "price": "850",
+        "ingredients": "Kalfsvlees 200g, Ui, Tomaat, Paprika",
+    },
+    {
+        "name": "Rundersteak in Peper Saus 250g",
+        "price": "1250",
+        "ingredients": "Kalfs Vleesgerechten",
+    },
+],
+
+        //pork
+        [
+    {
+        "name": "Varkenshaas met Kaas en Champignons 200g",
+        "price": "390",
+        "ingredients": "Varkensvleesgerechten",
+    },
+    {
+        "name": "Karbonade in Gegrilde Saus met Sesam 200g",
+        "price": "350",
+        "ingredients": "Varkensvleesgerechten",
+    },
+    {
+        "name": "Hanger/Vešalica 200g",
+        "price": "370",
+        "ingredients": "Varkensvleesgerechten",
+    },
+    {
+        "name": "Huisgemaakte Worst 250g",
+        "price": "330",
+        "ingredients": "Varkensvleesgerechten",
+    },
+    {
+        "name": "Ribben 300g",
+        "price": "380",
+        "ingredients": "Varkensvleesgerechten",
+    },
+    {
+        "name": "Varkenspoot/Knie 1kg",
+        "price": "990",
+        "ingredients": "Varkensvleesgerechten",
+    },
+    {
+        "name": "Spek 200g",
+        "price": "340",
+        "ingredients": "Varkensvleesgerechten",
+    },
+],
+
+        //Chicken dishes
+        [
+    {
+        "name": "Lihnidia Kip",
+        "price": "360",
+        "ingredients": "Kipfilet 200g, Spek, Olijfolie, Parmezaan, Boter, Gedroogde Tomaten, Oregano, Tijm, Garnituur",
+    },
+    {
+        "name": "Gegrilde Kipfilet 200g",
+        "price": "260",
+        "ingredients": "Kipgerechten",
+    },
+    {
+        "name": "Knapperige Kipfilet 250g",
+        "price": "280",
+        "ingredients": "Kipgerechten",
+    },
+    {
+        "name": "Kipfilet in Aziatische Stijl 250g",
+        "price": "290",
+        "ingredients": "Courgette, Champignons, Ui, Witte Wijn, Curry",
+    },
+    {
+        "name": "Gegrilde Kippenbout in Saus 500g",
+        "price": "280",
+        "ingredients": "Kipgerechten",
+    },
+    {
+        "name": "Kippenvingers 300g",
+        "price": "320",
+        "ingredients": "Kipgerechten",
+    },
+],
+
+        //dishes in a pan
+        [
+    {
+        "name": "Dorpse Schotel",
+        "price": "440",
+        "ingredients": "Varkensvlees, Kip, Kaas, Champignons, Ui, Knoflook, Paprika, Tomaten",
+    },
+    {
+        "name": "Lihnidia Pan",
+        "price": "480",
+        "ingredients": "Varkensvlees, Kip, Spek, Tomaten, Paprika, Ui, Knoflook, Champignons, Gerookte Kaas",
+    },
+    {
+        "name": "Bonen uit de Pan/Tavče Gravče",
+        "price": "250",
+        "ingredients": "Gerechten uit de Pan",
+    },
+    {
+        "name": "Bonen uit de Pan/Tavče Gravče met Steak/Worst",
+        "price": "320",
+        "ingredients": "Gerechten uit de Pan",
+    },
+    {
+        "name": "Champignons met Spek en Kaas",
+        "price": "370",
+        "ingredients": "Gerechten uit de Pan",
+    },
+],
+
+        //БУРГЕРИ
+        [
+    {
+        "name": "Hamburger",
+        "price": "240",
+        "ingredients": "150g Gehakt, Sla, Kool, Komkommer, Ui, Friet",
+    },
+    {
+        "name": "Kipburger",
+        "price": "260",
+        "ingredients": "150g Kip, Sla, Kool, Komkommer, Friet",
+    },
+    {
+        "name": "Gerookte Burger",
+        "price": "320",
+        "ingredients": "150g Gehakt, Gerookte Kaas, Spek, Sla, Kool, Komkommer, Ui, Burger-Saus",
+    },
+    {
+        "name": "Blauwe Kipburger",
+        "price": "310",
+        "ingredients": "150g Kip, Gorgonzola-Saus, Sla, Kool, Komkommer, Friet, Saus",
+    },
+],
+
+       //risotto
+       [
+    {
+        "name": "Risotto met Eekhoorntjesbrood",
+        "price": "420",
+        "ingredients": "Rijst, Eekhoorntjesbrood, Ui, Witte Wijn, Melk, Boter, Parmezaan",
+    },
+    {
+        "name": "Spaghetti Carbonara",
+        "price": "380",
+        "ingredients": "Spaghetti, Spek, Parmezaan, Eidooiers, Peper",
+    },
+    {
+        "name": "Risotto met Gorgonzola",
+        "price": "390",
+        "ingredients": "Rijst, Boter, Olijfolie, Witte Wijn, Gorgonzola",
+    },
+    {
+        "name": "Risotto met Zeevruchten",
+        "price": "490",
+        "ingredients": "Rijst, Mosselen, Garnalen, Ui, Olijfolie, Witte Wijn, Dille",
+    },
+    {
+        "name": "Tortellini met Gorgonzola en Pistachenoten",
+        "price": "370",
+        "ingredients": "Rijst, Pistachenoten, Olijfolie, Witte Wijn, Gorgonzola",
+    },
+    {
+        "name": "Spaghetti met Zeevruchten",
+        "price": "460",
+        "ingredients": "Mosselen, Garnalen, Ui, Knoflook, Olijfolie, Peterselie, Dille",
+    },
+],
+
+        // Appetizers
+        [
+    {
+        "name": "Bruschetta met Tomaten, Mozzarella en Pesto",
+        "price": "220",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Gegrilde Kaas 200g",
+        "price": "240",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Paddestoelen in Boter 250g",
+        "price": "240",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Bacon Chips 200g",
+        "price": "290",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Gevulde Paprika met Kaymak",
+        "price": "170",
+        "ingredients": "Paprika, Kaymak, Ei, Kaas",
+    },
+    {
+        "name": "Knoflookbrood",
+        "price": "170",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Brood met Kaymak",
+        "price": "140",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Gegrilde Courgette 200g",
+        "price": "180",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Knoflookdip/Makalo",
+        "price": "140",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Ajvar",
+        "price": "140",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Bijenkaas met Spek 150g",
+        "price": "280",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Huisgemaakte Koe Kaas 200g",
+        "price": "250",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Gevulde Paddestoelen",
+        "price": "260",
+        "ingredients": "Paddestoelen, Kaas, Varkensnek",
+    },
+    {
+        "name": "Gesmolten Kaas 300g",
+        "price": "270",
+        "ingredients": "Feta, Tomatensaus, Zure Room, Spek, Kaas",
+    },
+    {
+        "name": "Gefrituurde Kaas 100g",
+        "price": "170",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Gefrituurde Zdenki 150g",
+        "price": "180",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Gefrituurde Uien 200g",
+        "price": "240",
+        "ingredients": "Voorgerechten",
+    },
+    {
+        "name": "Lutenica",
+        "price": "140",
+        "ingredients": "Voorgerechten",
+    },
+],
+
+        //fish
+        [
+    {
+        "name": "Forel 1kg",
+        "price": "1200",
+        "ingredients": "Vis",
+    },
+    {
+        "name": "Forel in Ohrid-Stijl 1kg",
+        "price": "1600",
+        "ingredients": "Vis",
+    },
+    {
+        "name": "Zalm in Witte Wijnsaus 1kg",
+        "price": "1350",
+        "ingredients": "Vis",
+    },
+    {
+        "name": "Karper Koteletten 1kg",
+        "price": "1400",
+        "ingredients": "Vis",
+    },
+    {
+        "name": "Gebacken Karper met Groenten 1kg (op bestelling)",
+        "price": "1550",
+        "ingredients": "Vis",
+    },
+    {
+        "name": "Belvica 1kg",
+        "price": "2400",
+        "ingredients": "Vis",
+    },
+],
+
+        // ДЕСЕРТ
+        [
+    {
+        "name": "Pannenkoek met Nutella, Plazma en Banaan",
+        "price": "180",
+        "ingredients": "Nagerechten",
+    },
+    {
+        "name": "Chocolademousse",
+        "price": "160",
+        "ingredients": "Nagerechten",
+    },
+    {
+        "name": "Fruit salade met seizoensgebonden fruit",
+        "price": "220",
+        "ingredients": "Nagerechten",
+    },
+    {
+        "name": "Baklava",
+        "price": "170",
+        "ingredients": "Nagerechten",
+    },
+],
+
+        //sides
+        [
+    {
+        "name": "Paprika (Stuk)",
+        "price": "50",
+        "ingredients": "Bijgerechten",
+    },
+    {
+        "name": "Pittige Paprika (Stuk)",
+        "price": "50",
+        "ingredients": "Bijgerechten",
+    },
+    {
+        "name": "Brood met Kaas",
+        "price": "150",
+        "ingredients": "Bijgerechten",
+    },
+    {
+        "name": "Olijven 100g",
+        "price": "80",
+        "ingredients": "Bijgerechten",
+    },
+    {
+        "name": "Brood",
+        "price": "50",
+        "ingredients": "Bijgerechten",
+    },
+    {
+        "name": "Ei",
+        "price": "30",
+        "ingredients": "Bijgerechten",
+    },
+    {
+        "name": "Frietjes 100g",
+        "price": "70",
+        "ingredients": "Bijgerechten",
+    },
+    {
+        "name": "Saus",
+        "price": "40",
+        "ingredients": "Bijgerechten",
+    },
+],
+
+        //КОКТЕЛИ
+        [
+    {
+        "name": "Margarita",
+        "price": "300",
+        "ingredients": "Tequila, Triple Sec, Citroensap",
+    },
+    {
+        "name": "Tequila Sunrise",
+        "price": "270",
+        "ingredients": "Tequila, Grenadinesiroop, Sinaasappelsap",
+    },
+    {
+        "name": "Cuba Libre",
+        "price": "290",
+        "ingredients": "Rum, Cola, Verse limoen",
+    },
+    {
+        "name": "Mojito",
+        "price": "320",
+        "ingredients": "Witte rum, Bruine suiker, Munt, IJs, Soda",
+    },
+    {
+        "name": "Sex on the Beach",
+        "price": "300",
+        "ingredients": "Wodka, Archers, Cranberrysap, Sinaasappelsap",
+    },
+    {
+        "name": "Mai Tai",
+        "price": "350",
+        "ingredients": "Witte rum, Donkere rum, Limoensap, Sinaasappelsap",
+    },
+    {
+        "name": "Cosmopolitan",
+        "price": "320",
+        "ingredients": "Wodka, Triple Sec, Limoensap, Cranberrysap",
+    },
+    {
+        "name": "Hurricane",
+        "price": "390",
+        "ingredients": "Witte en donkere rum, Passievruchtensap, Limoensap, Grenadine, Suikersiroop",
+    },
+    {
+        "name": "Long Island Iced Tea",
+        "price": "380",
+        "ingredients": "Witte rum, Wodka, Gin, Tequila, Citroensap, Cola, Suikersiroop",
+    },
+    {
+        "name": "AMF",
+        "price": "370",
+        "ingredients": "Wodka, Witte rum, Tequila, Gin, Blue Curaçao, Citroen, Suikersiroop",
+    },
+    {
+        "name": "Piña Colada",
+        "price": "350",
+        "ingredients": "Witte rum, Kokosroom, Ananassap",
+    },
+    {
+        "name": "Gin Fizz",
+        "price": "260",
+        "ingredients": "Gin, Citroensap, Suikersiroop, Soda",
+    },
+    {
+        "name": "Blue Lagoon",
+        "price": "320",
+        "ingredients": "Wodka, Blue Curaçao, 7Up",
+    },
+    {
+        "name": "Bahama Mama",
+        "price": "350",
+        "ingredients": "Witte rum, Malibu, Kersenbrand, Sinaasappelsap, Citroensap, Suikersiroop",
+    },
+    {
+        "name": "Aperol Spritz",
+        "price": "300",
+        "ingredients": "Aperol, Prosecco, Soda",
+    },
+    {
+        "name": "Blue Hawaii",
+        "price": "340",
+        "ingredients": "Witte rum, Wodka, Blue Curaçao, Ananassap, Citroensap, Suikersiroop",
+    },
+    {
+        "name": "Bloody Mary",
+        "price": "390",
+        "ingredients": "Wodka, Tomatensap, Citroensap, Tabasco, Worcestershire-saus, Zout, Zwarte peper",
+    },
+],
+
+        
+                // Add other categories here...
+            ];
+
+            const productListElement = document.getElementById('product-list');
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryId = parseInt(urlParams.get('id'), 10);
+
+            if (isNaN(categoryId) || !products[categoryId]) {
+                productListElement.innerHTML = '<p>Category not found.</p>';
+                return;
+            }
+
+            products[categoryId].forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'card mb-4 p-4 shadow';
+                productCard.innerHTML = `
+                    <div class="d-flex flex-row align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                            <div class="fw-bold">${product.name}</div>
+                            <div class="fst-italic ingredients">${product.ingredients}</div>
+                        </div>
+                        <div class="fw-bold fst-italic text-nowrap">${product.price} ден.</div>
+                    </div>
+                `;
+                productListElement.appendChild(productCard);
+            });
+        });
+    </script>
+</body>
+</html>

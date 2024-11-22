@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container pb-5">
+        <!-- Header Image -->
+        <div class="text-center mb-4">
+            <img src="images/back.jpg" class="img-fluid rounded-5" alt="Product List Header">
+        </div>
+        <!-- Logo -->
+        <div class="text-center mb-4">
+            <img src="images/temno.png" class="logo" alt="Product Logo">
+        </div>
+        <!-- Back Button -->
+        <a href="indexpolski.html" class="mb-4 back btn btn-warning shadow border-radius-14px fw-bold px-3">
+            &lt; Назад кон менито
+        </a>
+        <!-- Product List -->
+        <div id="product-list"></div>
+        <!-- Back Button -->
+        <a href="indexpolski.html" class="back mb-2 btn btn-warning shadow border-radius-14px fw-bold px-3">
+            &lt; Назад кон менито
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const products = [
+                // SOFT DRINKS
+                [
+    {
+        "name": "Woda (Duża) 0.75",
+        "price": "120",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Woda (Mała) 0.25",
+        "price": "80",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Pepsi",
+        "price": "120",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Pepsi Max",
+        "price": "120",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Gazoza",
+        "price": "100",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Ice Tea",
+        "price": "120",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "7Up",
+        "price": "120",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Sok",
+        "price": "140",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Świeży Sok Cytrynowy",
+        "price": "90",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Świeży Sok Pomarańczowy",
+        "price": "180",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Mirinda",
+        "price": "120",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Domowa Lemoniada",
+        "price": "160",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+    {
+        "name": "Soda Owocowa",
+        "price": "140",
+        "ingredients": "Napoje Bezalkoholowe"
+    },
+],
+
+                //beer
+                [
+    {
+        "name": "King Marko 0.5",
+        "price": "140",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Golden Dab 0.33",
+        "price": "130",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Golden Dab Draft 0.33",
+        "price": "140",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Golden Dab Draft 0.5",
+        "price": "170",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Fox Pale Ale Draft 0.5",
+        "price": "240",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Veda White IPA Draft 0.5",
+        "price": "260",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Corona",
+        "price": "250",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Kalesh-Black IPA 0.33",
+        "price": "250",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Tuborg 0.33",
+        "price": "170",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Tuborg Draft 0.4",
+        "price": "220",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Carlsberg 0.33",
+        "price": "190",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Holsten 0.5",
+        "price": "260",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Kozel 0.5",
+        "price": "220",
+        "ingredients": "Piwo"
+    },
+    {
+        "name": "Franziskaner 0.5",
+        "price": "280",
+        "ingredients": "Piwo"
+    },
+],
+
+
+                //wines
+                [
+    {
+        "name": "Synthesis Cuvee Barrique (Wytrawne)",
+        "price": "1900",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Dionis Vranec Barrique (Wytrawne)",
+        "price": "2200",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Hermes Vranec (Wytrawne)",
+        "price": "1300",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Hermes Cabernet Sauvignon (Wytrawne)",
+        "price": "1300",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Amfora Vranec (Półwytrawne)",
+        "price": "900",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Chardonnay Barrique Fermentowane (Wytrawne)",
+        "price": "2400",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Muscat Temjanika (Półwytrawne)",
+        "price": "1350",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Elegija Chardonnay (Wytrawne)",
+        "price": "1300",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Elegija Traminer (Wytrawne)",
+        "price": "1300",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Elegija Zupljanka (Wytrawne)",
+        "price": "1300",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Amphora Cuvee (Półwytrawne)",
+        "price": "900",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Temjanika (Wytrawne)",
+        "price": "1400",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Chardonnay (Wytrawne)",
+        "price": "1400",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Sauvignon Blanc (Wytrawne)",
+        "price": "1400",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Amfora Rose (Wytrawne)",
+        "price": "900",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Elegija Syrah (Wytrawne)",
+        "price": "1200",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Muscat Rolinger (Wytrawne)",
+        "price": "1250",
+        "ingredients": "Wino"
+    },
+    {
+        "name": "Muscat Rolinger Czerwony (Półwytrawne)",
+        "price": "1250",
+        "ingredients": "Wino"
+    },
+],
+
+
+        // КАФЕ И ЧАЈ/COFFEE AND TEA
+        [
+  {
+    "name": "Herbata",
+    "price": "80",
+    "ingredients": "Napojów Gorących"
+  },
+  {
+    "name": "Espresso",
+    "price": "90",
+    "ingredients": "Napojów Gorących"
+  },
+  {
+    "name": "Macchiato",
+    "price": "100",
+    "ingredients": "Napojów Gorących"
+  },
+  {
+    "name": "Duże Macchiato",
+    "price": "110",
+    "ingredients": "Napojów Gorących"
+  },
+  {
+    "name": "Latte macchiato",
+    "price": "160",
+    "ingredients": "Napojów Gorących"
+  },
+  {
+    "name": "Nescafe",
+    "price": "140",
+    "ingredients": "Napojów Gorących"
+  },
+  {
+    "name": "Cappuccino",
+    "price": "120",
+    "ingredients": "Napojów Gorących"
+  },
+  {
+    "name": "Zimne Macchiato",
+    "price": "110",
+    "ingredients": "Napojów Gorących"
+  },
+  {
+    "name": "Irish Coffee",
+    "price": "260",
+    "ingredients": "Napojów Gorących"
+  },
+  {
+    "name": "Americano",
+    "price": "120",
+    "ingredients": "Napojów Gorących"
+  },
+  {
+    "name": "Kawa Macedońska",
+    "price": "90",
+    "ingredients": "Napojów Gorących"
+  },
+],
+
+        // Alcoholic beverages
+        [
+  {
+    "name": "Żółta Rakija",
+    "price": "120",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Biała Rakija",
+    "price": "120",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Mastika",
+    "price": "120",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Rakija Azbuka",
+    "price": "130",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Gordion Amber Rakija",
+    "price": "160",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Badel Williams Rakija",
+    "price": "170",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Gin Badel",
+    "price": "120",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Smidgin",
+    "price": "250",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Gin Beefeater",
+    "price": "170",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Gin Gordons",
+    "price": "190",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Gin Pink Gordons",
+    "price": "180",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Gin Bombay",
+    "price": "240",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Wódka Badel",
+    "price": "120",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Baileys",
+    "price": "180",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Feneys",
+    "price": "150",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Likiery Gruszkowe Krushkovac",
+    "price": "140",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Tequila",
+    "price": "130",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Amaretto",
+    "price": "150",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Korlat Slivovitz",
+    "price": "220",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Korlat Maraska",
+    "price": "220",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Shot",
+    "price": "100",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Smirnoff",
+    "price": "160",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Jack Daniels",
+    "price": "280",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Jameson",
+    "price": "180",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Jameson Black",
+    "price": "290",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Johnny Red",
+    "price": "160",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Johnny Black",
+    "price": "260",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "4 Roses",
+    "price": "200",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "William Peel",
+    "price": "150",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Rum Morgan",
+    "price": "160",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Jagermeister",
+    "price": "210",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Pelinkovac Badel",
+    "price": "120",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Pelinkovac Antik",
+    "price": "170",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Koniak Badel",
+    "price": "120",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Koniak Badel Black",
+    "price": "160",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Rum Badel",
+    "price": "120",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Stock 84",
+    "price": "150",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Tequila Olmeca",
+    "price": "170",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Aperol",
+    "price": "160",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Korlat Lozova",
+    "price": "220",
+    "ingredients": "Napojów Alkoholowych"
+  },
+  {
+    "name": "Campari",
+    "price": "160",
+    "ingredients": "Napojów Alkoholowych"
+  },
+],
+
+        // САЛАТИ
+        [
+  {
+    "name": "Sałatka Shopska",
+    "price": "220",
+    "ingredients": "Pomidor, ogórek, cebula, ser"
+  },
+  {
+    "name": "Sałatka Egejska",
+    "price": "220",
+    "ingredients": "Pomidor, ogórek, pierścienie cebuli, ser w kostkach, oregano"
+  },
+  {
+    "name": "Sałatka Rakija",
+    "price": "170",
+    "ingredients": "Kapusta, ogórek, oliwki"
+  },
+  {
+    "name": "Sałatka Makedońska",
+    "price": "200",
+    "ingredients": "Pomidor, cebula, pieczone papryki"
+  },
+  {
+    "name": "Sałatka Mieszana",
+    "price": "190",
+    "ingredients": "Burak, marchew, ogórek, pomidor, kapusta"
+  },
+  {
+    "name": "Sałatka Cezar",
+    "price": "250",
+    "ingredients": "Sałata, kurczak, grzanki, pomidor, parmezan, sos"
+  },
+  {
+    "name": "Sałatka Tuńczykowa",
+    "price": "260",
+    "ingredients": "Sałata, tuńczyk, kukurydza, cebula, oliwki"
+  },
+  {
+    "name": "Sałatka Owoców Morza",
+    "price": "360",
+    "ingredients": "Sałata, owoce morza, awokado, ogórek, pomidor, musztardowy sos cytrynowy"
+  },
+],
+        //daski
+        [
+        {
+    "name": "Deska Mieszana (4 Osoby)",
+    "price": "1350",
+    "ingredients": "5 kebabów, 100g kotleta, 100g steku z kurczaka, 100g boczku, kiełbasa, wrap z kurczaka, 150g paluszków z kurczaka, smażona zdenka, 150g sera grillowanego, frytki, sos"
+  },
+  {
+    "name": "Deska Winna",
+    "price": "1650",
+    "ingredients": "Gorgonzola, wędzony żółty ser, domowy ser krowi, ser owczy, żółty ser, ubity ser, boczek, mortadela, prosciutto"
+  },
+  {
+    "name": "Deska Meze Makedońska",
+    "price": "890",
+    "ingredients": "Ajvar, lutenica, dip czosnkowy, grillowana cukinia, 200g domowego sera, grillowany chleb"
+  },
+],
+
+        //prilozi dorucek
+        [
+        {
+    "name": "Tortilla z Awokado",
+    "price": "250",
+    "ingredients": "2 jajka, tortilla, pasta z awokado, pomidor, kwaśna śmietana"
+  },
+  {
+    "name": "Omlet Ohridski",
+    "price": "240",
+    "ingredients": "3 jajka, pomidory, pieczone papryki, ser"
+  },
+  {
+    "name": "Jajka Smażone z Boczekiem",
+    "price": "230",
+    "ingredients": "3 jajka, 100g boczku, chleb"
+  },
+  {
+    "name": "Poranna Quesadilla",
+    "price": "260",
+    "ingredients": "Tortilla, żółty ser, cheddar, 1 smażone jajko, boczek, pomidor"
+  },
+  {
+    "name": "Śniadanie Lihnidia",
+    "price": "360",
+    "ingredients": "Smażony chleb z jajkami, żółty ser, boczek, kiełbasa, domowy ser krowi, ajvar"
+  },
+  {
+    "name": "Omlet",
+    "price": "250",
+    "ingredients": "Twoja wybrana kombinacja"
+  },
+  {
+    "name": "Jajka Smażone z Szynką",
+    "price": "220",
+    "ingredients": "3 jajka, 100g szynki, chleb"
+  },
+  {
+    "name": "Choco Toast",
+    "price": "190",
+    "ingredients": "Masło orzechowe, Nutella, miód, owoce sezonowe"
+  },
+  {
+    "name": "Gulasz Rybny",
+    "price": "240",
+    "ingredients": "Dodatki i śniadania"
+  },
+  {
+    "name": "Gulasz Wołowy",
+    "price": "230",
+    "ingredients": "Dodatki i śniadania"
+  },
+],
+
+
+        //minced
+        [
+  {
+    "name": "Kotlet 250g",
+    "price": "280",
+    "ingredients": "Potrawy z mielonego mięsa"
+  },
+  {
+    "name": "Kotlet Sharska 350g",
+    "price": "320",
+    "ingredients": "Mielone mięso 250g, żółty ser 100g"
+  },
+  {
+    "name": "Kebapi z Kaymak",
+    "price": "360",
+    "ingredients": "Potrawy z mielonego mięsa"
+  },
+  {
+    "name": "Kofte w sosie pomidorowym",
+    "price": "340",
+    "ingredients": "Mielone mięso 250g, sos pelati, parmezan, bazylia"
+  },
+  {
+    "name": "Kotlet 1kg z sosem serowym",
+    "price": "950",
+    "ingredients": "Potrawy z mielonego mięsa"
+  },
+  {
+    "name": "Kotlet nadziewany",
+    "price": "380",
+    "ingredients": "Mielone mięso 300g, ser żółty, zdenka, pieczarki, szynka"
+  },
+  {
+    "name": "Kebaby",
+    "price": "320",
+    "ingredients": "Potrawy z mielonego mięsa"
+  },
+  {
+    "name": "Kotlet Lihnidia 500g",
+    "price": "390",
+    "ingredients": "Mielone mięso 300g, boczek 100g, kaymak, jajko"
+  },
+],
+        //veal
+        [
+  {
+    "name": "Stek wołowy z masłem i rozmarynem 250g",
+    "price": "1150",
+    "ingredients": "Potrawy z wołowiny"
+  },
+  {
+    "name": "Stek wołowy z jajkiem 250g",
+    "price": "1220",
+    "ingredients": "Potrawy z wołowiny"
+  },
+  {
+    "name": "Tava wołowa 250g",
+    "price": "850",
+    "ingredients": "Mięso wołowe 200g, cebula, pomidor, papryka"
+  },
+  {
+    "name": "Stek wołowy w sosie paprykowym 250g",
+    "price": "1250",
+    "ingredients": "Potrawy z wołowiny"
+  },
+],
+        //pork
+        [
+  {
+    "name": "Filet wieprzowy z serem i grzybami 200g",
+    "price": "390",
+    "ingredients": "Potrawy wieprzowe"
+  },
+  {
+    "name": "Kare w sosie grillowanym i sezamie 200g",
+    "price": "350",
+    "ingredients": "Potrawy wieprzowe"
+  },
+  {
+    "name": "Hanger/Vešalica 200g",
+    "price": "370",
+    "ingredients": "Potrawy wieprzowe"
+  },
+  {
+    "name": "Domowa kiełbasa 250g",
+    "price": "330",
+    "ingredients": "Potrawy wieprzowe"
+  },
+  {
+    "name": "Żeberka 300g",
+    "price": "380",
+    "ingredients": "Potrawy wieprzowe"
+  },
+  {
+    "name": "Golonka wieprzowa 1kg",
+    "price": "990",
+    "ingredients": "Potrawy wieprzowe"
+  },
+  {
+    "name": "Boczek 200g",
+    "price": "340",
+    "ingredients": "Potrawy wieprzowe"
+  },
+],
+        //Chicken dishes
+        [
+  {
+    "name": "Kurczak Lihnidia",
+    "price": "360",
+    "ingredients": "Filet z kurczaka 200g, boczek, oliwa z oliwek, parmezan, masło, suszone pomidory, oregano, tymianek, dekoracja"
+  },
+  {
+    "name": "Grillowana pierś z kurczaka 200g",
+    "price": "260",
+    "ingredients": "Dania z kurczaka"
+  },
+  {
+    "name": "Smażona pierś z kurczaka 250g",
+    "price": "280",
+    "ingredients": "Dania z kurczaka"
+  },
+  {
+    "name": "Pierś z kurczaka w stylu azjatyckim 250g",
+    "price": "290",
+    "ingredients": "Cukinia, grzyby, cebula, białe wino, curry"
+  },
+  {
+    "name": "Grillowane pałki z kurczaka w sosie 500g",
+    "price": "280",
+    "ingredients": "Dania z kurczaka"
+  },
+  {
+    "name": "Paluszki z kurczaka 300g",
+    "price": "320",
+    "ingredients": "Dania z kurczaka"
+  },
+],
+
+        //dishes pan
+        [
+  {
+    "name": "Mięso wiejskie",
+    "price": "440",
+    "ingredients": "Wieprzowina, kurczak, ser, grzyby, cebula, czosnek, papryka, pomidor"
+  },
+  {
+    "name": "Patelnia Lihnidia",
+    "price": "480",
+    "ingredients": "Wieprzowina, kurczak, boczek, pomidor, papryka, cebula, czosnek, pieczarki, ser wędzony"
+  },
+  {
+    "name": "Fasola w patelni/Tavche gravche",
+    "price": "250",
+    "ingredients": "Dania w patelni"
+  },
+  {
+    "name": "Fasola w patelni/Tavche gravche z stekiem/ kiełbasą",
+    "price": "320",
+    "ingredients": "Dania w patelni"
+  },
+  {
+    "name": "Grzyby z boczkiem i serem",
+    "price": "370",
+    "ingredients": "Dania w patelni"
+  },
+],
+        //burgeri
+        [
+  {
+    "name": "Hamburger",
+    "price": "240",
+    "ingredients": "150g mielonego mięsa, sałata, kapusta, ogórek, cebula, frytki"
+  },
+  {
+    "name": "Burger z kurczaka",
+    "price": "260",
+    "ingredients": "150g kurczaka, sałata, kapusta, ogórek, frytki"
+  },
+  {
+    "name": "Burger wędzony",
+    "price": "320",
+    "ingredients": "150g mielonego mięsa, ser wędzony, boczek, sałata, kapusta, ogórek, cebula, sos burgerowy"
+  },
+  {
+    "name": "Niebieski burger z kurczaka",
+    "price": "310",
+    "ingredients": "150g kurczaka, sos gorgonzola, sałata, kapusta, ogórek, frytki, sos"
+  },
+],
+        //Рижото и паста
+        [
+  {
+    "name": "Risotto z borowikami",
+    "price": "420",
+    "ingredients": "Ryż, borowiki, cebula, białe wino, mleko, masło, parmezan"
+  },
+  {
+    "name": "Spaghetti Carbonara",
+    "price": "380",
+    "ingredients": "Spaghetti, boczek, parmezan, żółtko jajka, pieprz"
+  },
+  {
+    "name": "Risotto z Gorgonzolą",
+    "price": "390",
+    "ingredients": "Ryż, masło, oliwa z oliwek, białe wino, gorgonzola"
+  },
+  {
+    "name": "Risotto z owocami morza",
+    "price": "490",
+    "ingredients": "Ryż, muszle, krewetki, cebula, oliwa z oliwek, białe wino, koperek"
+  },
+  {
+    "name": "Tortellini z Gorgonzolą i Pistacjami",
+    "price": "370",
+    "ingredients": "Ryż, pistacje, oliwa z oliwek, białe wino, gorgonzola"
+  },
+  {
+    "name": "Spaghetti z owocami morza",
+    "price": "460",
+    "ingredients": "Muszle, krewetki, cebula, czosnek, oliwa z oliwek, pietruszka, koperek"
+  },
+],
+        //appetizers
+        [
+  {
+    "name": "Bruschetta z pomidorem, mozzarellą i pesto",
+    "price": "220",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Grillowany ser 200g",
+    "price": "240",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Grzyby w maśle 250g",
+    "price": "240",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Chipsy z boczkiem 200g",
+    "price": "290",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Papryka faszerowana kaymakiem",
+    "price": "170",
+    "ingredients": "Papryka, kaymak, jajko, ser"
+  },
+  {
+    "name": "Chleb czosnkowy",
+    "price": "170",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Chleb z kaymakiem",
+    "price": "140",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Grillowana cukinia 200g",
+    "price": "180",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Dip czosnkowy/Makalo",
+    "price": "140",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Ajvar",
+    "price": "140",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Ser Biene z boczkiem 150g",
+    "price": "280",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Domowy ser krowi 200g",
+    "price": "250",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Faszerowane grzyby",
+    "price": "260",
+    "ingredients": "Grzyby, ser, karkówka wieprzowa"
+  },
+  {
+    "name": "Rozpuszczony ser 300g",
+    "price": "270",
+    "ingredients": "Ser feta, sos pomidorowy, śmietana, boczek, ser"
+  },
+  {
+    "name": "Smażony ser 100g",
+    "price": "170",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Smażone zdenki 150g",
+    "price": "180",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Smażona cebula 200g",
+    "price": "240",
+    "ingredients": "Przystawki"
+  },
+  {
+    "name": "Lutenica",
+    "price": "140",
+    "ingredients": "Przystawki"
+  },
+],
+        //fish
+        [
+  {
+    "name": "Pstrąg 1kg",
+    "price": "1200",
+    "ingredients": "Ryby"
+  },
+  {
+    "name": "Pstrąg w stylu Ochrydzkim 1kg",
+    "price": "1600",
+    "ingredients": "Ryby"
+  },
+  {
+    "name": "Łosoś w sosie białego wina 1kg",
+    "price": "1350",
+    "ingredients": "Ryby"
+  },
+  {
+    "name": "Karpie kotlety 1kg",
+    "price": "1400",
+    "ingredients": "Ryby"
+  },
+  {
+    "name": "Pieczony karp z warzywami 1kg (na zamówienie)",
+    "price": "1550",
+    "ingredients": "Ryby"
+  },
+  {
+    "name": "Belvica 1kg",
+    "price": "2400",
+    "ingredients": "Ryby"
+  },
+],
+
+        //dessert
+        [
+  {
+    "name": "Naleśnik z Nutellą, Plazmą i bananem",
+    "price": "180",
+    "ingredients": "Desery"
+  },
+  {
+    "name": "Mus czekoladowy",
+    "price": "160",
+    "ingredients": "Desery"
+  },
+  {
+    "name": "Sałatka owocowa z owocami sezonowymi",
+    "price": "220",
+    "ingredients": "Desery"
+  },
+  {
+    "name": "Baklava",
+    "price": "170",
+    "ingredients": "Desery"
+  },
+],
+        //sides
+        [
+
+  {
+    "name": "Papryka (sztuka)",
+    "price": "50",
+    "ingredients": "Dodatki"
+  },
+  {
+    "name": "Ostra papryka (sztuka)",
+    "price": "50",
+    "ingredients": "Dodatki"
+  },
+  {
+    "name": "Chleb z serem",
+    "price": "150",
+    "ingredients": "Dodatki"
+  },
+  {
+    "name": "Oliwki 100g",
+    "price": "80",
+    "ingredients": "Dodatki"
+  },
+  {
+    "name": "Chleb",
+    "price": "50",
+    "ingredients": "Dodatki"
+  },
+  {
+    "name": "Jajko",
+    "price": "30",
+    "ingredients": "Dodatki"
+  },
+  {
+    "name": "Frytki 100g",
+    "price": "70",
+    "ingredients": "Dodatki"
+  },
+  {
+    "name": "Sos",
+    "price": "40",
+    "ingredients": "Dodatki"
+  },
+],
+
+        //КОКТЕЛИ
+        [
+  {
+    "name": "Margarita",
+    "price": "300",
+    "ingredients": "Tequila, triple sec, sok z cytryny"
+  },
+  {
+    "name": "Tequila sunrise",
+    "price": "270",
+    "ingredients": "Tequila, grenadyna, sok pomarańczowy"
+  },
+  {
+    "name": "Cuba libre",
+    "price": "290",
+    "ingredients": "Rum, cola, świeża limonka"
+  },
+  {
+    "name": "Mojito",
+    "price": "320",
+    "ingredients": "Biały rum, brązowy cukier, mięta, lód, soda"
+  },
+  {
+    "name": "Sex on the beach",
+    "price": "300",
+    "ingredients": "Wódka, Archers, sok żurawinowy, sok pomarańczowy"
+  },
+  {
+    "name": "Mai Tai",
+    "price": "350",
+    "ingredients": "Biały rum, ciemny rum, sok z limonki, sok pomarańczowy"
+  },
+  {
+    "name": "Cosmopolitan",
+    "price": "320",
+    "ingredients": "Wódka, triple sec, sok z limonki, sok żurawinowy"
+  },
+  {
+    "name": "Hurricane",
+    "price": "390",
+    "ingredients": "Świetny i ciemny rum, sok z marakui, sok z limonki, grenadyna, syrop prosty"
+  },
+  {
+    "name": "Long Island Iced Tea",
+    "price": "380",
+    "ingredients": "Biały rum, wódka, gin, tequila, sok z cytryny, cola, syrop prosty"
+  },
+  {
+    "name": "AMF",
+    "price": "370",
+    "ingredients": "Wódka, biały rum, tequila, gin, blue curaçao, cytryna, syrop prosty"
+  },
+  {
+    "name": "Pinacolada",
+    "price": "350",
+    "ingredients": "Biały rum, krem kokosowy, sok ananasowy"
+  },
+  {
+    "name": "Gin Fizz",
+    "price": "260",
+    "ingredients": "Gin, sok z cytryny, syrop prosty, soda"
+  },
+  {
+    "name": "Blue Lagoon",
+    "price": "320",
+    "ingredients": "Wódka, blue curaçao, 7Up"
+  },
+  {
+    "name": "Bahama Mama",
+    "price": "350",
+    "ingredients": "Biały rum, Malibu, cherry brandy, sok pomarańczowy, sok cytrynowy, syrop prosty"
+  },
+  {
+    "name": "Aperol Spritz",
+    "price": "300",
+    "ingredients": "Aperol, prosecco, soda"
+  },
+  {
+    "name": "Blue Hawaii",
+    "price": "340",
+    "ingredients": "Biały rum, wódka, blue curaçao, sok ananasowy, sok z cytryny, syrop prosty"
+  },
+  {
+    "name": "Bloody Mary",
+    "price": "390",
+    "ingredients": "Wódka, sok pomidorowy, sok z cytryny, Tabasco, sos Worcestershire, sól, czarny pieprz"
+  },
+],
+
+                // Add other categories here...
+            ];
+
+            const productListElement = document.getElementById('product-list');
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryId = parseInt(urlParams.get('id'), 10);
+
+            if (isNaN(categoryId) || !products[categoryId]) {
+                productListElement.innerHTML = '<p>Category not found.</p>';
+                return;
+            }
+
+            products[categoryId].forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'card mb-4 p-4 shadow';
+                productCard.innerHTML = `
+                    <div class="d-flex flex-row align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                            <div class="fw-bold">${product.name}</div>
+                            <div class="fst-italic ingredients">${product.ingredients}</div>
+                        </div>
+                        <div class="fw-bold fst-italic text-nowrap">${product.price} ден.</div>
+                    </div>
+                `;
+                productListElement.appendChild(productCard);
+            });
+        });
+    </script>
+</body>
+</html>
