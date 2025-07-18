@@ -30,75 +30,71 @@ document.addEventListener("DOMContentLoaded", function() {
         name: "Salate",
         id: 5,
       },
-      {
-        img: "images/foodboard.jpg",
-        name: "Essenstafeln",
-        id: 6,
-      },
+      
       {
         img: "images/breakfast.jpg",
         name: "Frühstück und Brunch",
-        id: 7,
+        id: 6,
       },
       {
         img: "images/mincemeat.jpg",
         name: "Gerichte mit Hackfleisch",
-        id: 8,
+        id: 7,
       },
       {
         img: "images/vealmeat.jpg",
         name: "Gerichte mit Kalbfleisch",
-        id: 9,
+        id: 8,
       },
       {
         img: "images/porkmeat.jpg",
         name: "Gerichte mit Schweinefleisch",
-        id: 10,
+        id: 9,
       },
       {
         img: "images/chickenmeat.jpg",
         name: "Gerichte mit Hühnerfleisch",
-        id: 11,
+        id: 10,
       },
       {
         img: "images/tavafood.jpg",
         name: "Tava-Gerichte",
-        id: 12,
+        id: 11,
       },
       {
         img: "images/burger.jpg",
         name: "Burgers",
-        id: 13,
+        id: 12,
       },
       {
         img: "images/pasta.jpg",
         name: "Risotto und Pasta",
-        id: 14,
+        id: 13,
       },
       {
         img: "images/speciality.jpg",
         name: "Spezialitäten",
-        id: 15,
+        id: 14,
       },
       {
         img: "images/fish.jpg",
         name: "Fisch",
-        id: 16,
+        id: 15,
       },
       {
         img: "images/dessert.jpg",
         name: "Desserts",
-        id: 17,
+        id: 16,
       },
       {
         img: "images/peppers.jpg",
         name: "Beilagen",
-        id: 18,
+        id: 17,
       },
       {
         img: "images/cocktails.jpg",
         name: "Cocktails",
-        id: 19,
+        id: 18,
       },
   ]
     const appElement = document.getElementById('app');
