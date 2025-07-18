@@ -31,74 +31,69 @@ document.addEventListener("DOMContentLoaded", function() {
         id: 5,
       },
       {
-        img: "images/foodboard.jpg",
-        name: "Plankgerechten",
-        id: 6,
-      },
-      {
         img: "images/breakfast.jpg",
         name: "Ontbijt en Brunch",
-        id: 7,
+        id: 6,
       },
       {
         img: "images/mincemeat.jpg",
         name: "Gerechten met Gehakt",
-        id: 8,
+        id: 7,
       },
       {
         img: "images/vealmeat.jpg",
         name: "Kalfsvlees Gerechten",
-        id: 9,
+        id: 8,
       },
       {
         img: "images/porkmeat.jpg",
         name: "Varkensvlees Gerechten",
-        id: 10,
+        id: 9,
       },
       {
         img: "images/chickenmeat.jpg",
         name: "Kipgerechten",
-        id: 11,
+        id: 10,
       },
       {
         img: "images/tavafood.jpg",
         name: "Tava Gerechten",
-        id: 12,
+        id: 11,
       },
       {
         img: "images/burger.jpg",
         name: "Burgers",
-        id: 13,
+        id: 12,
       },
       {
         img: "images/pasta.jpg",
         name: "Risotto en Pasta",
-        id: 14,
+        id: 13,
       },
       {
         img: "images/speciality.jpg",
         name: "Specialiteiten",
-        id: 15,
+        id: 14,
       },
       {
         img: "images/fish.jpg",
         name: "Vis",
-        id: 16,
+        id: 15,
       },
       {
         img: "images/dessert.jpg",
         name: "Desserts",
-        id: 17,
+        id: 16,
       },
       {
         img: "images/peppers.jpg",
         name: "Toevoegingen",
-        id: 18,
+        id: 17,
       },
       {
         img: "images/cocktails.jpg",
         name: "Cocktails",
-        id: 19,
+        id: 18,
       },
   ]
     const appElement = document.getElementById('app');
