@@ -19,13 +19,13 @@
         </div>
         <!-- Back Button -->
         <a href="indexuk.html" class="mb-4 back btn btn-warning shadow border-radius-14px fw-bold px-3">
-            &lt; Назад кон менито
+            &lt; Back to menu
         </a>
         <!-- Product List -->
         <div id="product-list"></div>
         <!-- Back Button -->
         <a href="indexuk.html" class="back mb-2 btn btn-warning shadow border-radius-14px fw-bold px-3">
-            &lt; Назад кон менито
+            &lt; Back to menu
         </a>
     </div>
 
@@ -34,148 +34,114 @@
             const products = [
                 // SOFT DRINKS
                 [
-                {
-                    "name": "Water (Large) 0.75",
-                    "price": "120",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Water (Small) 0.25",
-                    "price": "80",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Pepsi 0.25",
-                    "price": "120",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Pepsi Max 0.25",
-                    "price": "120",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Gazoza 0.25",
-                    "price": "100",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Ice Tea 0.25",
-                    "price": "120",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "7Up 0.25",
-                    "price": "120",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Juice 0.25",
-                    "price": "140",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Fresh Lemon Juice 0.25",
-                    "price": "90",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Fresh Orange Juice 0.25",
-                    "price": "180",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Mirinda 0.25",
-                    "price": "120",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Homemade Lemonade 0.25",
-                    "price": "160",
-                    "ingredients": "Non-Alcoholic Beverages",
-                },
-                {
-                    "name": "Fruit Soda 0.33",
-                    "price": "140",
-                    "ingredients": "Non-Alcoholic Beverages"
-                }
-                ],
+          {
+            name: "Water (Large) 0.75",
+            price: "140",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Water (Small) 0.25",
+            price: "90",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Pepsi 0.25",
+            price: "130",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Pepsi Max 0.25",
+            price: "130",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Gazoza",
+            price: "120",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Ice Tea 0.25",
+            price: "140",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "7Up 0.25",
+            price: "130",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Non-carbonated juices",
+            price: "150",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Fresh Lemon Juice",
+            price: "170",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Fresh Orange Juice",
+            price: "220",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Mirinda",
+            price: "130",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Homemade flavored lemonade",
+            price: "180",
+            ingredients: "Soft Drinks",
+          },
+          {
+            name: "Fruit Soda 0.33",
+            price: "150",
+            ingredients: "Soft Drinks"
+          }
+        ],
         // BEER
-                [
-                {
-                    "name": "King Marko 0.5",
-                    "price": "140",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Golden Dab 0.33",
-                    "price": "130",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Golden Dab Draft 0.33",
-                    "price": "140",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Golden Dab Draft 0.5",
-                    "price": "170",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Fox Pale Ale Draft 0.5",
-                    "price": "240",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Veda White IPA Draft 0.5",
-                    "price": "260",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Corona",
-                    "price": "250",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Kalesh-Black IPA 0.33",
-                    "price": "250",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Tuborg 0.33",
-                    "price": "170",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Tuborg Draft 0.4",
-                    "price": "220",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Carlsberg 0.33",
-                    "price": "190",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Holsten 0.5",
-                    "price": "260",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Kozel 0.5",
-                    "price": "220",
-                    "ingredients": "Beer",
-                },
-                {
-                    "name": "Franziskaner 0.5",
-                    "price": "280",
-                    "ingredients": "Beer",
-                }
-                ],
+        [
+          {
+            name: "Krali Marko 0.5",
+            price: "170",
+            ingredients: "Beer",
+          },
+          {
+            name: "Golden Dab 0.33",
+            price: "150",
+            ingredients: "Beer",
+          },
+          {
+            name: "Golden Dab Draft 0.33",
+            price: "150",
+            ingredients: "Beer",
+          },
+          {
+            name: "Golden Dab Draft 0.5",
+            price: "180",
+            ingredients: "Beer",
+          },
+          {
+            name: "Corona",
+            price: "250",
+            ingredients: "Beer",
+          },
+          {
+            name: "Tuborg 0.33",
+            price: "190",
+            ingredients: "Beer",
 
-        // WINES
-                [
+          },
+          {
+            name: "Carlsberg 0.33",
+            price: "210",
+            ingredients: "Beer",
+          },
+          
+        ],
+        // WINERY
+        [
           {
             name: "Dionis vranec barrique(dry) Dalvina Winery" ,
             price: "2200",
@@ -252,7 +218,7 @@
             ingredients: "Red wines",
           },
           {
-            name: "T’ga za jug (semi-dry) Tikvesh Winery",
+            name: "T'ga za jug (semi-dry) Tikvesh Winery",
             price: "890",
             ingredients: "Red wines",
           },
@@ -532,7 +498,7 @@
             ingredients: "Rose wines",
           },
         ],
-        // КАФЕ И ЧАЈ/COFFEE AND TEA
+        // COFFEE AND TEA
         [
           {
             name: "Tea",
@@ -541,38 +507,38 @@
           },
           {
             name: "Espresso",
-            price: "90",
-            ingredients: "Hot Drinks",
-          },
-          {
-            name: "Macchiato",
             price: "100",
             ingredients: "Hot Drinks",
           },
           {
-            name: "Large Macchiato",
+            name: "Macchiato",
             price: "110",
             ingredients: "Hot Drinks",
           },
           {
+            name: "Large Macchiato",
+            price: "120",
+            ingredients: "Hot Drinks",
+          },
+          {
             name: "Latte macchiato",
-            price: "160",
+            price: "180",
             ingredients: "Hot Drinks",
           },
           {
             name: "Nescafe",
-            price: "140",
+            price: "150",
             ingredients: "Hot Drinks",
           },
           {
             name: "Cappuccino",
-            price: "120",
+            price: "150",
             ingredients: "Hot Drinks",
           
           },
           {
             name: "Cold Macchiato",
-            price: "110",
+            price: "130",
             ingredients: "Hot Drinks",
 
           },
@@ -583,7 +549,7 @@
           },
           {
             name: "Americano",
-            price: "120",
+            price: "150",
             ingredients: "Hot Drinks",
           },
           {
@@ -592,235 +558,196 @@
             ingredients: "Hot Drinks",
           },
         ],
-        // Alcoholic beverages
+        // ALCOHOLIC DRINKS
         [
           {
             name: "Yellow Rakija 0.04",
             price: "120",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "White Rakija 0.04",
             price: "120",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Mastika 0.04",
             price: "120",
-            ingredients: "Alcoholic beverages",
-          },
-          {
-            name: "Rakija azbuka 0.04",
-            price: "130",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Gordion Amber Rakija 0.04",
             price: "160",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Badel Williams Rakija 0.04",
             price: "170",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Gin Badel 0.04",
             price: "120",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Smidgin 0.04",
             price: "250",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Gin Beefeater 0.04",
-            price: "170",
-            ingredients: "Alcoholic beverages",
+            price: "190",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Gin Gordons 0.04",
-            price: "190",
-            ingredients: "Alcoholic beverages",
+            price: "210",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Gin Pink Gordons 0.04",
-            price: "180",
-            ingredients: "Alcoholic beverages",
-          },
-          {
-            name: "Gin Bombay 0.04",
-            price: "240",
-            ingredients: "Alcoholic beverages",
+            price: "210",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Vodka Badel 0.04",
-            price: "120",
-            ingredients: "Alcoholic beverages",
+            price: "140",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Baileys 0.04",
-            price: "180",
-            ingredients: "Alcoholic beverages",
+            price: "190",
+            ingredients: "Alcoholic Drinks",
           },
-          {
-            name: "Feneys 0.04",
-            price: "150",
-            ingredients: "Alcoholic beverages",
-          },
-          {
-            name: "Krushkovac Pear Liqueur 0.04",
-            price: "140",
-            ingredients: "Alcoholic beverages",
-          },
+        
+          
           {
             name: "Tequila 0.03",
             price: "130",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Amaretto 0.04",
             price: "150",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Korlat Slivovitz 0.04",
-            price: "220",
-            ingredients: "Alcoholic beverages",
+            price: "240",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Korlat Maraska 0.05",
-            price: "220",
-            ingredients: "Alcoholic beverages",
-          },
-          {
-            name: "Shot 0.04",
-            price: "100",
-            ingredients: "Alcoholic beverages",
+            price: "240",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Smirnoff 0.04",
-            price: "160",
-            ingredients: "Alcoholic beverages",
+            price: "190",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Jack Daniels 0.04",
-            price: "280",
-            ingredients: "Alcoholic beverages",
+            price: "350",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Jameson 0.04",
-            price: "180",
-            ingredients: "Alcoholic beverages",
+            price: "250",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Jameson Black 0.04",
-            price: "290",
-            ingredients: "Alcoholic beverages",
+            price: "360",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Johnny Red 0.04",
-            price: "160",
-            ingredients: "Alcoholic beverages",
+            price: "200",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Johnny Black 0.04",
-            price: "260",
-            ingredients: "Alcoholic beverages",
+            price: "300",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "4 Roses 0.04",
-            price: "200",
-            ingredients: "Alcoholic beverages",
+            price: "260",
+            ingredients: "Alcoholic Drinks",
           },
-          {
-            name: "William Peel 0.04",
-            price: "150",
-            ingredients: "Alcoholic beverages",
-          },
+         
           {
             name: "Rum Morgan 0.04",
-            price: "160",
-            ingredients: "Alcoholic beverages",
+            price: "190",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Jagermeister 0.04",
             price: "210",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Pelinkovac Badel 0.04",
-            price: "120",
-            ingredients: "Alcoholic beverages",
+            price: "130",
+            ingredients: "Alcoholic Drinks",
           },
-          {
-            name: "Pelinkovac Antik 0.04",
-            price: "170",
-            ingredients: "Alcoholic beverages",
-          },
+
           {
             name: "Cognac Badel 0.04",
-            price: "120",
-            ingredients: "Alcoholic beverages",
+            price: "130",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Cognac Badel Black 0.04",
             price: "160",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Rum Badel 0.04",
             price: "120",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Stock 84 0.04",
             price: "150",
-            ingredients: "Alcoholic beverages",
+            ingredients: "Alcoholic Drinks",
           },
           {
             name: "Tequila Olmeca 0.04",
-            price: "170",
-            ingredients: "Alcoholic beverages",
+            price: "200",
+            ingredients: "Alcoholic Drinks",
           },
-          {
-            name: "Aperol 0.04",
-            price: "160",
-            ingredients: "Alcoholic beverages",
-          },
+
           {
             name: "Korlat Lozova 0.04",
-            price: "220",
-            ingredients: "Alcoholic beverages",
+            price: "240",
+            ingredients: "Alcoholic Drinks",
           },
-          {
-            name: "Campari 0.04",
-            price: "160",
-            ingredients: "Alcoholic beverages",
-          },
+  
         ],
-        // САЛАТИ
+        // SALADS
         [
           {
             name: "Shopska Salad",
-            price: "220",
-            ingredients: "Tomato, cucumber, onion, cheese",
+            price: "230",
+            ingredients: "Tomatoes, cucumber, onion, cheese",
           },
           {
             name: "Aegean Salad",
-            price: "220",
-            ingredients: "Tomato, cucumber, onion rings, cubed cheese, oregano",
+            price: "240",
+            ingredients: "Tomatoes, cucumber, onion rings, cubed cheese, oregano",
           },
           {
             name: "Rakija Salad",
-            price: "170",
+            price: "180",
             ingredients: "Cabbage, cucumber, olives",
           },
           {
             name: "Macedonian Salad",
-            price: "200",
-            ingredients: "Tomato, onion, roasted peppers",
+            price: "260",
+            ingredients: "Tomatoes, onion, roasted peppers",
           },
           {
             name: "Mixed Salad",
@@ -831,65 +758,54 @@
       
           {
             name: "Caesar Salad",
-            price: "250",
+            price: "330",
             ingredients: 
-            "Lettuce, chicken, croutons, tomato, parmesan, dressing",
+            "Lettuce, chicken, croutons, tomatoes, parmesan, dressing",
           },
           {
             name: "Tuna Salad",
-            price: "260",
+            price: "340",
             ingredients: "Lettuce, tuna, corn, onion, olives",
           },
           
           {
             name: "Seafood Salad",
-            price: "360",
+            price: "420",
             ingredients:
-              "Lettuce, seafood, avocado, cucumber, tomato, mustard and lemon dressing",
+              "Lettuce, seafood, avocado, cucumber, tomatoes, mustard and lemon dressing",
+          },
+          {
+            name: "Galichica Salad",
+            price: "320",
+            ingredients:
+              "Goat cheese, arugula, tomato, dried fruit, nuts",
           },
         
         ],
 
-        // ДАСКИ
-        [
-          {
-            name: "Mixed Board (4 Persons)",
-            price: "1350",
-            ingredients: "5 kebabs, 100g patty, 100g chicken steak, 100g bacon, sausage, chicken wrap, 150g chicken fingers, fried zdenka, 150g grilled cheese, fries, sauce",
-          },
-          {
-            name: "Wine Board",
-            price: "1650",
-            ingredients: "Gorgonzola, smoked yellow cheese, homemade cow cheese, sheep cheese, yellow cheese, beaten cheese, bacon, mortadella, prosciutto",
-          },
-          {
-            name: "Macedonian Meze Board",
-            price: "890",
-            ingredients: "Ajvar, lutenica, garlic dip, grilled zucchini, 200g homemade cheese, grilled bread",
-          },
-          
-        ],
+        // BOARDS
 
-        // ПРИЛОЗИ И ДОРУЧЕК
+
+        // SIDE DISHES AND BREAKFAST
         [
           {
             name: "Avocado Tortilla",
-            price: "250",
+            price: "260",
             ingredients: "2 eggs, tortilla, avocado spread, tomato, sour cream",
           },
           {
             name: "Ohrid Omelette",
-            price: "240",
+            price: "260",
             ingredients: "3 eggs, tomatoes, roasted peppers, cheese",
           },
           {
             name: "Fried Eggs with Bacon",
-            price: "230",
+            price: "240",
             ingredients: "3 eggs, 100g bacon, bread",
           },
           {
             name: "Morning Quesadilla",
-            price: "260",
+            price: "280",
             ingredients: "Tortilla, yellow cheese, cheddar, 1 fried egg, bacon, tomato",
           },
           {
@@ -904,347 +820,362 @@
           },
           {
             name: "Fried Eggs with Ham",
-            price: "220",
+            price: "230",
             ingredients: "3 eggs, 100g ham, bread",
           },
           {
-            name: "Choco Toast",
-            price: "190",
-            ingredients: "Peanut butter, Nutella, honey, seasonal fruit",
+            name: "Village Breakfast",
+            price: "270",
+            ingredients: "Roasted pepper, egg, yellow cheese, kaymak",
           },
           {
-            name: "Fish stew",
-            price: "240",
+            name: "Fish Stew",
+            price: "270",
             ingredients: "Side dishes and breakfast",
           },
           {
-            name: "Veal stew",
-            price: "230",
+            name: "Veal Stew",
+            price: "280",
             ingredients: "Side dishes and breakfast",
           },
           
         ],
 
-        // Minced meat dishes
+        // MINCED MEAT DISHES
         [
+         
           {
-            name: "Patty 250g.",
-            price: "280",
-            ingredients: "Minced meat dishes",
+            name: "Sharska Patty 300g",
+            price: "340",
+            ingredients: "Minced meat 250g, yellow cheese 50g",
           },
           {
-            name: "Sharska Patty 350g.",
-            price: "320",
-            ingredients: "Minced meat 250g, yellow cheese 100g",
-          },
-          {
-            name: "Kebapi with Kaymak 350g",
-            price: "360",
+            name: "Kebapi with Kaymak",
+            price: "420",
             ingredients: "Minced meat dishes",
           },
           {
             name: "Kofte in Tomato Sauce",
-            price: "340",
-            ingredients: "Мелено месо 250г, пелати сос, пармнезан, босилек",
+            price: "390",
+            ingredients: "Minced meat 250g, tomato sauce, parmesan, basil",
           },
           {
             name: "Patty 1kg with Cheese Sauce",
-            price: "950",
+            price: "990",
             ingredients: "Minced meat dishes",
           },
           {
             name: "Stuffed Patty",
-            price: "380",
-            ingredients: "Мелено месо 300г, кашкавал, зденка, печурки, шунка",
+            price: "440",
+            ingredients: "Minced meat 300g, yellow cheese, zdenka, mushrooms, ham",
           },
           {
-            name: "Kebabs 300g",
-            price: "320",
+            name: "Kebapi",
+            price: "360",
             ingredients: "Minced meat dishes",
           },
           {
             name: "Lihnidia Patty 500g",
-            price: "390",
-            ingredients: "Minced meat 300g, bacon 100g, kaymak, egg",
+            price: "470",
+            ingredients: "Minced meat 250g, bacon 100g, kaymak, egg",
           },
           
         ],
-        //Veal dishes
+        //VEAL DISHES
         [
           {
             name: "Beef Steak with Butter and Rosemary 250g",
-            price: "1150",
+            price: "1420",
             ingredients: "Veal dishes",
           },
           {
-            name: "Beef Steak with Egg 250g",
-            price: "1220",
+            name: "File Stroganoff 250g",
+            price: "1490",
             ingredients: "Veal dishes",
-          },
-          {
-            name: "Veal Tava 250g",
-            price: "850",
-            ingredients: "Veal meat 200g, onion, tomato, pepper",
           },
           {
             name: "Beef Steak in Pepper Sauce 250g",
-            price: "1250",
+            price: "1550",
             ingredients: "Veal dishes",
           },
         ],
-        //Pork dishes
+        //PORK DISHES
         [
           {
-            name: "Pork Fillet with Cheese and Mushrooms 200g",
-            price: "390",
+            name: "Pork Fillet with Cheese and Mushrooms 250g",
+            price: "520",
             ingredients: "Pork dishes",
           },
           {
-            name: "Kare in Grilled Sauce and Sesame 200g",
-            price: "350",
-            ingredients: "Pork dishes",
-
-          },
-          {
-            name: "Hanger/Vešalica 200g",
-            price: "370",
-            ingredients: "Pork dishes",
-          },
-          {
-            name: "Homemade Sausage 250g",
-            price: "330",
+            name: "Kare in Grilled Sauce and Sesame 250g",
+            price: "430",
             ingredients: "Pork dishes",
 
           },
           {
-            name: "Rib 300g",
-            price: "380",
+            name: "Hanger/Vešalica 250g",
+            price: "490",
+            ingredients: "Pork dishes",
+          },
+          {
+            name: "Rib in Oven 300g",
+            price: "520",
             ingredients: "Pork dishes",
 
           },
           {
-            name: "Pork Hock/Knee 1kg",
-            price: "990",
+            name: "Lihnidia Rib 250g",
+            price: "520",
+            ingredients: "Rolled rib with kaymak",
+
+          },
+          {
+            name: "Pork in Vranec and Oregano Sauce 250g",
+            price: "470",
             ingredients: "Pork dishes",
           },
           {
-            name: "Bacon 200g",
-            price: "340",
+            name: "Glazed Baby Ribs 350g",
+            price: "480",
             ingredients: "Pork dishes",
 
           },
         ],
-        //Chicken dishes
+        //CHICKEN DISHES
         [
         {
             name: "Lihnidia Chicken",
-            price: "360",
+            price: "390",
             ingredients: "Chicken fillet 200g, bacon, olive oil, parmesan, butter, sun-dried tomato, oregano, thyme, garnish",
           },
           {
-            name: "Grilled Chicken Steak 200g",
-            price: "260",
-            ingredients: "Chicken dishes",
-
-          },
-          {
             name: "Crispy Chicken Steak 250g",
-            price: "280",
+            price: "360",
             ingredients: "Chicken dishes",
           },
           {
             name: "Chicken Steak in Asian Style 250g",
-            price: "290",
+            price: "350",
             ingredients: "Zucchini, mushrooms, onion, white wine, curry",
 
           },
           {
-            name: "Grilled Chicken Drumsticks in Sauce 500g",
-            price: "280",
+            name: "Mojito Chicken 250g",
+            price: "420",
+            ingredients: "Chicken fillet 250g,brown sugar,white rum,lime juice,mint",
+
+          },
+          {
+            name: "Chicken Drumstick without Bone 300g",
+            price: "330",
             ingredients: "Chicken dishes",
 
           },
           {
             name: "Chicken Fingers 300g",
-            price: "320",
+            price: "350",
             ingredients: "Chicken dishes",
           },
           
         ],
-        //Dishes in a pan
+        //DISHES IN PAN
         [
         {
-            name: "Village Meat 450g",
-            price: "440",
-            ingredients: "Pork, chicken, cheese, mushrooms, onion, garlic, bell pepper, tomato",
+            name: "Village Meat",
+            price: "540",
+            ingredients: "Pork, chicken, yellow cheese, mushrooms, onion, garlic, bell pepper, tomato",
           },
           {
-            name: "Lihnidia Pan 450g",
-            price: "480",
+            name: "Lihnidia Pan",
+            price: "580",
             ingredients: "Pork, chicken, bacon, tomato, bell pepper, onion, garlic, champignon, smoked cheese",
 
           },
           {
-            name: "Beans in a Pan/Tavche gravche",
-            price: "250",
-            ingredients: "Dishes in a pan",
+            name: "Tavche Gravche",
+            price: "280",
+            ingredients: "Dishes in pan",
           },
           {
-            name: "Beans in a Pan/Tavche gravche with Steak/Sausage",
-            price: "320",
-            ingredients: "Dishes in a pan",
+            name: "Tavche Gravche with Patty/Sausage",
+            price: "360",
+            ingredients: "Dishes in pan",
 
           },
           {
-            name: "Mushrooms with Bacon and Cheese 200g",
-            price: "370",
-            ingredients: "Dishes in a pan",
+            name: "Mushrooms with Bacon and Cheese",
+            price: "390",
+            ingredients: "Dishes in pan",
 
           },
          
         ],
-        //БУРГЕРИ
+        //BURGERS
         [
         {
             name: "Hamburger",
-            price: "240",
+            price: "280",
             ingredients: "150g minced meat, lettuce, cabbage, cucumber, onion, fries",
           },
           {
             name: "Chicken Burger",
-            price: "260",
+            price: "290",
             ingredients: "150g chicken, lettuce, cabbage, cucumber, fries",
 
           },
           {
-            name: "Smoked Burger",
-            price: "320",
-            ingredients: "150g minced meat, smoked cheese, bacon, lettuce, cabbage, cucumber, onion, burger sauce",
+            name: "Bacon Cheddar Burger",
+            price: "380",
+            ingredients: "150g minced meat,50g bacon,50g cheddar,fries",
           },
           {
-            name: "Blue Chicken Burger",
-            price: "310",
-            ingredients: "150g chicken, gorgonzola sauce, lettuce, cabbage, cucumber, fries, sauce",
+            name: "Pizza Burger",
+            price: "420",
+            ingredients: "150g minced meat,mushrooms,onion,olives,yellow cheese,tomato sauce,fries",
+
+          },
+          {
+            name: "Grilled Chicken",
+            price: "340",
+            ingredients: "150g chicken with fries",
+
+          },
+          {
+            name: "Grilled Pork",
+            price: "380",
+            ingredients: "150g pork in grilled sauce, cream salad, fries",
 
           },
           
         ],
-        //Рижото и паста
+        //RISOTTO AND PASTA
         [
         {
             name: "Risotto with Porcini",
-            price: "420",
-            ingredients: "Rice, porcini mushrooms, onion, white wine, milk, butter, parmesan",
+            price: "440",
+            ingredients: "Rice, porcini mushrooms, onion and garlic, white wine, milk, butter, parmesan",
           },
           {
-            name: "Шпагети карбонара",
-            price: "380",
+            name: "Spaghetti Carbonara",
+            price: "420",
             ingredients: "Spaghetti, bacon, parmesan, egg yolk, pepper",
 
           },
           {
-            name: "Risotto with Gorgonzola",
-            price: "390",
-            ingredients: "Rice, butter, olive oil, white wine, gorgonzola",
+            name: "Risotto with Gorgonzola and Chicken",
+            price: "490",
+            ingredients: "Rice,shells,shrimp,onion and garlic,olive oil,white wine,dill",
           },
           {
             name: "Risotto with Seafood",
-            price: "490",
-            ingredients: "Rice, shells, shrimp, onion, olive oil, white wine, dill",
+            price: "530",
+            ingredients: "Rice, shells, shrimp, onion and garlic, olive oil, white wine, dill",
 
           }, 
           {
             name: "Tortellini with Gorgonzola and Pistachios",
-            price: "370",
+            price: "420",
             ingredients: "Rice, pistachios, olive oil, white wine, gorgonzola",
           },
           {
             name: "Spaghetti with Seafood",
-            price: "460",
-            ingredients: "Shells, shrimp, onion, garlic, olive oil, parsley, dill",
+            price: "560",
+            ingredients: "Shells, shrimp, onion, garlic, olive oil, parsley, dill, white wine, tomato",
 
           }, 
         ],
 
-        // Appetizers
+        // APPETIZERS
         [
           {
-            name: "Bruschetta with Tomato, Mozzarella, and Pesto",
-            price: "220",
+            name: "Bruschetta with Tomato and Pesto",
+            price: "260",
+            ingredients:
+              "Appetizers",
+          },
+          {
+            name: "Bruschetta with Olive Spread and Smoked Salmon",
+            price: "340",
+            ingredients:
+              "Appetizers",
+          },
+          {
+            name: "Bruschetta with Tuna Spread and Prosciutto",
+            price: "350",
             ingredients:
               "Appetizers",
           },
           {
             name: "Grilled Cheese 200g",
-            price: "240",
+            price: "260",
             ingredients: "Appetizers",
           },
           {
             name: "Mushrooms in Butter 250g",
-            price: "240",
+            price: "250",
             ingredients: "Appetizers",
           },
           {
             name: "Bacon Chips 200g",
-            price: "290",
+            price: "330",
             ingredients: "Appetizers",
           },
           {
-            name: "Stuffed Pepper with Kaymak",
-            price: "170",
-            ingredients: "Pepper, kaymak, egg, cheese",
-          },
-          {
             name: "Garlic Bread",
-            price: "170",
+            price: "190",
             ingredients: "Appetizers",
           },
           {
             name: "Bread with Kaymak",
-            price: "140",
+            price: "170",
             ingredients:
               "Appetizers",
           },
           {
             name: "Grilled Zucchini 200g",
-            price: "180",
+            price: "220",
             ingredients:
               "Appetizers",
           },
           {
-            name: "Garlic Dip/Makalo",
-            price: "140",
+            name: "Garlic Dip",
+            price: "160",
             ingredients: "Appetizers",
           },
           {
             name: "Ajvar",
-            price: "140",
+            price: "160",
             ingredients: "Appetizers",
           },
           {
-            name: "Biene Cheese with Bacon 150g",
-            price: "280",
+            name: "Pinjur",
+            price: "160",
+            ingredients: "Appetizers",
+          },
+          {
+            name: "Beaten Cheese with Bacon 150g",
+            price: "340",
             ingredients: "Appetizers",
           },
           {
             name: "Homemade Cow Cheese 200g",
-            price: "250",
+            price: "280",
             ingredients: "Appetizers",
           },
           {
             name: "Stuffed Mushrooms",
             price: "260",
-            ingredients: "Mushrooms, cheese, pork neck",
-          },
-          {
-            name: "Melted Cheese 300g",
-            price: "270",
-            ingredients:
-              "Feta cheese, tomato sauce, sour cream, bacon, cheese",
+            ingredients: "Mushrooms, yellow cheese, pork neck",
           },
           {
             name: "Fried Cheese 100g",
-            price: "170",
+            price: "190",
+            ingredients:
+              "Appetizers",
+          },
+          {
+            name: "Fried Calamari 200g",
+            price: "390",
             ingredients:
               "Appetizers",
           },
@@ -1255,73 +1186,73 @@
           },
           {
             name: "Fried Onion 200g",
-            price: "240",
+            price: "260",
             ingredients: "Appetizers",
           },
           {
             name: "Lutenica",
-            price: "140",
+            price: "160",
+            ingredients: "Appetizers",
+          },
+          {
+            name: "Pinjur",
+            price: "160",
             ingredients: "Appetizers",
           },
         ],
-        // Fish
+        // FISH
         [
           {
-            name: "Trout 1kg.",
-            price: "1200",
+            name: "Trout 1kg",
+            price: "1300",
             ingredients: "Fish",
           },
           {
-            name: "Trout in Ohrid Style 1kg.",
-            price: "1600",
-            ingredients: "Fish",
-          },
-          {
-            name: "Salmon in White Wine Sauce 1kg.",
-            price: "1350",
-            ingredients: "Fish",
-          },
-          {
-            name: "Carp Chops 1kg.",
-            price: "1400",
-            ingredients: "Fish",
-          },
-          {
-            name: "Baked Carp with Vegetables 1kg (by order)",
-            price: "1550",
-            ingredients: "Fish",
-          },
-          {
-            name: "Belvica 1kg.",
+            name: "Ohrid Trout 1kg",
             price: "2400",
             ingredients: "Fish",
           },
+          {
+            name: "Trout in Pan 1kg",
+            price: "2600",
+            ingredients: "Fish",
+          },
+          {
+            name: "Salmon in White Wine Sauce 1kg",
+            price: "1400",
+            ingredients: "Fish",
+          },
         ],
-        // ДЕСЕРТ
+        // DESSERTS
         [
           {
-            name: "Pancake with Nutella, Plazma, and Banana",
+            name: "Tulumba",
             price: "180",
             ingredients: "Desserts",
           },
           {
-            name: "Chocolate Mousse 100g",
-            price: "160",
-            ingredients: "Desserts",
-          },
-          {
-            name: "Fruit Salad with Seasonal Fruit 300g",
-            price: "220",
-            ingredients: "Desserts",
-          },
-          {
             name: "Baklava",
-            price: "170",
+            price: "190",
+            ingredients: "Desserts",
+          },
+          {
+            name: "Pancake with Nutella, Plazma and Banana",
+            price: "180",
+            ingredients: "Desserts",
+          },
+          {
+            name: "Pancake with Pistachio Cream",
+            price: "270",
+            ingredients: "Desserts",
+          },
+          {
+            name: "Ohrid-style cake",
+            price: "210",
             ingredients: "Desserts",
           },
           
         ],
-        //Sides
+        //SIDES
         [
           {
             name: "Pepper (piece)",
@@ -1335,12 +1266,12 @@
           },
           {
             name: "Bread with Cheese",
-            price: "150",
+            price: "180",
             ingredients: "Sides",
           },
           {
             name: "Olives 100g",
-            price: "80",
+            price: "120",
             ingredients: "Sides",
           },
           {
@@ -1355,18 +1286,21 @@
           },
           {
             name: "Fries 100g",
-            price: "70",
+            price: "100",
             ingredients: "Sides",
-
-          
           },
           {
             name: "Sauce",
+            price: "50",
+            ingredients: "Sides",
+          },
+          {
+            name: "Ketchup, Mayonnaise",
             price: "40",
             ingredients: "Sides",
           },
         ],
-        //КОКТЕЛИ
+        //COCKTAILS
         [
         {
             name: "Margarita",
@@ -1475,7 +1409,7 @@
                             <div class="fw-bold">${product.name}</div>
                             <div class="fst-italic ingredients">${product.ingredients}</div>
                         </div>
-                        <div class="fw-bold fst-italic text-nowrap">${product.price} ден.</div>
+                        <div class="fw-bold fst-italic text-nowrap">${product.price} den.</div>
                     </div>
                 `;
                 productListElement.appendChild(productCard);
