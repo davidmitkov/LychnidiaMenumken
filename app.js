@@ -31,75 +31,71 @@ document.addEventListener("DOMContentLoaded", function() {
           name: "САЛАТИ",
           id: 5,
         },
-        {
-          img: "images/foodboard.jpg",
-          name: "ДАСКИ",
-          id: 6,
-        },
+       
         {
           img: "images/breakfast.jpg",
           name: "ПРИЛОЗИ И ДОРУЧЕК",
-          id: 7,
+          id: 6,
         },
         {
           img: "images/mincemeat.jpg",
           name: "ЈАДЕЊА ОД МЕЛЕНО МЕСО",
-          id: 8,
+          id: 7,
         },
         {
           img: "images/vealmeat.jpg",
           name: "ЈАДЕЊА ОД ТЕЛЕШКО МЕСО",
-          id: 9,
+          id: 8,
         },
         {
           img: "images/porkmeat.jpg",
           name: "ЈАДЕЊА ОД СВИНСКО МЕСО",
-          id: 10,
+          id: 9,
         },
         {
           img: "images/chickenmeat.jpg",
           name: "ЈАДЕЊА ОД ПИЛЕШКО МЕСО",
-          id: 11,
+          id: 10,
         },
         {
           img: "images/tavafood.jpg",
           name: "ЈАДЕЊА ВО ТАВА",
-          id: 12,
+          id: 11,
         },
         {
           img: "images/burger.jpg",
           name: "БУРГЕРИ",
-          id: 13,
+          id: 12,
         },
         {
           img: "images/pasta.jpg",
           name: "РИЖОТО И ПАСТА",
-          id: 14,
+          id: 13,
         },
         {
           img: "images/speciality.jpg",
           name: "ПРЕДЈАДЕЊА",
-          id: 15,
+          id: 14,
         },
         {
           img: "images/fish.jpg",
           name: "РИБА",
-          id: 16,
+          id: 15,
         },
         {
           img: "images/dessert.jpg",
           name: "ДЕСЕРТИ",
-          id: 17,
+          id: 16,
         },
         {
           img: "images/peppers.jpg",
           name: "ДОДАТОЦИ",
-          id: 18,
+          id: 17,
         },
         {
           img: "images/cocktails.jpg",
           name: "КОКТЕЛИ",
-          id: 19,
+          id: 18,
         },
       ]
 
