@@ -31,75 +31,71 @@ document.addEventListener("DOMContentLoaded", function() {
           name: "Salads",
           id: 5,
         },
-        {
-          img: "images/foodboard.jpg",
-          name: "Food Boards",
-          id: 6,
-        },
+        
         {
           img: "images/breakfast.jpg",
           name: "Breakfast and Brunch",
-          id: 7,
+          id: 6,
         },
         {
           img: "images/mincemeat.jpg",
           name: "Minced Meat Dishes",
-          id: 8,
+          id: 7,
         },
         {
           img: "images/vealmeat.jpg",
           name: "Veal Meat Dishes",
-          id: 9,
+          id: 8,
         },
         {
           img: "images/porkmeat.jpg",
           name: "Pork Meat Dishes",
-          id: 10,
+          id: 9,
         },
         {
           img: "images/chickenmeat.jpg",
           name: "Chicken Meat Dishes",
-          id: 11,
+          id: 10,
         },
         {
           img: "images/tavafood.jpg",
           name: "Tava Dishes",
-          id: 12,
+          id: 11,
         },
         {
           img: "images/burger.jpg",
           name: "Burgers",
-          id: 13,
+          id: 12,
         },
         {
           img: "images/pasta.jpg",
           name: "Risotto and Pasta",
-          id: 14,
+          id: 13,
         },
         {
           img: "images/speciality.jpg",
           name: "Specialities",
-          id: 15,
+          id: 14,
         },
         {
           img: "images/fish.jpg",
           name: "Fish",
-          id: 16,
+          id: 15,
         },
         {
           img: "images/dessert.jpg",
           name: "Desserts",
-          id: 17,
+          id: 16,
         },
         {
           img: "images/peppers.jpg",
           name: "Additives",
-          id: 18,
+          id: 17,
         },
         {
           img: "images/cocktails.jpg",
           name: "Cocktails",
-          id: 19,
+          id: 18,
         },
       ]
 
