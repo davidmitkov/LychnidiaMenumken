@@ -31,74 +31,69 @@ document.addEventListener("DOMContentLoaded", function() {
         id: 5,
       },
       {
-        img: "images/foodboard.jpg",
-        name: "Deski Jedzeniowe",
-        id: 6,
-      },
-      {
         img: "images/breakfast.jpg",
         name: "Śniadanie i Brunch",
-        id: 7,
+        id: 6,
       },
       {
         img: "images/mincemeat.jpg",
         name: "Dania z Mięsa Mielonego",
-        id: 8,
+        id: 7,
       },
       {
         img: "images/vealmeat.jpg",
         name: "Dania z Mięsa Cielęcego",
-        id: 9,
+        id: 8,
       },
       {
         img: "images/porkmeat.jpg",
         name: "Dania z Mięsa Wieprzowego",
-        id: 10,
+        id: 9,
       },
       {
         img: "images/chickenmeat.jpg",
         name: "Dania z Mięsa Kurczaka",
-        id: 11,
+        id: 10,
       },
       {
         img: "images/tavafood.jpg",
         name: "Dania Tava",
-        id: 12,
+        id: 11,
       },
       {
         img: "images/burger.jpg",
         name: "Burgery",
-        id: 13,
+        id: 12,
       },
       {
         img: "images/pasta.jpg",
         name: "Risotto i Makaron",
-        id: 14,
+        id: 13,
       },
       {
         img: "images/speciality.jpg",
         name: "Specjalności",
-        id: 15,
+        id: 14,
       },
       {
         img: "images/fish.jpg",
         name: "Ryba",
-        id: 16,
+        id: 15,
       },
       {
         img: "images/dessert.jpg",
         name: "Desery",
-        id: 17,
+        id: 16,
       },
       {
         img: "images/peppers.jpg",
         name: "Dodatki",
-        id: 18,
+        id: 17,
       },
       {
         img: "images/cocktails.jpg",
         name: "Koktajle",
-        id: 19,
+        id: 18,
       },
     ]
 
