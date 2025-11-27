@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         id: 0,
       },
       {
-        img: "images/beer.jpeg",
+        img: "images/pivo3.jpg",
         name: "Bier",
         id: 1,
       },
@@ -21,80 +21,95 @@ document.addEventListener("DOMContentLoaded", function() {
         id: 3,
       },
       {
-        img: "images/alcochol.jpg",
-        name: "Alkoholische Getränke",
+        img: "images/rakija.jpg",
+        name: "RAKIJA",
         id: 4,
       },
       {
-        img: "images/salad.jpg",
-        name: "Salate",
+        img: "images/jack.jpg",
+        name: "Alkoholische Getränke",
         id: 5,
       },
+      {
+        img: "images/sopska.jpg",
+        name: "Salate",
+        id: 6,
+      },
+      {
+        "img": "images/daski.png",
+        "name": "HOLZPLATTEN",
+        "id": 7
+      },      
       
       {
         img: "images/breakfast.jpg",
         name: "Frühstück und Brunch",
-        id: 6,
+        id: 8,
       },
       {
         img: "images/mincemeat.jpg",
         name: "Gerichte mit Hackfleisch",
-        id: 7,
+        id: 9,
       },
       {
         img: "images/vealmeat.jpg",
         name: "Gerichte mit Kalbfleisch",
-        id: 8,
+        id: 10,
       },
       {
         img: "images/porkmeat.jpg",
         name: "Gerichte mit Schweinefleisch",
-        id: 9,
+        id: 11,
       },
       {
         img: "images/chickenmeat.jpg",
         name: "Gerichte mit Hühnerfleisch",
-        id: 10,
+        id: 12,
       },
       {
         img: "images/tavafood.jpg",
         name: "Tava-Gerichte",
-        id: 11,
+        id: 13,
       },
       {
-        img: "images/burger.jpg",
-        name: "Burgers",
-        id: 12,
+        img: "images/musaka.jpg",
+        name: "Mazedonische traditionelle Gerichte",
+        id: 14,
       },
       {
         img: "images/pasta.jpg",
         name: "Risotto und Pasta",
-        id: 13,
+        id: 15,
       },
       {
         img: "images/speciality.jpg",
         name: "Spezialitäten",
-        id: 14,
+        id: 16,
       },
       {
         img: "images/fish.jpg",
         name: "Fisch",
-        id: 15,
+        id: 17,
       },
       {
         img: "images/dessert.jpg",
         name: "Desserts",
-        id: 16,
+        id: 18,
       },
       {
         img: "images/peppers.jpg",
         name: "Beilagen",
-        id: 17,
+        id: 19,
       },
       {
         img: "images/cocktails.jpg",
         name: "Cocktails",
-        id: 18,
+        id: 20,
+      },
+      {
+        img: "images/extraoffer.png",
+        name: "ZUSÄTZLICHES ANGEBOT",
+        id: 21,
       },
   ]
     const appElement = document.getElementById('app');
