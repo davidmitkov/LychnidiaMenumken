@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         id: 0,
       },
       {
-        img: "images/beer.jpeg",
+        img: "images/pivo3.jpg",
         name: "Piwo",
         id: 1,
       },
@@ -21,79 +21,94 @@ document.addEventListener("DOMContentLoaded", function() {
         id: 3,
       },
       {
-        img: "images/alcochol.jpg",
-        name: "Napoje Alkoholowe",
+        img: "images/rakija.jpg",
+        name: "RAKIJA",
         id: 4,
       },
       {
-        img: "images/salad.jpg",
-        name: "Sałatki",
+        img: "images/jack.jpg",
+        name: "Napoje Alkoholowe",
         id: 5,
       },
       {
+        img: "images/sopska.jpg",
+        name: "Sałatki",
+        id: 6,
+      },
+      {
+        "img": "images/daski.png",
+        "name": "DESKI",
+        "id": 7
+      },      
+      {
         img: "images/breakfast.jpg",
         name: "Śniadanie i Brunch",
-        id: 6,
+        id: 8,
       },
       {
         img: "images/mincemeat.jpg",
         name: "Dania z Mięsa Mielonego",
-        id: 7,
+        id: 9,
       },
       {
         img: "images/vealmeat.jpg",
         name: "Dania z Mięsa Cielęcego",
-        id: 8,
+        id: 10,
       },
       {
         img: "images/porkmeat.jpg",
         name: "Dania z Mięsa Wieprzowego",
-        id: 9,
+        id: 11,
       },
       {
         img: "images/chickenmeat.jpg",
         name: "Dania z Mięsa Kurczaka",
-        id: 10,
+        id: 12,
       },
       {
         img: "images/tavafood.jpg",
         name: "Dania Tava",
-        id: 11,
+        id: 13,
       },
       {
-        img: "images/burger.jpg",
-        name: "Burgery",
-        id: 12,
+        img: "images/musaka.jpg",
+        name: "TRADYCYJNE DANIA MACEDOŃSKIE",
+        id: 14,
       },
       {
         img: "images/pasta.jpg",
         name: "Risotto i Makaron",
-        id: 13,
+        id: 15,
       },
       {
         img: "images/speciality.jpg",
         name: "Specjalności",
-        id: 14,
+        id: 16,
       },
       {
         img: "images/fish.jpg",
         name: "Ryba",
-        id: 15,
+        id: 17,
       },
       {
         img: "images/dessert.jpg",
         name: "Desery",
-        id: 16,
+        id: 18,
       },
       {
         img: "images/peppers.jpg",
         name: "Dodatki",
-        id: 17,
+        id: 19,
       },
       {
         img: "images/cocktails.jpg",
         name: "Koktajle",
-        id: 18,
+        id: 20,
+      },
+      {
+        img: "images/extraoffer.png",
+        name: "OFERTA DODATKOWA",
+        id: 21,
       },
     ]
 
