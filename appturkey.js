@@ -66,49 +66,44 @@ document.addEventListener("DOMContentLoaded", function() {
         id: 12,
       },
       {
-        img: "images/tavafood.jpg",
-        name: "Tava Yemekleri",
-        id: 13,
-      },
-      {
         img: "images/musaka.jpg",
         name: "MAKEDONYA GELENEKSEL YEMEKLERİ",
-        id: 14,
+        id: 13,
       },
       {
         img: "images/pasta.jpg",
         name: "Risotto ve Makarna",
-        id: 15,
+        id: 14,
       },
       {
         img: "images/speciality.jpg",
         name: "Uzmanlık Yemekleri",
-        id: 16,
+        id: 15,
       },
       {
         img: "images/fish.jpg",
         name: "Balık",
-        id: 17,
+        id: 16,
       },
       {
         img: "images/dessert.jpg",
         name: "Tatlılar",
-        id: 18,
+        id: 17,
       },
       {
         img: "images/peppers.jpg",
         name: "Ekstralar",
-        id: 19,
+        id: 18,
       },
       {
         img: "images/cocktails.jpg",
         name: "Kokteyller",
-        id: 20,
+        id: 19,
       },
       {
         img: "images/extraoffer.png",
         name: "EKSTRA TEKLİF",
-        id: 21,
+        id: 20,
       },
     ]
     
