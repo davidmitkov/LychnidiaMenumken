@@ -66,49 +66,44 @@ document.addEventListener("DOMContentLoaded", function() {
         id: 12,
       },
       {
-        img: "images/tavafood.jpg",
-        name: "Dania Tava",
-        id: 13,
-      },
-      {
         img: "images/musaka.jpg",
         name: "TRADYCYJNE DANIA MACEDOŃSKIE",
-        id: 14,
+        id: 13,
       },
       {
         img: "images/pasta.jpg",
         name: "Risotto i Makaron",
-        id: 15,
+        id: 14,
       },
       {
         img: "images/speciality.jpg",
         name: "Specjalności",
-        id: 16,
+        id: 15,
       },
       {
         img: "images/fish.jpg",
         name: "Ryba",
-        id: 17,
+        id: 16,
       },
       {
         img: "images/dessert.jpg",
         name: "Desery",
-        id: 18,
+        id: 17,
       },
       {
         img: "images/peppers.jpg",
         name: "Dodatki",
-        id: 19,
+        id: 18,
       },
       {
         img: "images/cocktails.jpg",
         name: "Koktajle",
-        id: 20,
+        id: 19,
       },
       {
         img: "images/extraoffer.png",
         name: "OFERTA DODATKOWA",
-        id: 21,
+        id: 20,
       },
     ]
 
