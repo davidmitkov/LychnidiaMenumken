@@ -67,49 +67,44 @@ document.addEventListener("DOMContentLoaded", function() {
           id: 12,
         },
         {
-          img: "images/tavafood.jpg",
-          name: "ЈАДЕЊА ВО ТАВА",
-          id: 13,
-        },
-        {
           img: "images/musaka.jpg",
           name: "МАКЕДОНСКИ ТРАДИЦИОНАЛНИ ЈАДЕЊА",
-          id: 14,
+          id: 13,
         },
         {
           img: "images/pasta.jpg",
           name: "РИЖОТО И ПАСТА",
-          id: 15,
+          id: 14,
         },
         {
           img: "images/speciality.jpg",
           name: "ПРЕДЈАДЕЊА",
-          id: 16,
+          id: 15,
         },
         {
           img: "images/fish.jpg",
           name: "РИБА",
-          id: 17,
+          id: 16,
         },
         {
           img: "images/dessert.jpg",
           name: "ДЕСЕРТИ",
-          id: 18,
+          id: 17,
         },
         {
           img: "images/peppers.jpg",
           name: "ДОДАТОЦИ",
-          id: 19,
+          id: 18,
         },
         {
           img: "images/cocktails.jpg",
           name: "КОКТЕЛИ",
-          id: 20,
+          id: 19,
         },
         {
           img: "images/extraoffer.png",
           name: "ЕКСТРА ПОНУДА",
-          id: 21,
+          id: 20,
         },
       ]
 
