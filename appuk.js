@@ -68,49 +68,44 @@ document.addEventListener("DOMContentLoaded", function() {
           id: 12,
         },
         {
-          img: "images/tavafood.jpg",
-          name: "Tava Dishes",
-          id: 13,
-        },
-        {
           img: "images/musaka.jpg",
           name: "Traditional macedonian foods",
-          id: 14,
+          id: 13,
         },
         {
           img: "images/pasta.jpg",
           name: "Risotto and Pasta",
-          id: 15,
+          id: 14,
         },
         {
           img: "images/speciality.jpg",
           name: "Specialities",
-          id: 16,
+          id: 15,
         },
         {
           img: "images/fish.jpg",
           name: "Fish",
-          id: 17,
+          id: 16,
         },
         {
           img: "images/dessert.jpg",
           name: "Desserts",
-          id: 18,
+          id: 17,
         },
         {
           img: "images/peppers.jpg",
           name: "Additives",
-          id: 19,
+          id: 18,
         },
         {
           img: "images/cocktails.jpg",
           name: "Cocktails",
-          id: 20,
+          id: 19,
         },
         {
           img: "images/extraoffer.png",
           name: "EXTRA OFFER",
-          id: 21,
+          id: 20,
         },
       ]
 
