@@ -32,42 +32,47 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const products = [
-                // НЕГАЗИРАНИ ПИЈАЛОЦИ/SOFT DRINKS
-                [
+          const products = [
+        // НЕГАЗИРАНИ ПИЈАЛОЦИ/SOFT DRINKS
+        [
           {
-            name: "Вода (голема) 0.75",
+            name: "Pepsi 0.33",
             price: "130",
             ingredients: "Безалкохолни пијалоци",
           },
           {
-            name: "Вода (мала) 0.25",
-            price: "80",
+            name: "Pepsi max 0.33",
+            price: "130",
             ingredients: "Безалкохолни пијалоци",
           },
           {
-            name: "Пепси 0.33",
-            price: "120",
+            name: "7up 0.33",
+            price: "130",
             ingredients: "Безалкохолни пијалоци",
           },
           {
-            name: "Пепси Макс 0.33",
-            price: "120",
+            name: "Gazoza 0.33",
+            price: "130",
             ingredients: "Безалкохолни пијалоци",
           },
           {
-            name: "Газоза 0.33",
-            price: "120",
+            name: "Mirinda 0.33",
+            price: "130",
             ingredients: "Безалкохолни пијалоци",
           },
           {
-            name: "Леден Чај/Ice Tea 0.33",
+            name: "Ice tea 0.33",
+            price: "150",
+            ingredients: "Безалкохолни пијалоци",
+          },
+          {
+            name: "Вода 0.25",
+            price: "100",
+            ingredients: "Безалкохолни пијалоци",
+          },
+          {
+            name: "Вода 0.75",
             price: "140",
-            ingredients: "Безалкохолни пијалоци",
-          },
-          {
-            name: "7уп 0.33",
-            price: "120",
             ingredients: "Безалкохолни пијалоци",
           },
           {
@@ -76,46 +81,51 @@
             ingredients: "Безалкохолни пијалоци",
           },
           {
-            name: "Цеден Лимон 0.25",
-            price: "170",
+            name: "Цеден лимон 0.25",
+            price: "180",
             ingredients: "Безалкохолни пијалоци",
           },
           {
             name: "Цеден портокал 0.25",
-            price: "220",
+            price: "240",
             ingredients: "Безалкохолни пијалоци",
           },
           {
-            name: "Mirinda lemon/orange 0.33",
-            price: "120",
-            ingredients: "Безалкохолни пијалоци",
-          },
-          {
-            name: "Soda lemon/orange/mojito 0.33",
+            name: "Овошна сода 0.33",
             price: "150",
-            ingredients: "Безалкохолни пијалоци"
-          }
+            ingredients: "Безалкохолни пијалоци",
+          },
         ],
         // ПИВО
         [
           {
-            name: "Крали Марко 0.5",
+            name: "Krali Marko 0.5",
+            price: "170",
+            ingredients: "Пиво",
+          },
+          {
+            name: "Zlaten Dab 0.33",
             price: "150",
             ingredients: "Пиво",
           },
           {
-            name: "Златен Даб 0.33",
-            price: "140",
+            name: "Zlaten Dab draft 0.33",
+            price: "150",
             ingredients: "Пиво",
           },
           {
-            name: "Златен Даб Драфт 0.5",
-            price: "140",
+            name: "Zlaten Dab draft 0.5",
+            price: "180",
             ingredients: "Пиво",
           },
           {
-            name: "Златен Даб amber 0.33",
-            price: "140",
+            name: "Tuborg 0.33",
+            price: "210",
+            ingredients: "Пиво",
+          },
+          {
+            name: "Carlsberg 0.33",
+            price: "240",
             ingredients: "Пиво",
           },
           {
@@ -124,1174 +134,883 @@
             ingredients: "Пиво",
           },
           {
-            name: "Tuborg 0.33",
-            price: "190",
-            ingredients: "Пиво",
-
-          },
-          {
-            name: "Carlsberg 0.33",
-            price: "210",
-            ingredients: "Пиво",
-          },
-          {
-            name: "Heinkene 0.33",
+            name: "Heineken 0.33",
             price: "230",
             ingredients: "Пиво",
           },
-          {
-            name: "Tuborg 0.5 0.0%",
-            price: "210",
-            ingredients: "Пиво",
-          },
-          
         ],
         // ВИНАРИЈА
         [
           {
-            name: "Dionis vranec barrique(dry) Dalvina Winery" ,
-            price: "2200",
+            name: "Kratosija (dry) - Lazar winery",
+            price: "1260",
             ingredients: "Red wines",
           },
           {
-            name: "Hermes vranec (dry) Dalvina Winery",
-            price: "1300",
-            ingredients: "Red Wines",
+            name: "Bukefal (dry) - Lazar winery",
+            price: "1800",
+            ingredients: "Red wines",
           },
           {
-            name: "Hermes cabernet sauvignon(dry) Dalvina Winery",
-            price: "1300",
-            ingredients: "Red Wines",
-          },
-          {
-            name: "Muscat temjanika (semi-dry) Dalvina Winery",
-            price: "1350",
+            name: "Belan (dry) - Lazar winery",
+            price: "1500",
             ingredients: "White wines",
           },
           {
-            name: "Elegija chardonnay (dry) Dalvina Winery",
-            price: "1300",
+            name: "Pinot grigio (dry) - Lazar winery",
+            price: "1260",
             ingredients: "White wines",
           },
           {
-            name: "Elegija traminer (dry) Dalvina Winery",
-            price: "1300",
-            ingredients: "White wines",
-          },
-          {
-            name: "Elegija zupljanka (dry) Dalvina Winery",
-            price: "1300",
-            ingredients: "White wines",
-          },
-          {
-            name: "Elegija syrah(dry) Dalvina Winery",
+            name: "Grasevina (dry) - Lazar winery",
             price: "1200",
+            ingredients: "White wines",
+          },
+          {
+            name: "Pearl blanc de blanc (dry) - Lazar winery",
+            price: "1560",
+            ingredients: "Sparkling wines",
+          },
+          {
+            name: "Pearl blanc de rose (dry) - Lazar winery",
+            price: "1200",
+            ingredients: "Sparkling wines",
+          },
+          {
+            name: "Korija temjanika (dry) - Venec winery",
+            price: "1800",
+            ingredients: "White wines",
+          },
+          {
+            name: "Chardonnay oak (dry) - Venec winery",
+            price: "1710",
+            ingredients: "White wines",
+          },
+          {
+            name: "Orle vranec (dry) - Venec winery",
+            price: "2600",
+            ingredients: "Red wines",
+          },
+          {
+            name: "Shiraz (dry) - Venec winery",
+            price: "1560",
+            ingredients: "Red wines",
+          },
+          {
+            name: "Prokupec (dry) - Venec winery",
+            price: "1560",
+            ingredients: "Red wines",
+          },
+          {
+            name: "Stanushina (dry) - Venec winery",
+            price: "1650",
             ingredients: "Rose wines",
           },
           {
-            name: "Cabernet sauvignon (dry) Ohrid Winery",
-            price: "1400",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Merlot (dry) Ohrid Winery",
-            price: "1400",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Vranec (dry) Ohrid Winery",
-            price: "1400",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Temjanika (dry) Ohrid Winery",
-            price: "1400",
-            ingredients: "White wines",
-          },
-          {
-            name: "Chardonnay (dry) Ohrid Winery",
-            price: "1400",
-            ingredients: "White wines",
-          },
-          {
-            name: "Sauvignon blanc (dry) Ohrid Winery",
-            price: "1400",
-            ingredients: "White wines",
-          },
-          {
-            name: "Alexandria (dry) Tikvesh Winery",
+            name: "Alexandria (dry) - Tikves winery",
             price: "890",
             ingredients: "Red wines",
           },
           {
-            name: "T’ga za jug (semi-dry) Tikvesh Winery",
+            name: "T’ga za jug (semi-dry) - Tikves winery",
             price: "890",
             ingredients: "Red wines",
           },
           {
-            name: "Luda mara vranec (dry) Tikvesh Winery",
-            price: "1530",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Luda mara merlot (dry) Tikvesh Winery",
-            price: "1440",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Luda mara cabernet sauvignon (dry) Tikvesh Winery",
-            price: "1440",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Alexandria cuvee (dry) Tikvesh Winery",
+            name: "Alexandria cuvee (dry) - Tikves winery",
             price: "1500",
             ingredients: "Red wines",
           },
           {
-            name: "Babuna (dry) Tikvesh Winery",
-            price: "2400",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Vrsnik 2250 (dry) Tikvesh Winery",
-            price: "2250",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Barovo (dry) Tikvesh Winery",
+            name: "Barovo (dry) - Tikves winery",
             price: "5400",
             ingredients: "Red wines",
           },
           {
-            name: "Alexandria (semi-dry) Tikvesh Winery",
+            name: "Alexandria (semi-dry) - Tikves winery",
             price: "890",
             ingredients: "White wines",
           },
           {
-            name: "Alexandria cuvee (dry) Tikvesh Winery",
+            name: "Alexandria cuvee (dry) - Tikves winery",
             price: "1500",
             ingredients: "White wines",
           },
           {
-            name: "Luda mara temjanika (dry) Tikvesh Winery",
+            name: "Luda mara temjanika (dry) - Tikves winery",
             price: "1560",
             ingredients: "White wines",
           },
           {
-            name: "Barovo (dry) Tikvesh Winery",
+            name: "Barovo (dry) - Tikves winery",
             price: "4800",
             ingredients: "White wines",
           },
           {
-            name: "Barovo temjanika (dry) Tikvesh Winery",
-            price: "2400",
-            ingredients: "White wines",
-          },
-          {
-            name: "Bela voda (dry) Tikvesh Winery",
+            name: "Bela voda (dry) - Tikves winery",
             price: "5400",
             ingredients: "White wines",
           },
           {
-            name: "Barovo zilavka (dry) Tikvesh Winery",
+            name: "Barovo zilavka (dry) - Tikves winery",
             price: "1950",
             ingredients: "White wines",
           },
           {
-            name: "Barovo Grenache blanc (dry) Tikvesh Winery",
+            name: "Barovo Grenache blanc (dry) - Tikves winery",
             price: "1950",
             ingredients: "White wines",
           },
           {
-            name: "LBabuna (dry) Tikvesh Winery",
-            price: "2400",
-            ingredients: "White wines",
-          },
-          {
-            name: "Vrsnik (dry) Tikvesh Winery",
-            price: "2250",
-            ingredients: "White wines",
-          },
-          {
-            name: "Traminec (dry) Tikvesh Winery",
+            name: "Traminec (dry) - Tikves winery",
             price: "930",
             ingredients: "White wines",
           },
           {
-            name: "Alexandria (semi-dry) Tikvesh Winery",
+            name: "Alexandria (semi-dry) - Tikves winery",
             price: "890",
             ingredients: "Rose wines",
           },
           {
-            name: "Alexandria cuvee (dry) Tikvesh Winery",
+            name: "Alexandria cuvee (dry) - Tikves winery",
             price: "1500",
             ingredients: "Rose wines",
           },
           {
-            name: "Mistral au jardin (dry) Tikvesh Winery",
-            price: "1800",
-            ingredients: "Rose wines",
-          },
-          {
-            name: "Vranec (dry) Bovin Winery",
+            name: "Vranec (dry) - Bovin winery",
             price: "1650",
             ingredients: "Red wines",
           },
           {
-            name: "Pinot noir (dry) Bovin Winery",
+            name: "Pinot noir (dry) - Bovin winery",
             price: "1710",
             ingredients: "Red wines",
           },
           {
-            name: "Cabernet sauvignon (dry) Bovin Winery",
+            name: "Cabernet sauvignon (dry) - Bovin winery",
             price: "1710",
             ingredients: "Red wines",
           },
           {
-            name: "Merlot (dry) Bovin Winery",
+            name: "Merlot (dry) - Bovin winery",
             price: "1710",
             ingredients: "Red wines",
           },
           {
-            name: "Venus cuvee (dry) Bovin Winery",
-            price: "1650",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Kleopatra (semi-dry) Bovin Winery",
-            price: "1950",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Imperator (semi-dry) Bovin Winery",
+            name: "Imperator (semi-dry) - Bovin winery",
             price: "4200",
             ingredients: "Red wines",
           },
           {
-            name: "Daron superior (dry) Bovin Winery",
-            price: "2250",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Disan barique (dry) Bovin Winery",
+            name: "Disan barique (dry) - Bovin winery",
             price: "2700",
             ingredients: "Red wines",
           },
           {
-            name: "Sauvignon blanc (dry) Bovin Winery",
+            name: "Sauvignon blanc (dry) - Bovin winery",
             price: "1710",
             ingredients: "White wines",
           },
           {
-            name: "Rizling (dry) Bovin Winery",
+            name: "Rizling (dry) - Bovin winery",
             price: "1650",
             ingredients: "White wines",
           },
           {
-            name: "Traminec (semi-dry) Bovin Winery",
+            name: "Traminec (semi-dry) - Bovin winery",
             price: "1710",
             ingredients: "White wines",
           },
           {
-            name: "Chardonnay (dry) Bovin Winery",
+            name: "Chardonnay (dry) - Bovin winery",
             price: "1800",
             ingredients: "White wines",
           },
           {
-            name: "Muscat temjanika (semi-dry) Bovin Winery",
+            name: "Muscat temjanika (semi-dry) - Bovin winery",
             price: "1800",
             ingredients: "White wines",
           },
           {
-            name: "Grasevina (dry) Bovin Winery",
-            price: "1800",
-            ingredients: "White wines",
-          },
-          {
-            name: "Chardonnay barrique (dry) Bovin Winery",
-            price: "2700",
-            ingredients: "White wines",
-          },
-          {
-            name: "Ana marija (semi-dry) Bovin Winery",
+            name: "Ana marija (semi-dry) - Bovin winery",
             price: "1710",
             ingredients: "Rose wines",
           },
           {
-            name: "Erigon cuvee (dry) Lazar Winery",
-            price: "1260",
+            name: "Dionis vranec barrique (dry) - Dalvina winery",
+            price: "2200",
             ingredients: "Red wines",
           },
           {
-            name: "Kratosija (dry) Lazar Winery",
-            price: "1260",
+            name: "Hermes vranec (dry) - Dalvina winery",
+            price: "1300",
             ingredients: "Red wines",
           },
           {
-            name: "Bukefal (dry) Lazar Winery",
-            price: "1800",
+            name: "Hermes cabernet sauvignon (dry) - Dalvina winery",
+            price: "1300",
             ingredients: "Red wines",
           },
           {
-            name: "Pinot noir (dry) Lazar Winery",
-            price: "1260",
-            ingredients: "Red wines",
-          },
-          {
-            name: "Belan (dry) Lazar Winery",
-            price: "1500",
-            ingredients: "White wines",
-          },
-          {
-            name: "Pinot grigio (dry) Lazar Winery",
-            price: "1260",
-            ingredients: "White wines",
-          },
-          {
-            name: "Grasevina (dry) Lazar Winery",
-            price: "1200",
-            ingredients: "White wines",
-          },
-          {
-            name: "Fortuna (dry) Lazar Winery",
+            name: "Muscat temjanika (semi-dry) - Dalvina winery",
             price: "1350",
+            ingredients: "White wines",
+          },
+          {
+            name: "Elegija zupljanka (dry) - Dalvina winery",
+            price: "1300",
+            ingredients: "White wines",
+          },
+          {
+            name: "Elegija syrah (dry) - Dalvina winery",
+            price: "1200",
             ingredients: "Rose wines",
           },
           {
-            name: "Pearl blanc de blanc (dry) Lazar Winery",
-            price: "1560",
-            ingredients: "Sparkling wines",
-          },
-          {
-            name: "Pearl blanc de rose (dry) Lazar Winery",
-            price: "1200",
-            ingredients: "Sparkling wines",
-          },
-          {
-            name: "365 clasic vranec (dry) milev-gd tikves Winery",
-            price: "850",
+            name: "Cabernet sauvignon (dry) - Ohrid winery",
+            price: "1400",
             ingredients: "Red wines",
           },
           {
-            name: "Virgo syrah (dry) milev-gd tikves Winery",
-            price: "1350",
+            name: "Merlot (dry) - Ohrid winery",
+            price: "1400",
             ingredients: "Red wines",
           },
           {
-            name: "Virgo cabernet franc (dry)  milev-gd tikves Winery",
-            price: "1500",
+            name: "Vranec (dry) - Ohrid winery",
+            price: "1400",
             ingredients: "Red wines",
           },
           {
-            name: "Virgo traminec (dry) milev-gd tikves Winery",
-            price: "1200",
+            name: "Temjanika (dry) - Ohrid winery",
+            price: "1400",
             ingredients: "White wines",
           },
           {
-            name: "Sauvignon blanc (dry) milev-gd tikves Winery",
-            price: "1200",
+            name: "Chardonnay (dry) - Ohrid winery",
+            price: "1400",
             ingredients: "White wines",
           },
           {
-            name: "Virgo temjanika (semi-dry) milev-gd tikves Winery",
-            price: "1350",
+            name: "Sauvignon blanc (dry) - Ohrid winery",
+            price: "1400",
             ingredients: "White wines",
           },
           {
-            name: "Virgo muscat rose (semi-dry) milev-gd tikves Winery",
-            price: "1350",
-            ingredients: "Rose wines",
+            name: "Temjanika (dry) - Monteko winery",
+            price: "1850",
+            ingredients: "White wines",
+          },
+          {
+            name: "Chardonnay (dry) - Monteko winery",
+            price: "1770",
+            ingredients: "White wines",
+          },
+          {
+            name: "Volcano premium cabernet sauvignon (dry) - Monteko winery",
+            price: "5250",
+            ingredients: "Red wines",
+          },
+          {
+            name: "Vranec (dry) - Monteko winery",
+            price: "1850",
+            ingredients: "Red wines",
+          },
+          {
+            name: "Merlot (dry) - Monteko winery",
+            price: "1770",
+            ingredients: "Red wines",
+          },
+          {
+            name: "Cabernet sauvignon (dry) - Monteko winery",
+            price: "1850",
+            ingredients: "Red wines",
+          },
+          {
+            name: "Nero (dry) - Monteko winery",
+            price: "1980",
+            ingredients: "Red wines",
+          },
+          {
+            name: "Fillip (dry) - Monteko winery",
+            price: "1980",
+            ingredients: "Red wines",
           },
         ],
         // КАФЕ И ЧАЈ/COFFEE AND TEA
         [
           {
-            name: "Чај/Tea",
-            price: "80",
-            ingredients: "Топли напитоци",
-          },
-          {
-            name: "Еспресо/Espresso",
+            name: "Еспресо / Espresso",
             price: "100",
-            ingredients: "Топли напитоци",
+            ingredients: "Кафе",
           },
           {
-            name: "Макијато/Macchiato",
-            price: "110",
-            ingredients: "Топли напитоци",
-          },
-          {
-            name: "Големо Макијато",
+            name: "Макијато / Macchiato",
             price: "120",
-            ingredients: "Топли напитоци",
+            ingredients: "Кафе",
           },
           {
-            name: "Latte macchiato",
-            price: "180",
-            ingredients: "Топли напитоци",
-          },
-          {
-            name: "Нес кафе",
-            price: "150",
-            ingredients: "Топли напитоци",
-          },
-          {
-            name: "Капучино",
-            price: "150",
-            ingredients: "Топли напитоци",
-          
-          },
-          {
-            name: "Ладно макијато",
+            name: "Големо макијато / Large macchiato",
             price: "130",
-            ingredients: "Топли напитоци",
-
+            ingredients: "Кафе",
           },
           {
-            name: "Ирско кафе",
-            price: "260",
-            ingredients: "Топли напитоци",
-          },
-          {
-            name: "Американо",
+            name: "Капучино / Cappuccino",
             price: "150",
-            ingredients: "Топли напитоци",
+            ingredients: "Кафе",
+          },
+          {
+            name: "Ладно макијато / Cold macchiato",
+            price: "130",
+            ingredients: "Кафе",
+          },
+          {
+            name: "Американо / Americano",
+            price: "150",
+            ingredients: "Кафе",
+          },
+          {
+            name: "Лате макијато / Latte macchiato",
+            price: "180",
+            ingredients: "Кафе",
+          },
+          {
+            name: "Нес кафе / Nescafe",
+            price: "150",
+            ingredients: "Кафе",
           },
           {
             name: "Македонско кафе",
-            price: "90",
-            ingredients: "Топли напитоци",
+            price: "100",
+            ingredients: "Кафе",
+          },
+          {
+            name: "Чај / Tea",
+            price: "100",
+            ingredients: "Чај",
           },
         ],
-        //RAKIJA
+        // РАКИЈА
         [
           {
             name: "Лозова жолта 0.05",
-            price: "120",
+            price: "130",
             ingredients: "Ракија",
           },
           {
             name: "Лозова бела 0.05",
-            price: "120",
+            price: "130",
             ingredients: "Ракија",
           },
           {
-            name: "Жолта ракија бовин класик 0.05",
-            price: "120",
-            ingredients: "Ракија",
-          },
-          {
-            name: "Премиум ракија бовин 0.05",
-            price: "180",
-            ingredients: "Ракија",
-          },
-          {
-            name: "Ракија од круша 0.05",
-            price: "240",
-            ingredients: "Ракија",
-          },
-          {
-            name: "Ракија од дуња 0.05",
-            price: "240",
-            ingredients: "Ракија",
-          },
-          {
-            name: "Гордон амбер yellow 0.05",
+            name: "Дукат 0.04",
             price: "160",
             ingredients: "Ракија",
           },
           {
-            name: "Мастика 0.05",
+            name: "Мастика 0.04",
             price: "120",
             ingredients: "Ракија",
           },
           {
-            name: "Сливова ракија 0.05",
-            price: "240",
+            name: "Bovin classic rakia 0.04",
+            price: "130",
             ingredients: "Ракија",
           },
           {
-            name: "Лозова домашна 0.05",
-            price: "240",
+            name: "Bovin premium rakia 0.04",
+            price: "180",
             ingredients: "Ракија",
           },
           {
-            name: "Бовин ракија од вишна",
+            name: "Bovin cherry brandy 0.04",
             price: "200",
             ingredients: "Ракија",
           },
           {
-            name: "Ликер од круша 0.04",
-            price: "150",
+            name: "Badel Williams rakija 0.04",
+            price: "170",
+            ingredients: "Ракија",
+          },
+          {
+            name: "Shlivovica 0.04",
+            price: "240",
             ingredients: "Ракија",
           },
         ],
         // АЛКОХОЛНИ ПИЈАЛОЦИ
         [
           {
-            name: "Џин бадел 0.04",
-            price: "130",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Смидџин 0.04",
+            name: "Смидџин / Craft gin 0.04",
             price: "250",
-            ingredients: "Алкохолни пијалоци",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "Џин беефеатер 0.04",
+            name: "Gin Gordons 0.04",
+            price: "210",
+            ingredients: "Жестоки пијалоци",
+          },
+          {
+            name: "Gin Pink Gordons 0.04",
+            price: "210",
+            ingredients: "Жестоки пијалоци",
+          },
+          {
+            name: "Smirnoff 0.04",
             price: "200",
-            ingredients: "Алкохолни пијалоци",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "Џин Гордонс 0.04",
-            price: "220",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Џин пинк Гордонс 0.04",
-            price: "220",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Водка бадел 0.04",
-            price: "140",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Бејлис 0.04",
-            price: "220",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Амарето 0.04",
-            price: "170",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Ballentines 0.04",
-            price: "240",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Пелинковац бадел 0.04",
-            price: "130",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Коњак бадел 0.04",
-            price: "140",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Рум бадел 0.04",
-            price: "120",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Смирноф 0.04",
-            price: "200",
-            ingredients: "Алкохолни пијалоци",
-          },
-          {
-            name: "Џек Даниелс 0.04",
+            name: "Jack Daniels 0.04",
             price: "350",
-            ingredients: "Алкохолни пијалоци",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "Џемјсон 0.04",
+            name: "Jameson 0.04",
             price: "250",
-            ingredients: "Алкохолни пијалоци",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "Џејмсон Блек 0.04",
-            price: "400",
-            ingredients: "Алкохолни пијалоци",
+            name: "Jameson Black 0.04",
+            price: "360",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "Џони Ред 0.04",
+            name: "Johnnie Red 0.04",
             price: "200",
-            ingredients: "Алкохолни пијалоци",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "Џони Блек 0.04",
+            name: "Johnnie Black 0.04",
             price: "300",
-            ingredients: "Алкохолни пијалоци",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "4 Рози бурбон 0.04",
+            name: "Four Roses 0.04",
             price: "260",
-            ingredients: "Алкохолни пијалоци",
-          },
-         
-          {
-            name: "Рум Морган 0.04",
-            price: "200",
-            ingredients: "Алкохолни пијалоци",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "Јегермајстер 0.04",
+            name: "Rum Morgan 0.04",
             price: "220",
-            ingredients: "Алкохолни пијалоци",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "Чивас Регал 12 0.04",
-            price: "390",
-            ingredients: "Алкохолни пијалоци",
+            name: "Jagermeister 0.04",
+            price: "240",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "Кампари 0.04",
-            price: "180",
-            ingredients: "Алкохолни пијалоци",
+            name: "Pelinkovac Badel 0.04",
+            price: "130",
+            ingredients: "Жестоки пијалоци",
           },
           {
-            name: "Текила олмека 0.04",
+            name: "Konjak Badel 0.04",
+            price: "130",
+            ingredients: "Жестоки пијалоци",
+          },
+          {
+            name: "Stock 84 0.04",
+            price: "160",
+            ingredients: "Жестоки пијалоци",
+          },
+          {
+            name: "Baileys 0.04",
+            price: "190",
+            ingredients: "Жестоки пијалоци",
+          },
+          {
+            name: "Tequila Olmeca 0.04",
             price: "200",
-            ingredients: "Алкохолни пијалоци",
+            ingredients: "Жестоки пијалоци",
           },
         ],
         // САЛАТИ
         [
           {
-            name: "Шопска Салата",
-            price: "190",
-            ingredients: "Домати, краставица , кромид , сирење",
+            name: "Шопска / Shopska",
+            price: "240",
+            ingredients: "Домати, краставица, кромид, сирење",
           },
           {
-            name: "Егејска салата",
-            price: "200",
+            name: "Егејска / Aegean",
+            price: "250",
             ingredients: "Домати, краставица, кромид кругови, сирење на коцки, оригано",
           },
           {
-            name: "Ракија салата",
-            price: "160",
+            name: "Ракија салата / Rakija salad",
+            price: "190",
             ingredients: "Зелка, краставица, маслинки",
           },
           {
-            name: "Македонска салата",
-            price: "240",
-            ingredients: "Домати, кромид, печени пиперки",
+            name: "Таратур / Taratur",
+            price: "260",
+            ingredients: "Салати",
           },
           {
-            name: "Мешана салата",
-            price: "170",
-            ingredients: "Цвекло, морков, краставица, домат, зелка",
-          },
-          
-      
-          {
-            name: "Цезар салата",
-            price: "290",
-            ingredients: 
-            "Марула, пилешко, кубети, домати, пармезан, прелив",
+            name: "Мешана салата / Mixed salad",
+            price: "200",
+            ingredients: "Морков, краставица, домат, зелка",
           },
           {
-            name: "Туна салата",
-            price: "340",
+            name: "Македонска салата / Macedonian salad",
+            price: "270",
+            ingredients: "Домати, печени пиперки, кромид",
+          },
+          {
+            name: "Салата Галичица / Galichica salad",
+            price: "350",
+            ingredients: "Козјо сирење, рукола, домат, сушено овошје, ореви",
+          },
+          {
+            name: "Туна салата / Tuna salad",
+            price: "360",
             ingredients: "Марула, туна, пченка, кромид, маслинки",
           },
-          
           {
-            name: "Туршија",
-            price: "180",
-            ingredients:
-              "Зелка,пиперка,морков,карфиол,домат,краставица",
+            name: "Цезар салата / Caesar salad",
+            price: "340",
+            ingredients: "Марула, пилешко месо 150 г, кубети, домати, пармезан, прелив",
           },
-          {
-            name: "Салата Галичица",
-            price: "320",
-            ingredients:
-              "Козјо сирење,рукола,домат,сушено овошје,ореви",
-          },
-        
         ],
-
         // ДАСКИ
         [
           {
-            name: "Специјал даска за 6 лица",
-            price: "3600",
-            ingredients: "Коленица,ребро во фурна,роловано ребро,домашен колбас,свинско во сос од вргањ,ќебапи со кајмак,џигер на скара,солено месо",
-          },
-          {
             name: "Македонска мезе даска за 4 лица",
             price: "1800",
-            ingredients: "Ајвар,пинџур,макало,лутеница,туршија,сарма,пиперка во кајмак,овчо сирење,биеносирење со сланина,пршки вокачамак,домашен леб",
+            ingredients: "Ајвар, пинџур, макало, лутеница, пиперка во кајмак, овчо сирење, качамак со сланина, биено сирење, сланина, домашен леб",
           },
           {
-            name: "Похована даска за 4 лица",
-            price: "2380",
-            ingredients: "Зденки,кромид,пилешки прсти,крцкав пилешки стек,похован кашкавал,пирошка,крцкав кашкавал,поховано сирење/melted",
+            name: "Специјал даска за 6 лица",
+            price: "3800",
+            ingredients: "Коленица, ребро во фурна, роловано ребро со кајмак, младо ребро, домашен колбас, чадена сланина, џигер на скара, солено месо",
           },
-          {
-            name: "Мешано месо за 4 лица",
-            price: "2400",
-            ingredients: "Ќебапи,шарска плескавица,сланина,вешалица,пилешки стек,свинско филе",
-          },
-        
         ],
-
         // ПРИЛОЗИ И ДОРУЧЕК
         [
           {
             name: "Охридска кајгана",
-            price: "240",
+            price: "260",
             ingredients: "3 јајца, домати, печени пиперки, сирење",
           },
           {
+            name: "Доручек Lychnidia",
+            price: "390",
+            ingredients: "Пржени лепчиња со јајце, кашкавал, сланина, кравјо сирење, колбас, ајвар",
+          },
+          {
+            name: "Омлет",
+            price: "260",
+            ingredients: "Ваша комбинација по избор",
+          },
+          {
             name: "Јајца на око со сланина",
-            price: "240",
-            ingredients: "3 јајца, 100г сланина, леб",
-          },
-          {
-            name: "Утринска кеседиља",
-            price: "280",
-            ingredients: "Тортиља, кашвакал, чедар, 1 јаце на око, сланина, домат",
-          },
-          {
-            name: "Доручек Лихнидија",
-            price: "330",
-            ingredients: "Пржени лепчиња со јајце, кашкавал, сланина, колбас, домашно кравјо сирење, ајвар",
-          },
-          {
-            name: "Омлет на баба",
-            price: "270",
-            ingredients: "3 јајца, сува пиперка, кромид, праз",
-          },
-          {
-            name: "Омлет со печурки и кашкавал",
-            price: "230",
-            ingredients: "З јајца, печурки, кашкавал",
-          },
-          {
-            name: "Омлет со ајвар и сирење",
-            price: "250",
-            ingredients: "Прилози и доручек",
+            price: "260",
+            ingredients: "3 јајца, 100 г сланина, леб",
           },
           {
             name: "Јајца на око со шунка",
             price: "230",
-            ingredients: "3 јајца, 100г шунка, леб",
+            ingredients: "3 јајца, 100 г шунка, леб",
+          },
+          {
+            name: "Утринска кеседиља",
+            price: "320",
+            ingredients: "Тортиља, кашкавал, чедар, 1 јајце на око, сланина, домат",
           },
           {
             name: "Рибна чорба",
-            price: "250",
-            ingredients: "(пастрмка 150 г,лепиња,макало,лимон,феферони",
+            price: "290",
+            ingredients: "Чорби",
           },
           {
             name: "Телешка чорба",
-            price: "260",
-            ingredients: "Прилози и доручек",
-          },
-          {
-            name: "Гулаш",
-            price: "280",
-            ingredients: "(Јунешка кртина, кромид,зачини, пире од компир/ориз,лепиња)",
-          },
-          
-        ],
-
-        // Јадења од мелено месо
-        [
-         
-          {
-            name: "Шарска плескавица 300г.",
             price: "320",
-            ingredients: "Мелено месо 250г, кашкавал 50г",
+            ingredients: "Чорби",
+          },
+        ],
+        // ЈАДЕЊА ОД МЕЛЕНО МЕСО
+        [
+          {
+            name: "Шарска плескавица 300 г",
+            price: "380",
+            ingredients: "Мелено месо 250 г, кашкавал 50 г",
+          },
+          {
+            name: "Lychnidia плескавица",
+            price: "490",
+            ingredients: "Мелено месо 250 г, сланина 100 г, кајмак, јајце",
+          },
+          {
+            name: "Полнета плескавица",
+            price: "470",
+            ingredients: "Мелено месо 250 г, кашкавал, зденка, печурки, шунка",
+          },
+          {
+            name: "Ќебапи 350 г",
+            price: "390",
+            ingredients: "Јадења од мелено месо",
           },
           {
             name: "Ќебапи со кајмак",
-            price: "380",
+            price: "460",
             ingredients: "Јадења од мелено месо",
           },
-          {
-            name: "Ќофте во доматен сос",
-            price: "380",
-            ingredients: "Јадења од мелено месо",
-          },
-          {
-            name: "Плескавица Охриѓанка",
-            price: "390",
-            ingredients: "Мелено месо 300 г,ајвар,сиренье,кајмак",
-          },
-          {
-            name: "Полнета плескавица 500г",
-            price: "430",
-            ingredients: "Мелено месо 300г, кашкавал, зденка, печурки, шунка",
-          },
-          {
-            name: "Ќебапи 350г",
-            price: "330",
-            ingredients: "Јадења од мелено месо",
-          },
-          {
-            name: "Лихнидија плескавица 400г",
-            price: "420",
-            ingredients: "Мелено месо 250г,кашкавал 50г",
-          },
-          {
-            name: "Плескавица 500г",
-            price: "420",
-            ingredients: "Јадења од мелено месо",
-          },
-          
         ],
-        //ЈАДЕЊА ОД ТЕЛЕШКО МЕСО
+        // ЈАДЕЊА ОД ТЕЛЕШКО МЕСО
         [
           {
-            name: "Бифтек на путер и рузмарин 250г",
-            price: "1420",
+            name: "Мускул во сос од печурки 250 г",
+            price: "690",
             ingredients: "Јадења од телешко месо",
           },
           {
-            name: "Филе Стронганоф 250г",
+            name: "Филе Строганоф 250 г",
             price: "1490",
             ingredients: "Јадења од телешко месо",
           },
-          {
-            name: "Бифтек во сос од бибер во зрна 250г",
-            price: "1550",
-            ingredients: "Јадења од телешко месо",
-          },
-          {
-            name: "Телешки мускул во сос 250г",
-            price: "460",
-            ingredients: "Јадења од телешко месо",
-          },
         ],
-        //ЈАДЕЊА ОД СВИНСКО МЕСО
+        // ЈАДЕЊА ОД СВИНСКО МЕСО
         [
           {
-            name: "Свинско филе со кашкавал и печурки 250г",
+            name: "Свинско филе со кашкавал и печурки 250 г",
+            price: "520",
+            ingredients: "Јадења од свинско месо",
+          },
+          {
+            name: "Свинско во сос од печурки и мајчина душица 250 г",
             price: "480",
             ingredients: "Јадења од свинско месо",
           },
           {
-            name: "Каре во скара сос и сусам 250г",
-            price: "430",
-            ingredients: "Јадења од свинско месо",
-
-          },
-          {
-            name: "Вешалица 250г",
-            price: "490",
+            name: "Глазирано бејби ребро 350 г",
+            price: "590",
             ingredients: "Јадења од свинско месо",
           },
           {
-            name: "Ребро во фурна 350г",
-            price: "490",
+            name: "Ребро во фурна 300 г",
+            price: "540",
             ingredients: "Јадења од свинско месо",
-
           },
           {
-            name: "Ребро Лихнидија 350г",
-            price: "530",
+            name: "Ребро Лихнидија 250 г",
+            price: "590",
             ingredients: "Роловано ребро со кајмак",
-
           },
           {
-            name: "Коленица 500г",
-            price: "560",
-            ingredients: "Јадења од свинско",
-
-          },
-          {
-            name: "Медаљлони во сос од вргањ и мајчина душица 300г",
-            price: "470",
+            name: "Вешалица 250 г",
+            price: "490",
             ingredients: "Јадења од свинско месо",
           },
           {
-            name: "Свинско со сува пиперка и праз 300г",
-            price: "450",
+            name: "Бавно печена коленица 400 г",
+            price: "620",
             ingredients: "Јадења од свинско месо",
           },
-          {
-            name: "Домашен колбас 200г",
-            price: "350",
-            ingredients: "Јадења од свинско месо",
-          },
-          {
-            name: "Џигер на скара",
-            price: "310",
-            ingredients: "Јадења од свинско месо",
-          },
-          
         ],
-        //ЈАДЕЊА ОД ПИЛЕШКО МЕСО
+        // ЈАДЕЊА ОД ПИЛЕШКО МЕСО
         [
-        {
-            name: "Пилешко Лихнидија",
-            price: "360",
-            ingredients: "Пилешко филе 200г, сланина, маслиново масло, пармезан, путер, сушен домат, оригано, мајчина душица, гарнир",
-          },
           {
-            name: "Крцкав пилешки стек 300г",
-            price: "350",
+            name: "Крцкав пилешки стек 250 г",
+            price: "370",
             ingredients: "Јадења од пилешко месо",
           },
           {
-            name: "Пилешки стек на азсики начин 300г",
-            price: "340",
-            ingredients: "Пилешко 250г,тиквици,печурки,кромид,соjа сос,кари,бело вино",
-
-          },
-          {
-            name: "Пилешки прсти 300г",
-            price: "330",
-            ingredients: "Јадења од пилешко месо",
-          },
-          {
-            name: "Пилешки стронгаф",
+            name: "Пилешко на азиски начин 250 г",
             price: "380",
-            ingredients: "Пилешко 250г,кромид, кисели краставици, печурки,киселапавлака, сенф",
+            ingredients: "Тиквици, печурки, кромид, бело вино, кари, соја сос",
           },
           {
-            name: "Пилешкo со печурки во бел сос 250г",
-            price: "320",
-            ingredients: "Јадења од пилешко",
+            name: "Пилешко Lychnidia",
+            price: "440",
+            ingredients: "Пилешко филе 200 г, сланина, маслиново масло, путер, пармезан, сушен домат, оригано, мајчина душица, гарнир",
           },
           {
-            name: "Пилешки стек 250г",
-            price: "310",
-            ingredients: "Јадења од пилешко",
+            name: "Пилешко со печурки во бел сос 250 г",
+            price: "360",
+            ingredients: "Јадења од пилешко месо",
           },
-          
-          
+          {
+            name: "Пилешки прсти 300 г",
+            price: "350",
+            ingredients: "Јадења од пилешко месо",
+          },
+          {
+            name: "Пилешки стек на скара 250 г",
+            price: "350",
+            ingredients: "Јадења од пилешко месо",
+          },
         ],
-        
-        //MAKEDONSKI TRADICIONALNI JADEnja
+        // МАКЕДОНСКИ ТРАДИЦИОНАЛНИ ЈАДЕЊА
         [
-        {
+          {
             name: "Селско месо",
-            price: "460",
-            ingredients: "(свинско месо, пилешко месо,кромид,печурки,домат,пиперка,какашкавал",
+            price: "540",
+            ingredients: "Свинско месо, пилешко месо, кашкавал, печурки, кромид, лук, пиперка, домат",
           },
           {
-            name: "Мусака",
-            price: "320",
-            ingredients: "Компир,мелено месо,кромид,млеко,jajце",
-
+            name: "Печурки со сланина и кашкавал",
+            price: "390",
+            ingredients: "Традиционални македонски јадења",
           },
           {
             name: "Тавче гравче",
-            price: "270",
-            ingredients: "Бел грав со сушена пиперка во тава",
+            price: "300",
+            ingredients: "Традиционални македонски јадења",
+          },
+          {
+            name: "Тавче гравче со плескавица/колбас",
+            price: "390",
+            ingredients: "Традиционални македонски јадења",
+          },
+          {
+            name: "Мусака",
+            price: "340",
+            ingredients: "Традиционални македонски јадења",
           },
           {
             name: "Полнети пиперки",
-            price: "330",
-            ingredients: "Пиперка,мелено месо, кромид,ориз,домат",
-
-          },
-          {
-            name: "Тавче гравче со сланина/колбас",
-            price: "340",
-            ingredients: "Бел грав со сушена пиперка,бејкон,колбас",
-
-          },
-          {
-            name: "Сарма",
-            price: "340",
-            ingredients: "Кисела зелка,мелено месо,ориз,кромид,кисело млеко",
-
+            price: "350",
+            ingredients: "Традиционални македонски јадења",
           },
           {
             name: "Џигер на селски начин",
-            price: "340",
-            ingredients: "Џигер 300 г,кромид,лук,млеко ,зачини",
-
+            price: "420",
+            ingredients: "Кромид, праз, лук, сува пиперка",
           },
           {
-            name: "Подварок со суво месо",
+            name: "Џигер на скара 300 г",
             price: "350",
-            ingredients: "Македонски традиционални јадења",
-
+            ingredients: "Традиционални македонски јадења",
           },
-          
         ],
-        //Рижото и паста
+        // РИЖОТО И ПАСТА
         [
-        {
-            name: "Рижото со врган",
+          {
+            name: "Рижото со печурки",
             price: "440",
-            ingredients: "Ориз, врган, лук и кромид, бело вино, млеко, путер, пармезан",
+            ingredients: "Ориз, печурки, лук и кромид, бело вино, млеко, путер, пармезан",
+          },
+          {
+            name: "Рижото со морски плодови",
+            price: "540",
+            ingredients: "Рижото и паста",
           },
           {
             name: "Шпагети карбонара",
-            price: "380",
+            price: "420",
             ingredients: "Шпагети, сланина, пармезан, жолчка од јајце, бибер",
-
-          },
-          {
-            name: "Рижото со горгонзола и пилешко",
-            price: "460",
-            ingredients: "Ориз,школки,ракчиња,лук и кромид,маслиново масло,бело вино,копар",
-          },
-          {
-            name: "Тортелини со горгонзола и фстаци",
-            price: "380",
-            ingredients: "Ориз, пустер, маслиново масло, бело вино, горгонзола",
           },
           {
             name: "Шпагети со морски плодови",
-            price: "560",
-            ingredients: "Школки, ракчиња, кромид, лук, маслиново масло, магданос, копер, бело вино, домат",
-
-          }, 
+            price: "590",
+            ingredients: "Школки, ракчиња, кромид, лук, маслиново масло, магдонос, копар, бело вино, домат",
+          },
+          {
+            name: "Тортелони со горгонзола и ф’стаци",
+            price: "520",
+            ingredients: "Горгонзола, ф’стаци, маслиново масло, путер",
+          },
         ],
-
         // ПРЕДЈАДЕЊА
         [
           {
-            name: "Сирење на скара 200г",
+            name: "Домашни намази",
+            price: "180",
+            ingredients: "Ајвар, пинџур, лутеница, макало",
+          },
+          {
+            name: "Пиперка во кајмак",
+            price: "280",
+            ingredients: "Предјадења",
+          },
+          {
+            name: "Печурки на путер 250 г",
             price: "260",
             ingredients: "Предјадења",
           },
           {
-            name: "Печурки на путер 250г",
-            price: "230",
+            name: "Сирење на скара 200 г",
+            price: "260",
             ingredients: "Предјадења",
           },
           {
-            name: "Чипс од сланина 200г",
-            price: "290",
+            name: "Сирење свежо 200 г",
+            price: "250",
             ingredients: "Предјадења",
           },
           {
-            name: "Лепчиња со лук,фета,македан",
-            price: "180",
+            name: "Биено сирење со сланина 150 г",
+            price: "340",
+            ingredients: "Предјадења",
+          },
+          {
+            name: "Брускети со домат и песто",
+            price: "260",
+            ingredients: "Предјадења",
+          },
+          {
+            name: "Лебчиња со лук",
+            price: "170",
+            ingredients: "Предјадења",
+          },
+          {
+            name: "Лебчиња со фета и лук",
+            price: "190",
             ingredients: "Предјадења",
           },
           {
             name: "Лепиња со кајмак",
             price: "180",
-            ingredients:
-              "Предјадења",
-          },
-          {
-            name: "Тиквици на скара 200г",
-            price: "190",
-            ingredients:
-              "Предјадења",
-          },
-          {
-            name: "Макало од лук",
-            price: "150",
             ingredients: "Предјадења",
           },
           {
-            name: "Ајвар",
-            price: "150",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Биено сирење со сланина 200г",
-            price: "340",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Домашно кравјо сирење 200г",
-            price: "280",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Полнети печурки 350г",
-            price: "290",
-            ingredients: "Печурки, кашкавал, шунка",
-          },
-          {
-            name: "Похован кашкавал 150г",
-            price: "170",
-            ingredients:
-              "Предјадења",
-          },
-          {
-            name: "Поховани зденки 200г",
-            price: "190",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Похован кромид 200г",
+            name: "Тиквици на скара 200 г",
             price: "220",
             ingredients: "Предјадења",
           },
           {
-            name: "Лутеница",
-            price: "150",
+            name: "Похован кашкавал 150 г",
+            price: "240",
             ingredients: "Предјадења",
           },
           {
-            name: "Пинџур",
-            price: "150",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Свежо сирење 200г",
+            name: "Поховани зденки 150 г",
             price: "220",
             ingredients: "Предјадења",
           },
           {
-            name: "Печурки со сланина и кашкавал 300г",
-            price: "330",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Пиперка со кајмак",
-            price: "190",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Туршија пиперка во павлака",
-            price: "150",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Лебпчиња со ајвар и сирење",
-            price: "180",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Крцкав кашкавал 200г",
-            price: "230",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Пирошка 120г",
-            price: "180",
-            ingredients: "Предјадења",
-          },
-          {
-            name: "Пршки 100г",
-            price: "180",
+            name: "Похован кромид 200 г",
+            price: "260",
             ingredients: "Предјадења",
           },
         ],
         // РИБА
         [
           {
-            name: "Речна Пастрмка 500г.",
-            price: "590",
+            name: "Пастрмка 1 кг",
+            price: "1700",
             ingredients: "Риба",
           },
           {
-            name: "Охридска пастрмка 400г.",
-            price: "1100",
+            name: "Лосос во сос од бело вино 1 кг",
+            price: "2500",
             ingredients: "Риба",
           },
           {
-            name: "Пастрмка во тава 400г.",
-            price: "1300",
-            ingredients: "Пастрмка,кромид,пиперка,домат,македан,лук",
-          },
-          {
-            name: "Лосос во сос од бело вино 500г.",
-            price: "750",
+            name: "Охридска пастрмка 1 кг",
+            price: "2700",
             ingredients: "Риба",
           },
           {
-            name: "Белвица 400г.",
-            price: "900",
+            name: "Пастрмка во тава 1 кг",
+            price: "2800",
+            ingredients: "Риба",
+          },
+          {
+            name: "Белвица 1 кг",
+            price: "2400",
             ingredients: "Риба",
           },
         ],
@@ -1299,35 +1018,34 @@
         [
           {
             name: "Тулумба",
-            price: "180",
+            price: "150",
             ingredients: "Десерти",
           },
           {
             name: "Баклава",
-            price: "190",
-            ingredients: "Десерти",
-          },
-          {
-            name: "Палачинка со нутела,плазма и банана",
             price: "180",
             ingredients: "Десерти",
           },
           {
-            name: "Палачинка со крем од ф'стак",
-            price: "270",
+            name: "Палачинка со нутела, банана и плазма",
+            price: "240",
+            ingredients: "Десерти",
+          },
+          {
+            name: "Палачинка со крем од ф’стак",
+            price: "290",
             ingredients: "Десерти",
           },
           {
             name: "Охридска торта",
-            price: "210",
+            price: "220",
             ingredients: "Десерти",
           },
-          
         ],
-        //ДОДАТОЦИ
+        // ДОДАТОЦИ
         [
           {
-            name: "Пиперка парче",
+            name: "Пиперка блага парче",
             price: "50",
             ingredients: "Додатоци",
           },
@@ -1337,28 +1055,13 @@
             ingredients: "Додатоци",
           },
           {
-            name: "Нафора со сирење",
-            price: "180",
-            ingredients: "Додатоци",
-          },
-          {
-            name: "Маслинки 100г",
-            price: "120",
-            ingredients: "Додатоци",
-          },
-          {
             name: "Лепиња",
             price: "50",
             ingredients: "Додатоци",
           },
           {
-            name: "Јајце",
-            price: "50",
-            ingredients: "Додатоци",
-          },
-          {
-            name: "Помфрит 100г",
-            price: "100",
+            name: "Маслинки 100 г",
+            price: "120",
             ingredients: "Додатоци",
           },
           {
@@ -1367,139 +1070,138 @@
             ingredients: "Додатоци",
           },
           {
-            name: "Кечап,мајонез",
-            price: "40",
-            ingredients: "Додатоци",
-          },
-          {
             name: "Кајмак топче",
             price: "130",
             ingredients: "Додатоци",
           },
           {
-            name: "Пармезан",
+            name: "Пармезан 50 г",
             price: "120",
-            ingredients: "Додатоци",
-          },
-          {
-            name: "Домат парче",
-            price: "120",
-            ingredients: "Додатоци",
-          },
-          {
-            name: "Ориз топче",
-            price: "70",
             ingredients: "Додатоци",
           },
         ],
-        //КОКТЕЛИ
+        // КОКТЕЛИ
         [
-        {
-            name: "Margarita",
-            price: "300",
-            ingredients: "Текила, трипл сек, сок од лимон",
-          },
           {
-            name: "Tequila sunrise",
-            price: "270",
-            ingredients: "Текила, гранадин, сок од портокал",
-          },
-          {
-            name: "Cuba libre",
-            price: "290",
-            ingredients: "Рум, кока кола, свежа лимета",
+            name: "Tequila Sunrise",
+            price: "320",
+            ingredients: "Tequila, Orange Juice, Grenadine",
           },
           {
             name: "Mojito",
             price: "320",
-            ingredients: "Бел рум, кафеав шеќер, нане, лед, сода",
+            ingredients: "White Rum, Lime, Mint, Sugar, Soda",
           },
           {
-            name: "Sex on the beach",
-            price: "300",
-            ingredients: "Вотка, арчерс, сок од брусница, портокал",
+            name: "Strawberry Mojito",
+            price: "340",
+            ingredients: "White Rum, Lime, Mint, Strawberry, Soda",
+          },
+          {
+            name: "Sex on the Beach",
+            price: "340",
+            ingredients: "Vodka, Peach Schnapps, Orange Juice, Cranberry Juice",
           },
           {
             name: "Mai Tai",
-            price: "350",
-            ingredients: "Бел рум, црн рум, сок од лимета, портокал",
-          },
-          {
-            name: "Cosmopolitan",
-            price: "320",
-            ingredients: "Вотка, трипл сек, сок од лимета, брусница",
-          },
-          {
-            name: "Hurricane",
-            price: "390",
-            ingredients: "Бел и темен рум, сок од маракуја и лимета, гренадин, шеќерен сируп ",
-          },
-          {
-            name: "Long Island Iced Tea",
-            price: "380",
-            ingredients: "Бел рум, вотка, џин, текила, сок од лимон, кока кола, шеќерен сируп",
-          },
-          {
-            name: "AMF",
-            price: "370",
-            ingredients: "Вотка, бел рум, текила, џин, син курасао, лимон, шеќерен сируп",
-          },
-          {
-            name: "Pinacolada",
-            price: "350",
-            ingredients: "Бел рум, кокосов крем и рум, сок од ананас",
-          },
-          {
-            name: "Gin Fizz",
-            price: "260",
-            ingredients: "Џин, сок од лимон, шеќерен сируп, сода",
+            price: "360",
+            ingredients: "White Rum, Dark Rum, Orange Curaçao, Lime, Almond Syrup",
           },
           {
             name: "Blue Lagoon",
-            price: "320",
-            ingredients: "Вотка, син курасао, 7уп",
-          },
-          {
-            name: "Bahama Mama",
-            price: "350",
-            ingredients: "Бел рум, малибу, вишнова ракија, сок од портокал и лимон, шеќерен сируп",
-          },
-          {
-            name: "Aperol Spritz",
-            price: "300",
-            ingredients: "Аперол, просеко, сода",
+            price: "340",
+            ingredients: "Vodka, Blue Curaçao, Lemonade",
           },
           {
             name: "Blue Hawaii",
+            price: "360",
+            ingredients: "Rum, Vodka, Blue Curaçao, Pineapple Juice",
+          },
+          {
+            name: "Bahama Mama",
+            price: "360",
+            ingredients: "Rum, Coconut Liqueur, Coffee Liqueur, Pineapple Juice",
+          },
+          {
+            name: "Aperol Spritz",
             price: "340",
-            ingredients: "Бел рум, вотка, син курасао, сок од ананас и лимон, шеќерен сируп",
+            ingredients: "Aperol, Prosecco, Soda",
           },
           {
-            name: "Bloody Mary",
-            price: "390",
-            ingredients: "Вотка, сок од домат и лимон, табаско, ворчестер сос, сол, црн пипер",
+            name: "Hurricane",
+            price: "360",
+            ingredients: "Light Rum, Dark Rum, Passion Fruit, Orange Juice, Lime",
+          },
+          {
+            name: "Long Island Iced Tea",
+            price: "420",
+            ingredients: "Vodka, Gin, Tequila, Rum, Triple Sec, Cola",
+          },
+          {
+            name: "Piña Colada",
+            price: "360",
+            ingredients: "White Rum, Coconut Cream, Pineapple Juice",
+          },
+          {
+            name: "Gin Fizz",
+            price: "320",
+            ingredients: "Gin, Lemon Juice, Sugar, Soda",
+          },
+          {
+            name: "AMF",
+            price: "420",
+            ingredients: "Vodka, Gin, Rum, Tequila, Blue Curaçao, Lemon-Lime Soda",
+          },
+          {
+            name: "Lychnidia Sunset",
+            price: "260",
+            ingredients: "Orange Juice, Pineapple Juice, Peach Syrup, Grenadine, Lime",
+          },
+          {
+            name: "Ohrid Blue Lemonade",
+            price: "220",
+            ingredients: "Blue Curaçao Syrup, Lemonade, Lime, Soda",
+          },
+          {
+            name: "Strawberry Mojito Mocktail",
+            price: "260",
+            ingredients: "Strawberry, Mint, Lime, Sugar, Soda",
+          },
+          {
+            name: "Virgin Piña Colada",
+            price: "260",
+            ingredients: "Coconut Cream, Pineapple Juice, Cream",
+          },
+          {
+            name: "Tropical Iced Tea",
+            price: "220",
+            ingredients: "Iced Tea, Peach, Lemon, Orange, Mint",
+          },
+          {
+            name: "Oreo Milkshake",
+            price: "290",
+            ingredients: "Milk, Vanilla Ice Cream, Oreo, Whipped Cream",
+          },
+          {
+            name: "Strawberry Milkshake",
+            price: "290",
+            ingredients: "Milk, Vanilla Ice Cream, Strawberry, Whipped Cream",
+          },
+          {
+            name: "Vanilla Plazma Milkshake",
+            price: "290",
+            ingredients: "Milk, Vanilla Ice Cream, Plazma Biscuit, Whipped Cream",
+          },
+          {
+            name: "Chocolate Milkshake",
+            price: "290",
+            ingredients: "Milk, Vanilla Ice Cream, Chocolate, Whipped Cream",
           },
         ],
-        //екстра понуда
-        [
-          {
-            name: "Печена патка 2.3кг",
-            price: "1800",
-            ingredients: "Екстра понуда",
-          },
-          {
-            name: "Јагнешко печење 1кг",
-            price: "1750",
-            ingredients: "Екстра понуда",
-          },
-          {
-            name: "Јагнешки котлети 0.5кг",
-            price: "890",
-            ingredients: "Екстра понуда",
-          },
-        ],
-                // Add other categories here...
-            ];
+        // ЕКСТРА ПОНУДА
+        [],
+];
+
 
             const productListElement = document.getElementById('product-list');
             const urlParams = new URLSearchParams(window.location.search);
