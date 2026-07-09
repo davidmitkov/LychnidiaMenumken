@@ -31,1448 +31,1176 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const products = [
-                // ALKOHOLFREIE GETRÄNKE
-                [
-                {
-    "name": "Wasser (groß) 0.75",
-    "price": "130",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "Wasser (klein) 0.25",
-    "price": "80",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "Pepsi 0.33",
-    "price": "120",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "Pepsi Max 0.33",
-    "price": "120",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "Gazoza 0.33",
-    "price": "120",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "Eistee 0.33",
-    "price": "140",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "7up 0.33",
-    "price": "120",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "Stille Säfte 0.2",
-    "price": "150",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "Frischer Zitronensaft 0.25",
-    "price": "170",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "Frischer Orangensaft 0.25",
-    "price": "220",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "Mirinda Zitrone/Orange 0.33",
-    "price": "120",
-    "ingredients": "Alkoholfreie Getränke"
-  },
-  {
-    "name": "Soda Zitrone/Orange/Mojito 0.33",
-    "price": "150",
-    "ingredients": "Alkoholfreie Getränke"
-  }
+          const products = [
+        // ALKOHOLFREIE GETRÄNKE
+        [
+          {
+            name: "Pepsi 0.33",
+            price: "130",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "Pepsi Max 0.33",
+            price: "130",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "7Up 0.33",
+            price: "130",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "Gazoza 0.33",
+            price: "130",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "Mirinda 0.33",
+            price: "130",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "Eistee 0.33",
+            price: "150",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "Wasser 0.25",
+            price: "100",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "Wasser 0.75",
+            price: "140",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "Stille Säfte 0.2",
+            price: "150",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "Frisch gepresster Zitronensaft 0.25",
+            price: "180",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "Frisch gepresster Orangensaft 0.25",
+            price: "240",
+            ingredients: "Alkoholfreie Getränke",
+          },
+          {
+            name: "Fruchtsoda 0.33",
+            price: "150",
+            ingredients: "Alkoholfreie Getränke",
+          },
         ],
         // BIER
         [
-        {
-    "name": "Krali Marko 0.5",
-    "price": "150",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Zlaten Dab 0.33",
-    "price": "140",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Zlaten Dab vom Fass 0.5",
-    "price": "140",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Zlaten Dab Amber 0.33",
-    "price": "140",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Corona 0.33",
-    "price": "250",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Tuborg 0.33",
-    "price": "190",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Carlsberg 0.33",
-    "price": "210",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Heineken 0.33",
-    "price": "230",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Tuborg 0.5 (0.0%)",
-    "price": "210",
-    "ingredients": "Bier"
-  }
+          {
+            name: "Krali Marko 0.5",
+            price: "170",
+            ingredients: "Bier",
+          },
+          {
+            name: "Zlaten Dab 0.33",
+            price: "150",
+            ingredients: "Bier",
+          },
+          {
+            name: "Zlaten Dab vom Fass 0.33",
+            price: "150",
+            ingredients: "Bier",
+          },
+          {
+            name: "Zlaten Dab vom Fass 0.5",
+            price: "180",
+            ingredients: "Bier",
+          },
+          {
+            name: "Tuborg 0.33",
+            price: "210",
+            ingredients: "Bier",
+          },
+          {
+            name: "Carlsberg 0.33",
+            price: "240",
+            ingredients: "Bier",
+          },
+          {
+            name: "Corona 0.33",
+            price: "250",
+            ingredients: "Bier",
+          },
+          {
+            name: "Heineken 0.33",
+            price: "230",
+            ingredients: "Bier",
+          },
         ],
-        // WEINKELLEREI
+        // WEINKARTE
         [
           {
-            name: "Dionis vranec barrique(trocken) Dalvina Winery" ,
-            price: "2200",
+            name: "Kratosija (trocken) - Weingut Lazar",
+            price: "1260",
             ingredients: "Rotweine",
           },
           {
-            name: "Hermes vranec (trocken) Dalvina Winery",
-            price: "1300",
+            name: "Bukefal (trocken) - Weingut Lazar",
+            price: "1800",
             ingredients: "Rotweine",
           },
           {
-            name: "Hermes cabernet sauvignon(trocken) Dalvina Winery",
-            price: "1300",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Muscat temjanika (halbtrocken) Dalvina Winery",
-            price: "1350",
+            name: "Belan (trocken) - Weingut Lazar",
+            price: "1500",
             ingredients: "Weißweine",
           },
           {
-            name: "Elegija chardonnay (trocken) Dalvina Winery",
-            price: "1300",
+            name: "Pinot grigio (trocken) - Weingut Lazar",
+            price: "1260",
             ingredients: "Weißweine",
           },
           {
-            name: "Elegija traminer (trocken) Dalvina Winery",
-            price: "1300",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Elegija zupljanka (trocken) Dalvina Winery",
-            price: "1300",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Elegija syrah(trocken) Dalvina Winery",
+            name: "Grasevina (trocken) - Weingut Lazar",
             price: "1200",
+            ingredients: "Weißweine",
+          },
+          {
+            name: "Pearl blanc de blanc (trocken) - Weingut Lazar",
+            price: "1560",
+            ingredients: "Schaumweine",
+          },
+          {
+            name: "Pearl blanc de rose (trocken) - Weingut Lazar",
+            price: "1200",
+            ingredients: "Schaumweine",
+          },
+          {
+            name: "Korija temjanika (trocken) - Weingut Venec",
+            price: "1800",
+            ingredients: "Weißweine",
+          },
+          {
+            name: "Chardonnay oak (trocken) - Weingut Venec",
+            price: "1710",
+            ingredients: "Weißweine",
+          },
+          {
+            name: "Orle vranec (trocken) - Weingut Venec",
+            price: "2600",
+            ingredients: "Rotweine",
+          },
+          {
+            name: "Shiraz (trocken) - Weingut Venec",
+            price: "1560",
+            ingredients: "Rotweine",
+          },
+          {
+            name: "Prokupec (trocken) - Weingut Venec",
+            price: "1560",
+            ingredients: "Rotweine",
+          },
+          {
+            name: "Stanushina (trocken) - Weingut Venec",
+            price: "1650",
             ingredients: "Roséweine",
           },
           {
-            name: "Cabernet sauvignon (trocken) Ohrid Winery",
-            price: "1400",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Merlot (trocken) Ohrid Winery",
-            price: "1400",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Vranec (trocken) Ohrid Winery",
-            price: "1400",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Temjanika (trocken) Ohrid Winery",
-            price: "1400",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Chardonnay (trocken) Ohrid Winery",
-            price: "1400",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Sauvignon blanc (trocken) Ohrid Winery",
-            price: "1400",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Alexandria (trocken) Tikvesh Winery",
+            name: "Alexandria (trocken) - Weingut Tikves",
             price: "890",
             ingredients: "Rotweine",
           },
           {
-            name: "T'ga za jug (halbtrocken) Tikvesh Winery",
+            name: "T’ga za jug (halbtrocken) - Weingut Tikves",
             price: "890",
             ingredients: "Rotweine",
           },
           {
-            name: "Luda mara vranec (trocken) Tikvesh Winery",
-            price: "1530",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Luda mara merlot (trocken) Tikvesh Winery",
-            price: "1440",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Luda mara cabernet sauvignon (trocken) Tikvesh Winery",
-            price: "1440",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Alexandria cuvee (trocken) Tikvesh Winery",
+            name: "Alexandria cuvee (trocken) - Weingut Tikves",
             price: "1500",
             ingredients: "Rotweine",
           },
           {
-            name: "Babuna (trocken) Tikvesh Winery",
-            price: "2400",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Vrsnik 2250 (trocken) Tikvesh Winery",
-            price: "2250",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Barovo (trocken) Tikvesh Winery",
+            name: "Barovo (trocken) - Weingut Tikves",
             price: "5400",
             ingredients: "Rotweine",
           },
           {
-            name: "Alexandria (halbtrocken) Tikvesh Winery",
+            name: "Alexandria (halbtrocken) - Weingut Tikves",
             price: "890",
             ingredients: "Weißweine",
           },
           {
-            name: "Alexandria cuvee (trocken) Tikvesh Winery",
+            name: "Alexandria cuvee (trocken) - Weingut Tikves",
             price: "1500",
             ingredients: "Weißweine",
           },
           {
-            name: "Luda mara temjanika (trocken) Tikvesh Winery",
+            name: "Luda mara temjanika (trocken) - Weingut Tikves",
             price: "1560",
             ingredients: "Weißweine",
           },
           {
-            name: "Barovo (trocken) Tikvesh Winery",
+            name: "Barovo (trocken) - Weingut Tikves",
             price: "4800",
             ingredients: "Weißweine",
           },
           {
-            name: "Barovo temjanika (trocken) Tikvesh Winery",
-            price: "2400",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Bela voda (trocken) Tikvesh Winery",
+            name: "Bela voda (trocken) - Weingut Tikves",
             price: "5400",
             ingredients: "Weißweine",
           },
           {
-            name: "Barovo zilavka (trocken) Tikvesh Winery",
+            name: "Barovo zilavka (trocken) - Weingut Tikves",
             price: "1950",
             ingredients: "Weißweine",
           },
           {
-            name: "Barovo Grenache blanc (trocken) Tikvesh Winery",
+            name: "Barovo Grenache blanc (trocken) - Weingut Tikves",
             price: "1950",
             ingredients: "Weißweine",
           },
           {
-            name: "LBabuna (trocken) Tikvesh Winery",
-            price: "2400",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Vrsnik (trocken) Tikvesh Winery",
-            price: "2250",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Traminec (trocken) Tikvesh Winery",
+            name: "Traminec (trocken) - Weingut Tikves",
             price: "930",
             ingredients: "Weißweine",
           },
           {
-            name: "Alexandria (halbtrocken) Tikvesh Winery",
+            name: "Alexandria (halbtrocken) - Weingut Tikves",
             price: "890",
             ingredients: "Roséweine",
           },
           {
-            name: "Alexandria cuvee (trocken) Tikvesh Winery",
+            name: "Alexandria cuvee (trocken) - Weingut Tikves",
             price: "1500",
             ingredients: "Roséweine",
           },
           {
-            name: "Mistral au jardin (trocken) Tikvesh Winery",
-            price: "1800",
-            ingredients: "Roséweine",
-          },
-          {
-            name: "Vranec (trocken) Bovin Winery",
+            name: "Vranec (trocken) - Weingut Bovin",
             price: "1650",
             ingredients: "Rotweine",
           },
           {
-            name: "Pinot noir (trocken) Bovin Winery",
+            name: "Pinot noir (trocken) - Weingut Bovin",
             price: "1710",
             ingredients: "Rotweine",
           },
           {
-            name: "Cabernet sauvignon (trocken) Bovin Winery",
+            name: "Cabernet sauvignon (trocken) - Weingut Bovin",
             price: "1710",
             ingredients: "Rotweine",
           },
           {
-            name: "Merlot (trocken) Bovin Winery",
+            name: "Merlot (trocken) - Weingut Bovin",
             price: "1710",
             ingredients: "Rotweine",
           },
           {
-            name: "Venus cuvee (trocken) Bovin Winery",
-            price: "1650",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Kleopatra (halbtrocken) Bovin Winery",
-            price: "1950",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Imperator (halbtrocken) Bovin Winery",
+            name: "Imperator (halbtrocken) - Weingut Bovin",
             price: "4200",
             ingredients: "Rotweine",
           },
           {
-            name: "Daron superior (trocken) Bovin Winery",
-            price: "2250",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Disan barique (trocken) Bovin Winery",
+            name: "Disan barrique (trocken) - Weingut Bovin",
             price: "2700",
             ingredients: "Rotweine",
           },
           {
-            name: "Sauvignon blanc (trocken) Bovin Winery",
+            name: "Sauvignon blanc (trocken) - Weingut Bovin",
             price: "1710",
             ingredients: "Weißweine",
           },
           {
-            name: "Rizling (trocken) Bovin Winery",
+            name: "Riesling (trocken) - Weingut Bovin",
             price: "1650",
             ingredients: "Weißweine",
           },
           {
-            name: "Traminec (halbtrocken) Bovin Winery",
+            name: "Traminec (halbtrocken) - Weingut Bovin",
             price: "1710",
             ingredients: "Weißweine",
           },
           {
-            name: "Chardonnay (trocken) Bovin Winery",
+            name: "Chardonnay (trocken) - Weingut Bovin",
             price: "1800",
             ingredients: "Weißweine",
           },
           {
-            name: "Muscat temjanika (halbtrocken) Bovin Winery",
+            name: "Muscat temjanika (halbtrocken) - Weingut Bovin",
             price: "1800",
             ingredients: "Weißweine",
           },
           {
-            name: "Grasevina (trocken) Bovin Winery",
-            price: "1800",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Chardonnay barrique (trocken) Bovin Winery",
-            price: "2700",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Ana marija (halbtrocken) Bovin Winery",
+            name: "Ana Marija (halbtrocken) - Weingut Bovin",
             price: "1710",
             ingredients: "Roséweine",
           },
           {
-            name: "Erigon cuvee (trocken) Lazar Winery",
-            price: "1260",
+            name: "Dionis vranec barrique (trocken) - Weingut Dalvina",
+            price: "2200",
             ingredients: "Rotweine",
           },
           {
-            name: "Kratosija (trocken) Lazar Winery",
-            price: "1260",
+            name: "Hermes vranec (trocken) - Weingut Dalvina",
+            price: "1300",
             ingredients: "Rotweine",
           },
           {
-            name: "Bukefal (trocken) Lazar Winery",
-            price: "1800",
+            name: "Hermes cabernet sauvignon (trocken) - Weingut Dalvina",
+            price: "1300",
             ingredients: "Rotweine",
           },
           {
-            name: "Pinot noir (trocken) Lazar Winery",
-            price: "1260",
-            ingredients: "Rotweine",
-          },
-          {
-            name: "Belan (trocken) Lazar Winery",
-            price: "1500",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Pinot grigio (trocken) Lazar Winery",
-            price: "1260",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Grasevina (trocken) Lazar Winery",
-            price: "1200",
-            ingredients: "Weißweine",
-          },
-          {
-            name: "Fortuna (trocken) Lazar Winery",
+            name: "Muscat temjanika (halbtrocken) - Weingut Dalvina",
             price: "1350",
+            ingredients: "Weißweine",
+          },
+          {
+            name: "Elegija zupljanka (trocken) - Weingut Dalvina",
+            price: "1300",
+            ingredients: "Weißweine",
+          },
+          {
+            name: "Elegija syrah (trocken) - Weingut Dalvina",
+            price: "1200",
             ingredients: "Roséweine",
           },
           {
-            name: "Pearl blanc de blanc (trocken) Lazar Winery",
-            price: "1560",
-            ingredients: "Schaumweine",
-          },
-          {
-            name: "Pearl blanc de rose (trocken) Lazar Winery",
-            price: "1200",
-            ingredients: "Schaumweine",
-          },
-          {
-            name: "365 clasic vranec (trocken) milev-gd tikves Winery",
-            price: "850",
+            name: "Cabernet sauvignon (trocken) - Weingut Ohrid",
+            price: "1400",
             ingredients: "Rotweine",
           },
           {
-            name: "Virgo syrah (trocken) milev-gd tikves Winery",
-            price: "1350",
+            name: "Merlot (trocken) - Weingut Ohrid",
+            price: "1400",
             ingredients: "Rotweine",
           },
           {
-            name: "Virgo cabernet franc (trocken)  milev-gd tikves Winery",
-            price: "1500",
+            name: "Vranec (trocken) - Weingut Ohrid",
+            price: "1400",
             ingredients: "Rotweine",
           },
           {
-            name: "Virgo traminec (trocken) milev-gd tikves Winery",
-            price: "1200",
+            name: "Temjanika (trocken) - Weingut Ohrid",
+            price: "1400",
             ingredients: "Weißweine",
           },
           {
-            name: "Sauvignon blanc (trocken) milev-gd tikves Winery",
-            price: "1200",
+            name: "Chardonnay (trocken) - Weingut Ohrid",
+            price: "1400",
             ingredients: "Weißweine",
           },
           {
-            name: "Virgo temjanika (halbtrocken) milev-gd tikves Winery",
-            price: "1350",
+            name: "Sauvignon blanc (trocken) - Weingut Ohrid",
+            price: "1400",
             ingredients: "Weißweine",
           },
           {
-            name: "Virgo muscat rose (halbtrocken) milev-gd tikves Winery",
-            price: "1350",
-            ingredients: "Roséweine",
+            name: "Temjanika (trocken) - Weingut Monteko",
+            price: "1850",
+            ingredients: "Weißweine",
+          },
+          {
+            name: "Chardonnay (trocken) - Weingut Monteko",
+            price: "1770",
+            ingredients: "Weißweine",
+          },
+          {
+            name: "Volcano premium cabernet sauvignon (trocken) - Weingut Monteko",
+            price: "5250",
+            ingredients: "Rotweine",
+          },
+          {
+            name: "Vranec (trocken) - Weingut Monteko",
+            price: "1850",
+            ingredients: "Rotweine",
+          },
+          {
+            name: "Merlot (trocken) - Weingut Monteko",
+            price: "1770",
+            ingredients: "Rotweine",
+          },
+          {
+            name: "Cabernet sauvignon (trocken) - Weingut Monteko",
+            price: "1850",
+            ingredients: "Rotweine",
+          },
+          {
+            name: "Nero (trocken) - Weingut Monteko",
+            price: "1980",
+            ingredients: "Rotweine",
+          },
+          {
+            name: "Fillip (trocken) - Weingut Monteko",
+            price: "1980",
+            ingredients: "Rotweine",
           },
         ],
         // KAFFEE UND TEE
         [
           {
-            name: "Tee",
-            price: "80",
-            ingredients: "Heiße Getränke",
-          },
-          {
             name: "Espresso",
             price: "100",
-            ingredients: "Heiße Getränke",
+            ingredients: "Kaffee",
           },
           {
             name: "Macchiato",
-            price: "110",
-            ingredients: "Heiße Getränke",
+            price: "120",
+            ingredients: "Kaffee",
           },
           {
             name: "Großer Macchiato",
-            price: "120",
-            ingredients: "Heiße Getränke",
-          },
-          {
-            name: "Latte macchiato",
-            price: "180",
-            ingredients: "Heiße Getränke",
-          },
-          {
-            name: "Nescafé",
-            price: "150",
-            ingredients: "Heiße Getränke",
+            price: "130",
+            ingredients: "Kaffee",
           },
           {
             name: "Cappuccino",
             price: "150",
-            ingredients: "Heiße Getränke",
-          
+            ingredients: "Kaffee",
           },
           {
             name: "Kalter Macchiato",
             price: "130",
-            ingredients: "Heiße Getränke",
-
-          },
-          {
-            name: "Irischer Kaffee",
-            price: "260",
-            ingredients: "Heiße Getränke",
+            ingredients: "Kaffee",
           },
           {
             name: "Americano",
             price: "150",
-            ingredients: "Heiße Getränke",
+            ingredients: "Kaffee",
+          },
+          {
+            name: "Latte Macchiato",
+            price: "180",
+            ingredients: "Kaffee",
+          },
+          {
+            name: "Nescafe",
+            price: "150",
+            ingredients: "Kaffee",
           },
           {
             name: "Mazedonischer Kaffee",
-            price: "90",
-            ingredients: "Heiße Getränke",
+            price: "100",
+            ingredients: "Kaffee",
+          },
+          {
+            name: "Tee",
+            price: "100",
+            ingredients: "Tee",
           },
         ],
-        //rakija
+        // RAKIJA
         [
-  {
-    "name": "Lozova (gelb) 0.05",
-    "price": "120",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Lozova (weiß) 0.05",
-    "price": "120",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Gelber Rakija Bovin Classic 0.05",
-    "price": "120",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Premium Rakija Bovin 0.05",
-    "price": "180",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Birnenrakija 0.05",
-    "price": "240",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Quittenrakija 0.05",
-    "price": "240",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Gordon Amber Yellow 0.05",
-    "price": "160",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Mastika 0.05",
-    "price": "120",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Pflaumenrakija 0.05",
-    "price": "240",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Hausgemachte Lozova 0.05",
-    "price": "240",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Bovin Kirsch-Rakija",
-    "price": "200",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Birnenlikör 0.04",
-    "price": "150",
-    "ingredients": "Rakija"
-  }
-],
-
-        // ALKOHOLISCHE GETRÄNKE
+          {
+            name: "Lozova gelb 0.05",
+            price: "130",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Lozova weiß 0.05",
+            price: "130",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Dukat 0.04",
+            price: "160",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Mastika 0.04",
+            price: "120",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Bovin Classic Rakija 0.04",
+            price: "130",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Bovin Premium Rakija 0.04",
+            price: "180",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Bovin Kirsch-Rakija 0.04",
+            price: "200",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Badel Williams Birnenrakija 0.04",
+            price: "170",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Slivovitz 0.04",
+            price: "240",
+            ingredients: "Rakija",
+          },
+        ],
+        // SPIRITUOSEN
         [
-        {
-    "name": "Gin Badel 0.04",
-    "price": "130",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Smidgin 0.04",
-    "price": "250",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Beefeater Gin 0.04",
-    "price": "200",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Gordon’s Gin 0.04",
-    "price": "220",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Gordon’s Pink Gin 0.04",
-    "price": "220",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Vodka Badel 0.04",
-    "price": "140",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Baileys 0.04",
-    "price": "220",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Amaretto 0.04",
-    "price": "170",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Ballantine’s 0.04",
-    "price": "240",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Pelinkovac Badel 0.04",
-    "price": "130",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Cognac Badel 0.04",
-    "price": "140",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Rum Badel 0.04",
-    "price": "120",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Smirnoff 0.04",
-    "price": "200",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Jack Daniel’s 0.04",
-    "price": "350",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Jameson 0.04",
-    "price": "250",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Jameson Black 0.04",
-    "price": "400",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Johnnie Walker Red 0.04",
-    "price": "200",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Johnnie Walker Black 0.04",
-    "price": "300",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Four Roses Bourbon 0.04",
-    "price": "260",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Captain Morgan Rum 0.04",
-    "price": "200",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Jägermeister 0.04",
-    "price": "220",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Chivas Regal 12 0.04",
-    "price": "390",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Campari 0.04",
-    "price": "180",
-    "ingredients": "Alkoholische Getränke"
-  },
-  {
-    "name": "Tequila Olmeca 0.04",
-    "price": "200",
-    "ingredients": "Alkoholische Getränke"
-  }
-  
+          {
+            name: "Craft Gin 0.04",
+            price: "250",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Gin Gordon's 0.04",
+            price: "210",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Gin Pink Gordon's 0.04",
+            price: "210",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Smirnoff 0.04",
+            price: "200",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Jack Daniel's 0.04",
+            price: "350",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Jameson 0.04",
+            price: "250",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Jameson Black 0.04",
+            price: "360",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Johnnie Walker Red 0.04",
+            price: "200",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Johnnie Walker Black 0.04",
+            price: "300",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Four Roses 0.04",
+            price: "260",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Captain Morgan Rum 0.04",
+            price: "220",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Jägermeister 0.04",
+            price: "240",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Pelinkovac Badel 0.04",
+            price: "130",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Cognac Badel 0.04",
+            price: "130",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Stock 84 0.04",
+            price: "160",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Baileys 0.04",
+            price: "190",
+            ingredients: "Spirituosen",
+          },
+          {
+            name: "Tequila Olmeca 0.04",
+            price: "200",
+            ingredients: "Spirituosen",
+          },
         ],
         // SALATE
         [
-        [
-  {
-    "name": "Schopska Salat",
-    "price": "190",
-    "ingredients": "Tomaten, Gurke, Zwiebel, Weißkäse"
-  },
-  {
-    "name": "Ägäischer Salat",
-    "price": "200",
-    "ingredients": "Tomaten, Gurke, Zwiebelringe, Käsewürfel, Oregano"
-  },
-  {
-    "name": "Rakija Salat",
-    "price": "160",
-    "ingredients": "Kohl, Gurke, Oliven"
-  },
-  {
-    "name": "Mazedonischer Salat",
-    "price": "240",
-    "ingredients": "Tomaten, Zwiebel, geröstete Paprika"
-  },
-  {
-    "name": "Gemischter Salat",
-    "price": "170",
-    "ingredients": "Rote Bete, Karotten, Gurke, Tomate, Kohl"
-  },
-  {
-    "name": "Caesar Salat",
-    "price": "290",
-    "ingredients": "Blattsalat, Hähnchen, Croutons, Tomaten, Parmesan, Dressing"
-  },
-  {
-    "name": "Thunfisch Salat",
-    "price": "340",
-    "ingredients": "Blattsalat, Thunfisch, Mais, Zwiebel, Oliven"
-  },
-  {
-    "name": "Eingelegtes Gemüse",
-    "price": "180",
-    "ingredients": "Kohl, Paprika, Karotten, Blumenkohl, Tomate, Gurke"
-  },
-  {
-    "name": "Galicica Salat",
-    "price": "320",
-    "ingredients": "Ziegenkäse, Rucola, Tomate, Trockenfrüchte, Walnüsse"
-  }
-]
-
+          {
+            name: "Schopska Salat / Shopska",
+            price: "240",
+            ingredients: "Tomaten, Gurke, Zwiebel, weißer Käse",
+          },
+          {
+            name: "Ägäischer Salat / Aegean",
+            price: "250",
+            ingredients: "Tomaten, Gurke, Zwiebelringe, Käsewürfel, Oregano",
+          },
+          {
+            name: "Rakija-Salat / Rakija salad",
+            price: "190",
+            ingredients: "Kohl, Gurke, Oliven",
+          },
+          {
+            name: "Tarator",
+            price: "260",
+            ingredients: "Salate",
+          },
+          {
+            name: "Gemischter Salat / Mixed salad",
+            price: "200",
+            ingredients: "Karotte, Gurke, Tomate, Kohl",
+          },
+          {
+            name: "Mazedonischer Salat / Macedonian salad",
+            price: "270",
+            ingredients: "Tomaten, geröstete Paprika, Zwiebel",
+          },
+          {
+            name: "Galichica Salat / Galichica salad",
+            price: "350",
+            ingredients: "Ziegenkäse, Rucola, Tomate, Trockenfrüchte, Walnüsse",
+          },
+          {
+            name: "Thunfischsalat / Tuna salad",
+            price: "360",
+            ingredients: "Blattsalat, Thunfisch, Mais, Zwiebel, Oliven",
+          },
+          {
+            name: "Caesar Salat / Caesar salad",
+            price: "340",
+            ingredients: "Blattsalat, Hähnchenfleisch 150 g, Brotwürfel, Tomaten, Parmesan, Dressing",
+          },
         ],
-
-        // BREITTE
+        // PLATTEN
         [
-  {
-    "name": "Spezialplatte für 6 Personen",
-    "price": "3600",
-    "ingredients": "Schweinehaxe, Ofenrippen, gerollte Rippe, Hauswurst, Schweinefleisch in Steinpilzsauce, Ćevapčići mit Kajmak, gegrillte Leber, Geräuchertes Fleisch"
-  },
-  {
-    "name": "Mazedonische Meze-Platte für 4 Personen",
-    "price": "1800",
-    "ingredients": "Ajvar, Pindjur, Makalo, Lutenica, eingelegtes Gemüse, Sarma, Paprika mit Kajmak, Schafskäse, Bienenkäse mit Speck, Prški mit Kačamak, Hausbrot"
-  },
-  {
-    "name": "Panierte Platte für 4 Personen",
-    "price": "2380",
-    "ingredients": "Zdenka-Käse, Zwiebel, Hähnchenstreifen, knuspriges Hähnchenfilet, panierter Gelbkäse, Piroshka, knuspriger Gelbkäse, panierter Käse"
-  },
-  {
-    "name": "Gemischtes Fleisch für 4 Personen",
-    "price": "2400",
-    "ingredients": "Ćevapčići, Sharska-Burger, Speck, Veshallitsa, Hähnchenfilet, Schweinefilet"
-  }
-],
-
-
-        // BEILAGEN UND FRÜHSTÜCK
-        [
-        {
-    "name": "Ohrider Rührei",
-    "price": "240",
-    "ingredients": "3 Eier, Tomaten, geröstete Paprika, Käse"
-  },
-  {
-    "name": "Spiegeleier mit Speck",
-    "price": "240",
-    "ingredients": "3 Eier, 100g Speck, Brot"
-  },
-  {
-    "name": "Morgen-Quesadilla",
-    "price": "280",
-    "ingredients": "Tortilla, gelber Käse, Cheddar, 1 Spiegelei, Speck, Tomate"
-  },
-  {
-    "name": "Lihnidia Frühstück",
-    "price": "330",
-    "ingredients": "Gebratenes Brot mit Ei, gelber Käse, Speck, Wurst, hausgemachter Kuhkäse, Ajvar"
-  },
-  {
-    "name": "Omas Omelett",
-    "price": "270",
-    "ingredients": "3 Eier, getrocknete Paprika, Zwiebel, Lauch"
-  },
-  {
-    "name": "Omelett mit Pilzen und Gelbem Käse",
-    "price": "230",
-    "ingredients": "3 Eier, Pilze, gelber Käse"
-  },
-  {
-    "name": "Omelett mit Ajvar und Käse",
-    "price": "250",
-    "ingredients": "Beilagen und Frühstück"
-  },
-  {
-    "name": "Spiegeleier mit Schinken",
-    "price": "230",
-    "ingredients": "3 Eier, 100g Schinken, Brot"
-  },
-  {
-    "name": "Fischsuppe",
-    "price": "250",
-    "ingredients": "(Forelle 150g, Brötchen, Makalo, Zitrone, Peperoni)"
-  },
-  {
-    "name": "Kalbssuppe",
-    "price": "260",
-    "ingredients": "Beilagen und Frühstück"
-  },
-  {
-    "name": "Gulasch",
-    "price": "280",
-    "ingredients": "(Rindfleisch, Zwiebel, Gewürze, Kartoffelpüree/Reis, Brötchen)"
-  }
+          {
+            name: "Mazedonische Meze-Platte für 4 Personen",
+            price: "1800",
+            ingredients: "Ajvar, Pindjur, Makalo, Lutenica, Paprika in Kajmak, Schafskäse, Kachamak mit Speck, geräucherter Käse, Speck, hausgemachtes Brot",
+          },
+          {
+            name: "Spezial-Fleischplatte für 6 Personen",
+            price: "3800",
+            ingredients: "Schweinshaxe, Ofenrippen, gerollte Rippe mit Kajmak, junge Rippe, hausgemachte Wurst, geräucherter Speck, gegrillte Leber, gepökeltes Fleisch",
+          },
         ],
-
-        // GERICHTE AUS HACKFLEISCH
+        // FRÜHSTÜCK UND SUPPEN
         [
-        {
-    "name": "Sharska Burger 300g",
-    "price": "320",
-    "ingredients": "Hackfleisch 250g, gelber Käse 50g"
-  },
-  {
-    "name": "Kebapči mit Kajmak",
-    "price": "380",
-    "ingredients": "Hackfleischgerichte"
-  },
-  {
-    "name": "Fleischbällchen in Tomatensauce",
-    "price": "380",
-    "ingredients": "Hackfleischgerichte"
-  },
-  {
-    "name": "Ohrid Burger",
-    "price": "390",
-    "ingredients": "Hackfleisch 300g, Ajvar, Käse, Kajmak"
-  },
-  {
-    "name": "Gefüllter Burger 500g",
-    "price": "430",
-    "ingredients": "Hackfleisch 300g, gelber Käse, Zdenka Käse, Pilze, Schinken"
-  },
-  {
-    "name": "Kebapči 350g",
-    "price": "330",
-    "ingredients": "Hackfleischgerichte"
-  },
-  {
-    "name": "Lihnidia Burger 400g",
-    "price": "420",
-    "ingredients": "Hackfleisch 250g, gelber Käse 50g"
-  },
-  {
-    "name": "Burger 500g",
-    "price": "420",
-    "ingredients": "Hackfleischgerichte"
-  }
+          {
+            name: "Ohrider Rührei",
+            price: "260",
+            ingredients: "3 Eier, Tomaten, geröstete Paprika, Käse",
+          },
+          {
+            name: "Lychnidia Frühstück",
+            price: "390",
+            ingredients: "Gebratene Brotscheiben mit Ei, gelber Käse, Speck, Kuhkäse, Wurst, Ajvar",
+          },
+          {
+            name: "Omelett",
+            price: "260",
+            ingredients: "Kombination nach Wahl",
+          },
+          {
+            name: "Spiegeleier mit Speck",
+            price: "260",
+            ingredients: "3 Eier, 100 g Speck, Brot",
+          },
+          {
+            name: "Spiegeleier mit Schinken",
+            price: "230",
+            ingredients: "3 Eier, 100 g Schinken, Brot",
+          },
+          {
+            name: "Frühstücks-Quesadilla",
+            price: "320",
+            ingredients: "Tortilla, gelber Käse, Cheddar, 1 Spiegelei, Speck, Tomate",
+          },
+          {
+            name: "Fischsuppe",
+            price: "290",
+            ingredients: "Suppen",
+          },
+          {
+            name: "Kalbssuppe",
+            price: "320",
+            ingredients: "Suppen",
+          },
         ],
-        //KALBFLEISCHGERICHTE
+        // HACKFLEISCHGERICHTE
         [
-        {
-    "name": "Rinderfilet mit Butter und Rosmarin 250g",
-    "price": "1420",
-    "ingredients": "Kalbfleischgerichte"
-  },
-  {
-    "name": "Stroganoff Filet 250g",
-    "price": "1490",
-    "ingredients": "Kalbfleischgerichte"
-  },
-  {
-    "name": "Rinderfilet in Pfefferkornsauce 250g",
-    "price": "1550",
-    "ingredients": "Kalbfleischgerichte"
-  },
-  {
-    "name": "Kalbsmuskel in Sauce 250g",
-    "price": "460",
-    "ingredients": "Kalbfleischgerichte"
-  }
+          {
+            name: "Sharska Pljeskavica 300 g",
+            price: "380",
+            ingredients: "Hackfleisch 250 g, gelber Käse 50 g",
+          },
+          {
+            name: "Lychnidia Pljeskavica",
+            price: "490",
+            ingredients: "Hackfleisch 250 g, Speck 100 g, Kajmak, Ei",
+          },
+          {
+            name: "Gefüllte Pljeskavica",
+            price: "470",
+            ingredients: "Hackfleisch 250 g, gelber Käse, Zdenka-Käse, Pilze, Schinken",
+          },
+          {
+            name: "Kebapi 350 g",
+            price: "390",
+            ingredients: "Hackfleischgerichte",
+          },
+          {
+            name: "Kebapi mit Kajmak",
+            price: "460",
+            ingredients: "Hackfleischgerichte",
+          },
         ],
-        //SCHWEINEFLEISCHGERICHTE
+        // KALBFLEISCHGERICHTE
         [
-        {
-    "name": "Schweinefilet mit Gelbem Käse und Pilzen 250g",
-    "price": "480",
-    "ingredients": "Schweinefleischgerichte"
-  },
-  {
-    "name": "Kotelett in Grillsauce und Sesam 250g",
-    "price": "430",
-    "ingredients": "Schweinefleischgerichte"
-  },
-  {
-    "name": "Veshalitsa 250g",
-    "price": "490",
-    "ingredients": "Schweinefleischgerichte"
-  },
-  {
-    "name": "Ofenrippen 350g",
-    "price": "490",
-    "ingredients": "Schweinefleischgerichte"
-  },
-  {
-    "name": "Lihnidia Rippchen 350g",
-    "price": "530",
-    "ingredients": "Gerollte Rippen mit Kajmak"
-  },
-  {
-    "name": "Schweinshaxe 500g",
-    "price": "560",
-    "ingredients": "Schweinefleischgerichte"
-  },
-  {
-    "name": "Medaillons in Steinpilz-Thymian-Sauce 300g",
-    "price": "470",
-    "ingredients": "Schweinefleischgerichte"
-  },
-  {
-    "name": "Schweinefleisch mit Getrockneter Paprika und Lauch 300g",
-    "price": "450",
-    "ingredients": "Schweinefleischgerichte"
-  },
-  {
-    "name": "Hausgemachte Wurst 200g",
-    "price": "350",
-    "ingredients": "Schweinefleischgerichte"
-  },
-  {
-    "name": "Gegrillte Leber",
-    "price": "310",
-    "ingredients": "Schweinefleischgerichte"
-  }
+          {
+            name: "Kalbsmuskel in Pilzsauce 250 g",
+            price: "690",
+            ingredients: "Kalbfleischgerichte",
+          },
+          {
+            name: "Filet Stroganoff 250 g",
+            price: "1490",
+            ingredients: "Kalbfleischgerichte",
+          },
         ],
-        //HÄHNCHENGERICHTE
+        // SCHWEINEFLEISCHGERICHTE
         [
-        {
-    "name": "Lihnidia Hähnchen",
-    "price": "360",
-    "ingredients": "Hähnchenfilet 200g, Speck, Olivenöl, Parmesan, Butter, getrocknete Tomaten, Oregano, Thymian, Beilage"
-  },
-  {
-    "name": "Knuspriges Hähnchensteak 300g",
-    "price": "350",
-    "ingredients": "Hähnchengerichte"
-  },
-  {
-    "name": "Hähnchensteak auf Orientalische Art 300g",
-    "price": "340",
-    "ingredients": "Hähnchen 250g, Zucchini, Pilze, Zwiebel, Sojasauce, Curry, Weißwein"
-  },
-  {
-    "name": "Hähnchenfinger 300g",
-    "price": "330",
-    "ingredients": "Hähnchengerichte"
-  },
-  {
-    "name": "Hähnchen Stroganoff",
-    "price": "380",
-    "ingredients": "Hähnchen 250g, Zwiebel, Gewürzgurken, Pilze, Sauerrahm, Senf"
-  },
-  {
-    "name": "Hähnchen mit Pilzen in Weißer Sauce 250g",
-    "price": "320",
-    "ingredients": "Hähnchengerichte"
-  },
-  {
-    "name": "Hähnchensteak 250g",
-    "price": "310",
-    "ingredients": "Hähnchengerichte"
-  }
-          
+          {
+            name: "Schweinefilet mit gelbem Käse und Pilzen 250 g",
+            price: "520",
+            ingredients: "Schweinefleischgerichte",
+          },
+          {
+            name: "Schweinefleisch in Pilz-Thymian-Sauce 250 g",
+            price: "480",
+            ingredients: "Schweinefleischgerichte",
+          },
+          {
+            name: "Glasierte Baby Ribs 350 g",
+            price: "590",
+            ingredients: "Schweinefleischgerichte",
+          },
+          {
+            name: "Ofenrippen 300 g",
+            price: "540",
+            ingredients: "Schweinefleischgerichte",
+          },
+          {
+            name: "Lychnidia Rippchen 250 g",
+            price: "590",
+            ingredients: "Gerollte Rippe mit Kajmak",
+          },
+          {
+            name: "Veshalitsa 250 g",
+            price: "490",
+            ingredients: "Schweinefleischgerichte",
+          },
+          {
+            name: "Langsam gegarte Schweinshaxe 400 g",
+            price: "620",
+            ingredients: "Schweinefleischgerichte",
+          },
         ],
-        //GERICHTE IN DER PFANNE
-        //Makedonski trad
+        // HÄHNCHENGERICHTE
         [
-        {
-    "name": "Fleisch nach Dorfart",
-    "price": "460",
-    "ingredients": "(Schweinefleisch, Hähnchenfleisch, Zwiebel, Pilze, Tomate, Paprika, gelber Käse)"
-  },
-  {
-    "name": "Moussaka",
-    "price": "320",
-    "ingredients": "Kartoffeln, Hackfleisch, Zwiebel, Milch, Ei"
-  },
-  {
-    "name": "Tavče Gravče",
-    "price": "270",
-    "ingredients": "Weiße Bohnen mit getrockneter Paprika im Tontopf gebacken"
-  },
-  {
-    "name": "Gefüllte Paprika",
-    "price": "330",
-    "ingredients": "Paprika, Hackfleisch, Zwiebel, Reis, Tomate"
-  },
-  {
-    "name": "Tavče Gravče mit Speck/Wurst",
-    "price": "340",
-    "ingredients": "Weiße Bohnen mit getrockneter Paprika, Speck, Wurst"
-  },
-  {
-    "name": "Sarma",
-    "price": "340",
-    "ingredients": "Eingelegter Kohl, Hackfleisch, Reis, Zwiebel, Joghurt"
-  },
-  {
-    "name": "Leber nach Dorfart",
-    "price": "340",
-    "ingredients": "Leber 300g, Zwiebel, Knoblauch, Milch, Gewürze"
-  },
-  {
-    "name": "Podvarok mit Geräuchertem Fleisch",
-    "price": "350",
-    "ingredients": "Traditionelles mazedonisches Gericht"
-  }
-          
+          {
+            name: "Knuspriges Hähnchensteak 250 g",
+            price: "370",
+            ingredients: "Hähnchengerichte",
+          },
+          {
+            name: "Hähnchen nach asiatischer Art 250 g",
+            price: "380",
+            ingredients: "Zucchini, Pilze, Zwiebel, Weißwein, Curry, Sojasauce",
+          },
+          {
+            name: "Hähnchen Lychnidia",
+            price: "440",
+            ingredients: "Hähnchenfilet 200 g, Speck, Olivenöl, Butter, Parmesan, getrocknete Tomate, Oregano, Thymian, Beilage",
+          },
+          {
+            name: "Hähnchen mit Pilzen in weißer Sauce 250 g",
+            price: "360",
+            ingredients: "Hähnchengerichte",
+          },
+          {
+            name: "Hähnchenstreifen 300 g",
+            price: "350",
+            ingredients: "Hähnchengerichte",
+          },
+          {
+            name: "Gegrilltes Hähnchensteak 250 g",
+            price: "350",
+            ingredients: "Hähnchengerichte",
+          },
         ],
-        //RISOTTO UND PASTA
+        // TRADITIONELLE MAZEDONISCHE GERICHTE
         [
-        {
-    "name": "Steinpilz-Risotto",
-    "price": "440",
-    "ingredients": "Reis, Steinpilze, Knoblauch und Zwiebel, Weißwein, Milch, Butter, Parmesan"
-  },
-  {
-    "name": "Spaghetti Carbonara",
-    "price": "380",
-    "ingredients": "Spaghetti, Speck, Parmesan, Eigelb, Pfeffer"
-  },
-  {
-    "name": "Risotto mit Gorgonzola und Hähnchen",
-    "price": "460",
-    "ingredients": "Reis, Muscheln, Garnelen, Knoblauch und Zwiebel, Olivenöl, Weißwein, Dill"
-  },
-  {
-    "name": "Tortellini mit Gorgonzola und Pistazien",
-    "price": "380",
-    "ingredients": "Reis, Butter, Olivenöl, Weißwein, Gorgonzola"
-  },
-  {
-    "name": "Spaghetti mit Meeresfrüchten",
-    "price": "560",
-    "ingredients": "Muscheln, Garnelen, Zwiebel, Knoblauch, Olivenöl, Petersilie, Dill, Weißwein, Tomate"
-  }
+          {
+            name: "Fleisch nach Dorfart",
+            price: "540",
+            ingredients: "Schweinefleisch, Hähnchenfleisch, gelber Käse, Pilze, Zwiebel, Knoblauch, Paprika, Tomate",
+          },
+          {
+            name: "Pilze mit Speck und gelbem Käse",
+            price: "390",
+            ingredients: "Traditionelle mazedonische Gerichte",
+          },
+          {
+            name: "Tavče Gravče",
+            price: "300",
+            ingredients: "Traditionelle mazedonische Gerichte",
+          },
+          {
+            name: "Tavče Gravče mit Pljeskavica/Wurst",
+            price: "390",
+            ingredients: "Traditionelle mazedonische Gerichte",
+          },
+          {
+            name: "Moussaka",
+            price: "340",
+            ingredients: "Traditionelle mazedonische Gerichte",
+          },
+          {
+            name: "Gefüllte Paprika",
+            price: "350",
+            ingredients: "Traditionelle mazedonische Gerichte",
+          },
+          {
+            name: "Leber nach Dorfart",
+            price: "420",
+            ingredients: "Zwiebel, Lauch, Knoblauch, getrocknete Paprika",
+          },
+          {
+            name: "Gegrillte Leber 300 g",
+            price: "350",
+            ingredients: "Traditionelle mazedonische Gerichte",
+          },
         ],
-
+        // RISOTTO UND PASTA
+        [
+          {
+            name: "Risotto mit Pilzen",
+            price: "440",
+            ingredients: "Reis, Pilze, Knoblauch und Zwiebel, Weißwein, Milch, Butter, Parmesan",
+          },
+          {
+            name: "Risotto mit Meeresfrüchten",
+            price: "540",
+            ingredients: "Risotto und Pasta",
+          },
+          {
+            name: "Spaghetti Carbonara",
+            price: "420",
+            ingredients: "Spaghetti, Speck, Parmesan, Eigelb, Pfeffer",
+          },
+          {
+            name: "Spaghetti mit Meeresfrüchten",
+            price: "590",
+            ingredients: "Muscheln, Garnelen, Zwiebel, Knoblauch, Olivenöl, Petersilie, Dill, Weißwein, Tomate",
+          },
+          {
+            name: "Tortelloni mit Gorgonzola und Pistazien",
+            price: "520",
+            ingredients: "Gorgonzola, Pistazien, Olivenöl, Butter",
+          },
+        ],
         // VORSPEISEN
         [
-        {
-    "name": "Gegrillter Käse 200g",
-    "price": "260",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Pilze in Butter 250g",
-    "price": "230",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Speckchips 200g",
-    "price": "290",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Knoblauchbrot mit Feta und Makalo",
-    "price": "180",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Brötchen mit Kajmak",
-    "price": "180",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Gegrillte Zucchini 200g",
-    "price": "190",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Knoblauch-Makalo",
-    "price": "150",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Ajvar",
-    "price": "150",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Weichkäse mit Speck 200g",
-    "price": "340",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Hausgemachter Kuhkäse 200g",
-    "price": "280",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Gefüllte Pilze 350g",
-    "price": "290",
-    "ingredients": "Pilze, gelber Käse, Schinken"
-  },
-  {
-    "name": "Panierter Gelber Käse 150g",
-    "price": "170",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Panierte Zdenka-Käsewürfel 200g",
-    "price": "190",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Panierte Zwiebel 200g",
-    "price": "220",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Lutenica",
-    "price": "150",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Pindzur",
-    "price": "150",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Frischkäse 200g",
-    "price": "220",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Pilze mit Speck und Gelbem Käse 300g",
-    "price": "330",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Paprika mit Kajmak",
-    "price": "190",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Eingelegte Paprika in Sauerrahm",
-    "price": "150",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Brotstücke mit Ajvar und Käse",
-    "price": "180",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Knuspriger Gelber Käse 200g",
-    "price": "230",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Piroshka 120g",
-    "price": "180",
-    "ingredients": "Vorspeisen"
-  },
-  {
-    "name": "Prški 100g",
-    "price": "180",
-    "ingredients": "Vorspeisen"
-  }
+          {
+            name: "Hausgemachte Aufstriche",
+            price: "180",
+            ingredients: "Ajvar, Pindjur, Lutenica, Makalo",
+          },
+          {
+            name: "Paprika in Kajmak",
+            price: "280",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Pilze in Butter 250 g",
+            price: "260",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Gegrillter Käse 200 g",
+            price: "260",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Frischer weißer Käse 200 g",
+            price: "250",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Geräucherter Käse mit Speck 150 g",
+            price: "340",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Bruschetta mit Tomate und Pesto",
+            price: "260",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Knoblauchbrot",
+            price: "170",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Knoblauchbrot mit Feta",
+            price: "190",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Hausgemachtes Brot mit Kajmak",
+            price: "180",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Gegrillte Zucchini 200 g",
+            price: "220",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Panierter gelber Käse 150 g",
+            price: "240",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Panierte Zdenka-Käseecken 150 g",
+            price: "220",
+            ingredients: "Vorspeisen",
+          },
+          {
+            name: "Zwiebelringe 200 g",
+            price: "260",
+            ingredients: "Vorspeisen",
+          },
         ],
         // FISCH
         [
-        {
-    "name": "Flussforelle 500g",
-    "price": "590",
-    "ingredients": "Fisch"
-  },
-  {
-    "name": "Ohridforelle 400g",
-    "price": "1100",
-    "ingredients": "Fisch"
-  },
-  {
-    "name": "Pfannenforelle 400g",
-    "price": "1300",
-    "ingredients": "Forelle, Zwiebel, Paprika, Tomate, Petersilie, Knoblauch"
-  },
-  {
-    "name": "Lachs in Weißweinsauce 500g",
-    "price": "750",
-    "ingredients": "Fisch"
-  },
-  {
-    "name": "Belvica 400g",
-    "price": "900",
-    "ingredients": "Fisch"
-  }
+          {
+            name: "Forelle 1 kg",
+            price: "1700",
+            ingredients: "Fisch",
+          },
+          {
+            name: "Lachs in Weißweinsauce 1 kg",
+            price: "2500",
+            ingredients: "Fisch",
+          },
+          {
+            name: "Ohridforelle 1 kg",
+            price: "2700",
+            ingredients: "Fisch",
+          },
+          {
+            name: "Forelle nach Ohrider Art in der Pfanne 1 kg",
+            price: "2800",
+            ingredients: "Fisch",
+          },
+          {
+            name: "Belvica 1 kg",
+            price: "2400",
+            ingredients: "Fisch",
+          },
         ],
         // DESSERTS
         [
           {
             name: "Tulumba",
-            price: "180",
+            price: "150",
             ingredients: "Desserts",
           },
           {
             name: "Baklava",
-            price: "190",
-            ingredients: "Desserts",
-          },
-          {
-            name: "Palatschinken mit Nutella, Plazma und Banane",
             price: "180",
             ingredients: "Desserts",
           },
           {
-            name: "Palatschinken mit Pistaziencreme",
-            price: "270",
+            name: "Palatschinken mit Nutella, Banane und Plazma",
+            price: "240",
             ingredients: "Desserts",
           },
           {
-            name: "Ohrid-Kuchen",
-            price: "210",
+            name: "Palatschinken mit Pistaziencreme",
+            price: "290",
             ingredients: "Desserts",
           },
-          
-        ],
-        //BEILAGEN
-        [
-        {
-    "name": "Paprikastück",
-    "price": "50",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Scharfes Paprikastück",
-    "price": "50",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Nafora mit Käse",
-    "price": "180",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Oliven 100g",
-    "price": "120",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Brötchen",
-    "price": "50",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Ei",
-    "price": "50",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Pommes Frites 100g",
-    "price": "100",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Soße",
-    "price": "50",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Ketchup, Mayonnaise",
-    "price": "40",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Kajmak (Kugel)",
-    "price": "130",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Parmesan",
-    "price": "120",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Tomatenscheibe",
-    "price": "120",
-    "ingredients": "Zusätze"
-  },
-  {
-    "name": "Reisbällchen",
-    "price": "70",
-    "ingredients": "Zusätze"
-  }
-        ],
-        //COCKTAILS
-        [
-        {
-            name: "Margarita",
-            price: "300",
-            ingredients: "Tequila, Triple Sec, Zitronensaft",
+          {
+            name: "Ohrid-Torte",
+            price: "220",
+            ingredients: "Desserts",
           },
+        ],
+        // ZUSÄTZE
+        [
+          {
+            name: "Milde Paprika, Stück",
+            price: "50",
+            ingredients: "Zusätze",
+          },
+          {
+            name: "Scharfe Paprika, Stück",
+            price: "50",
+            ingredients: "Zusätze",
+          },
+          {
+            name: "Hausgemachtes Brot",
+            price: "50",
+            ingredients: "Zusätze",
+          },
+          {
+            name: "Oliven 100 g",
+            price: "120",
+            ingredients: "Zusätze",
+          },
+          {
+            name: "Sauce",
+            price: "50",
+            ingredients: "Zusätze",
+          },
+          {
+            name: "Kajmak-Kugel",
+            price: "130",
+            ingredients: "Zusätze",
+          },
+          {
+            name: "Parmesan 50 g",
+            price: "120",
+            ingredients: "Zusätze",
+          },
+        ],
+        // COCKTAILS, MOCKTAILS UND MILKSHAKES
+        [
           {
             name: "Tequila Sunrise",
-            price: "270",
-            ingredients: "Tequila, Grenadine, Orangensaft",
-          },
-          {
-            name: "Cuba Libre",
-            price: "290",
-            ingredients: "Rum, Cola, frische Limette",
+            price: "320",
+            ingredients: "Tequila, Orangensaft, Grenadine",
           },
           {
             name: "Mojito",
             price: "320",
-            ingredients: "Weißer Rum, brauner Zucker, Minze, Eis, Soda",
+            ingredients: "Weißer Rum, Limette, Minze, Zucker, Soda",
+          },
+          {
+            name: "Strawberry Mojito",
+            price: "340",
+            ingredients: "Weißer Rum, Limette, Minze, Erdbeere, Soda",
           },
           {
             name: "Sex on the Beach",
-            price: "300",
-            ingredients: "Wodka, Archers, Cranberrysaft, Orangensaft",
+            price: "340",
+            ingredients: "Wodka, Pfirsichlikör, Orangensaft, Cranberrysaft",
           },
           {
             name: "Mai Tai",
-            price: "350",
-            ingredients: "Weißer Rum, dunkler Rum, Limettensaft, Orangensaft",
+            price: "360",
+            ingredients: "Weißer Rum, dunkler Rum, Orange Curaçao, Limette, Mandelsirup",
           },
           {
-            name: "Cosmopolitan",
-            price: "320",
-            ingredients: "Wodka, Triple Sec, Limettensaft, Cranberrysaft",
+            name: "Blue Lagoon",
+            price: "340",
+            ingredients: "Wodka, Blue Curaçao, Limonade",
+          },
+          {
+            name: "Blue Hawaii",
+            price: "360",
+            ingredients: "Rum, Wodka, Blue Curaçao, Ananassaft",
+          },
+          {
+            name: "Bahama Mama",
+            price: "360",
+            ingredients: "Rum, Kokoslikör, Kaffeelikör, Ananassaft",
+          },
+          {
+            name: "Aperol Spritz",
+            price: "340",
+            ingredients: "Aperol, Prosecco, Soda",
           },
           {
             name: "Hurricane",
-            price: "390",
-            ingredients: "Heller und dunkler Rum, Maracujasaft, Limettensaft, Grenadine, Zuckersirup",
+            price: "360",
+            ingredients: "Heller Rum, dunkler Rum, Passionsfrucht, Orangensaft, Limette",
           },
           {
             name: "Long Island Iced Tea",
-            price: "380",
-            ingredients: "Weißer Rum, Wodka, Gin, Tequila, Zitronensaft, Cola, Zuckersirup",
-          },
-          {
-            name: "AMF",
-            price: "370",
-            ingredients: "Wodka, weißer Rum, Tequila, Gin, blauer Curaçao, Zitrone, Zuckersirup",
+            price: "420",
+            ingredients: "Wodka, Gin, Tequila, Rum, Triple Sec, Cola",
           },
           {
             name: "Piña Colada",
-            price: "350",
+            price: "360",
             ingredients: "Weißer Rum, Kokoscreme, Ananassaft",
           },
           {
             name: "Gin Fizz",
-            price: "260",
-            ingredients: "Gin, Zitronensaft, Zuckersirup, Soda",
-          },
-          {
-            name: "Blue Lagoon",
             price: "320",
-            ingredients: "Wodka, blauer Curaçao, 7Up",
+            ingredients: "Gin, Zitronensaft, Zucker, Soda",
           },
           {
-            name: "Bahama Mama",
-            price: "350",
-            ingredients: "Weißer Rum, Malibu, Kirschlikör, Orangensaft, Limettensaft, Zuckersirup",
+            name: "AMF",
+            price: "420",
+            ingredients: "Wodka, Gin, Rum, Tequila, Blue Curaçao, Zitronen-Limetten-Soda",
           },
           {
-            name: "Aperol Spritz",
-            price: "300",
-            ingredients: "Aperol, Prosecco, Soda",
+            name: "Lychnidia Sunset",
+            price: "260",
+            ingredients: "Orangensaft, Ananassaft, Pfirsichsirup, Grenadine, Limette",
           },
           {
-            name: "Blue Hawaii",
-            price: "340",
-            ingredients: "Weißer Rum, Wodka, blauer Curaçao, Ananassaft, Limettensaft, Zuckersirup",
+            name: "Ohrid Blue Lemonade",
+            price: "220",
+            ingredients: "Blue-Curaçao-Sirup, Limonade, Limette, Soda",
           },
           {
-            name: "Bloody Mary",
-            price: "390",
-            ingredients: "Wodka, Tomatensaft, Limettensaft, Tabasco, Worcestersauce, Salz, schwarzer Pfeffer",
+            name: "Strawberry Mojito Mocktail",
+            price: "260",
+            ingredients: "Erdbeere, Minze, Limette, Zucker, Soda",
+          },
+          {
+            name: "Virgin Piña Colada",
+            price: "260",
+            ingredients: "Kokoscreme, Ananassaft, Sahne",
+          },
+          {
+            name: "Tropical Iced Tea",
+            price: "220",
+            ingredients: "Eistee, Pfirsich, Zitrone, Orange, Minze",
+          },
+          {
+            name: "Oreo Milkshake",
+            price: "290",
+            ingredients: "Milch, Vanilleeis, Oreo, Schlagsahne",
+          },
+          {
+            name: "Strawberry Milkshake",
+            price: "290",
+            ingredients: "Milch, Vanilleeis, Erdbeere, Schlagsahne",
+          },
+          {
+            name: "Vanilla Plazma Milkshake",
+            price: "290",
+            ingredients: "Milch, Vanilleeis, Plazma-Keks, Schlagsahne",
+          },
+          {
+            name: "Chocolate Milkshake",
+            price: "290",
+            ingredients: "Milch, Vanilleeis, Schokolade, Schlagsahne",
           },
         ],
+        // SONDERANGEBOT
         [
-  {
-    "name": "Gebratene Ente 2.3kg",
-    "price": "1800",
-    "ingredients": "Sonderangebot"
-  },
-  {
-    "name": "Lammbraten 1kg",
-    "price": "1750",
-    "ingredients": "Sonderangebot"
-  },
-  {
-    "name": "Lammkoteletts 0.5kg",
-    "price": "890",
-    "ingredients": "Sonderangebot"
-  }
-]
-
-                // Add other categories here...
-            ];
+        ],
+];
 
             const productListElement = document.getElementById('product-list');
             const urlParams = new URLSearchParams(window.location.search);
