@@ -31,1438 +31,1177 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const products = [
-                // SOFT DRINKS
-                [
-                {
-    "name": "Water (groot) 0.75",
-    "price": "130",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "Water (klein) 0.25",
-    "price": "80",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "Pepsi 0.33",
-    "price": "120",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "Pepsi Max 0.33",
-    "price": "120",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "Gazoza 0.33",
-    "price": "120",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "IJsthee 0.33",
-    "price": "140",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "7up 0.33",
-    "price": "120",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "Niet-bruisende sappen 0.2",
-    "price": "150",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "Vers citroensap 0.25",
-    "price": "170",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "Vers sinaasappelsap 0.25",
-    "price": "220",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "Mirinda citroen/sinaasappel 0.33",
-    "price": "120",
-    "ingredients": "Frisdranken"
-  },
-  {
-    "name": "Soda citroen/sinaasappel/mojito 0.33",
-    "price": "150",
-    "ingredients": "Frisdranken"
-  }
-                ],
-                //beer
-                [
-                {
-    "name": "Krali Marko 0.5",
-    "price": "150",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Zlaten Dab 0.33",
-    "price": "140",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Zlaten Dab van de Tap 0.5",
-    "price": "140",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Zlaten Dab Amber 0.33",
-    "price": "140",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Corona 0.33",
-    "price": "250",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Tuborg 0.33",
-    "price": "190",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Carlsberg 0.33",
-    "price": "210",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Heineken 0.33",
-    "price": "230",
-    "ingredients": "Bier"
-  },
-  {
-    "name": "Tuborg 0.5 (0.0%)",
-    "price": "210",
-    "ingredients": "Bier"
-  }
-                ],
-                // WINES
-                [
-                    {
-                        "name": "Dionis Vranec Barrique (Droog) Dalvina Winery",
-                        "price": "2200",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Hermes Vranec (Droog) Dalvina Winery",
-                        "price": "1300",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Hermes Cabernet Sauvignon (Droog) Dalvina Winery",
-                        "price": "1300",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Muscat Temjanika (Halfdroog) Dalvina Winery",
-                        "price": "1350",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Elegija Chardonnay (Droog) Dalvina Winery",
-                        "price": "1300",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Elegija Traminer (Droog) Dalvina Winery",
-                        "price": "1300",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Elegija Zupljanka (Droog) Dalvina Winery",
-                        "price": "1300",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Elegija Syrah (Droog) Dalvina Winery",
-                        "price": "1200",
-                        "ingredients": "Rosé wijnen",
-                    },
-                    {
-                        "name": "Cabernet Sauvignon (Droog) Ohrid Winery",
-                        "price": "1400",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Merlot (Droog) Ohrid Winery",
-                        "price": "1400",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Vranec (Droog) Ohrid Winery",
-                        "price": "1400",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Temjanika (Droog) Ohrid Winery",
-                        "price": "1400",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Chardonnay (Droog) Ohrid Winery",
-                        "price": "1400",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Sauvignon Blanc (Droog) Ohrid Winery",
-                        "price": "1400",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Alexandria (Droog) Tikvesh Winery",
-                        "price": "890",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "T'ga za Jug (Halfdroog) Tikvesh Winery",
-                        "price": "890",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Luda Mara Vranec (Droog) Tikvesh Winery",
-                        "price": "1530",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Luda Mara Merlot (Droog) Tikvesh Winery",
-                        "price": "1440",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Luda Mara Cabernet Sauvignon (Droog) Tikvesh Winery",
-                        "price": "1440",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Alexandria Cuvée (Droog) Tikvesh Winery",
-                        "price": "1500",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Babuna (Droog) Tikvesh Winery",
-                        "price": "2400",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Vrsnik 2250 (Droog) Tikvesh Winery",
-                        "price": "2250",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Barovo (Droog) Tikvesh Winery",
-                        "price": "5400",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Alexandria (Halfdroog) Tikvesh Winery",
-                        "price": "890",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Alexandria Cuvée (Droog) Tikvesh Winery",
-                        "price": "1500",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Luda Mara Temjanika (Droog) Tikvesh Winery",
-                        "price": "1560",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Barovo (Droog) Tikvesh Winery",
-                        "price": "4800",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Barovo Temjanika (Droog) Tikvesh Winery",
-                        "price": "2400",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Bela Voda (Droog) Tikvesh Winery",
-                        "price": "5400",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Barovo Zilavka (Droog) Tikvesh Winery",
-                        "price": "1950",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Barovo Grenache Blanc (Droog) Tikvesh Winery",
-                        "price": "1950",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Babuna (Droog) Tikvesh Winery",
-                        "price": "2400",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Vrsnik (Droog) Tikvesh Winery",
-                        "price": "2250",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Traminer (Droog) Tikvesh Winery",
-                        "price": "930",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Alexandria (Halfdroog) Tikvesh Winery",
-                        "price": "890",
-                        "ingredients": "Rosé wijnen",
-                    },
-                    {
-                        "name": "Alexandria Cuvée (Droog) Tikvesh Winery",
-                        "price": "1500",
-                        "ingredients": "Rosé wijnen",
-                    },
-                    {
-                        "name": "Mistral au Jardin (Droog) Tikvesh Winery",
-                        "price": "1800",
-                        "ingredients": "Rosé wijnen",
-                    },
-                    {
-                        "name": "Vranec (Droog) Bovin Winery",
-                        "price": "1650",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Pinot Noir (Droog) Bovin Winery",
-                        "price": "1710",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Cabernet Sauvignon (Droog) Bovin Winery",
-                        "price": "1710",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Merlot (Droog) Bovin Winery",
-                        "price": "1710",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Venus Cuvée (Droog) Bovin Winery",
-                        "price": "1650",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Kleopatra (Halfdroog) Bovin Winery",
-                        "price": "1950",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Imperator (Halfdroog) Bovin Winery",
-                        "price": "4200",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Daron Superior (Droog) Bovin Winery",
-                        "price": "2250",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Disan Barrique (Droog) Bovin Winery",
-                        "price": "2700",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Sauvignon Blanc (Droog) Bovin Winery",
-                        "price": "1710",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Riesling (Droog) Bovin Winery",
-                        "price": "1650",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Traminer (Halfdroog) Bovin Winery",
-                        "price": "1710",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Chardonnay (Droog) Bovin Winery",
-                        "price": "1800",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Muscat Temjanika (Halfdroog) Bovin Winery",
-                        "price": "1800",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Grasevina (Droog) Bovin Winery",
-                        "price": "1800",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Chardonnay Barrique (Droog) Bovin Winery",
-                        "price": "2700",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Ana Marija (Halfdroog) Bovin Winery",
-                        "price": "1710",
-                        "ingredients": "Rosé wijnen",
-                    },
-                    {
-                        "name": "Erigon Cuvée (Droog) Lazar Winery",
-                        "price": "1260",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Kratosija (Droog) Lazar Winery",
-                        "price": "1260",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Bukefal (Droog) Lazar Winery",
-                        "price": "1800",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Pinot Noir (Droog) Lazar Winery",
-                        "price": "1260",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Belan (Droog) Lazar Winery",
-                        "price": "1500",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Pinot Grigio (Droog) Lazar Winery",
-                        "price": "1260",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Grasevina (Droog) Lazar Winery",
-                        "price": "1200",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Fortuna (Droog) Lazar Winery",
-                        "price": "1350",
-                        "ingredients": "Rosé wijnen",
-                    },
-                    {
-                        "name": "Pearl Blanc de Blanc (Droog) Lazar Winery",
-                        "price": "1560",
-                        "ingredients": "Mousserende wijnen",
-                    },
-                    {
-                        "name": "Pearl Blanc de Rosé (Droog) Lazar Winery",
-                        "price": "1200",
-                        "ingredients": "Mousserende wijnen",
-                    },
-                    {
-                        "name": "365 Classic Vranec (Droog) Milev-GD Tikves Winery",
-                        "price": "850",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Virgo Syrah (Droog) Milev-GD Tikves Winery",
-                        "price": "1350",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Virgo Cabernet Franc (Droog) Milev-GD Tikves Winery",
-                        "price": "1500",
-                        "ingredients": "Rode wijnen",
-                    },
-                    {
-                        "name": "Virgo Traminer (Droog) Milev-GD Tikves Winery",
-                        "price": "1200",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Sauvignon Blanc (Droog) Milev-GD Tikves Winery",
-                        "price": "1200",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Virgo Temjanika (Halfdroog) Milev-GD Tikves Winery",
-                        "price": "1350",
-                        "ingredients": "Witte wijnen",
-                    },
-                    {
-                        "name": "Virgo Muscat Rosé (Halfdroog) Milev-GD Tikves Winery",
-                        "price": "1350",
-                        "ingredients": "Rosé wijnen",
-                    },
-                ],
-                //kafecaj
-                [
-                    {
-                        "name": "Thee",
-                        "price": "80",
-                        "ingredients": "Warme Dranken",
-                    },
-                    {
-                        "name": "Espresso",
-                        "price": "100",
-                        "ingredients": "Warme Dranken",
-                    },
-                    {
-                        "name": "Macchiato",
-                        "price": "110",
-                        "ingredients": "Warme Dranken",
-                    },
-                    {
-                        "name": "Grote Macchiato",
-                        "price": "120",
-                        "ingredients": "Warme Dranken",
-                    },
-                    {
-                        "name": "Latte Macchiato",
-                        "price": "180",
-                        "ingredients": "Warme Dranken",
-                    },
-                    {
-                        "name": "Nescafe",
-                        "price": "150",
-                        "ingredients": "Warme Dranken",
-                    },
-                    {
-                        "name": "Cappuccino",
-                        "price": "150",
-                        "ingredients": "Warme Dranken",
-                    },
-                    {
-                        "name": "Koude Macchiato",
-                        "price": "130",
-                        "ingredients": "Warme Dranken",
-                    },
-                    {
-                        "name": "Ierse Koffie",
-                        "price": "260",
-                        "ingredients": "Warme Dranken",
-                    },
-                    {
-                        "name": "Americano",
-                        "price": "150",
-                        "ingredients": "Warme Dranken",
-                    },
-                    {
-                        "name": "Macedonische Koffie",
-                        "price": "90",
-                        "ingredients": "Warme Dranken",
-                    },
-                ],
-                //rakija
-                [
-  {
-    "name": "Lozova (geel) 0.05",
-    "price": "120",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Lozova (wit) 0.05",
-    "price": "120",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Gele Rakija Bovin Classic 0.05",
-    "price": "120",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Premium Rakija Bovin 0.05",
-    "price": "180",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Perenrakija 0.05",
-    "price": "240",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Kweepeer Rakija 0.05",
-    "price": "240",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Gordon Amber Yellow 0.05",
-    "price": "160",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Mastika 0.05",
-    "price": "120",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Pruimenrakija 0.05",
-    "price": "240",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Huisgemaakte Lozova 0.05",
-    "price": "240",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Bovin Kersenrakija",
-    "price": "200",
-    "ingredients": "Rakija"
-  },
-  {
-    "name": "Perenlikeur 0.04",
-    "price": "150",
-    "ingredients": "Rakija"
-  }
-],
+          const products = [
+        // FRISDRANKEN
+        [
+          {
+            name: "Pepsi 0.33",
+            price: "130",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "Pepsi Max 0.33",
+            price: "130",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "7Up 0.33",
+            price: "130",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "Gazoza 0.33",
+            price: "130",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "Mirinda 0.33",
+            price: "130",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "IJsthee 0.33",
+            price: "150",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "Water 0.25",
+            price: "100",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "Water 0.75",
+            price: "140",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "Niet-bruisende sappen 0.2",
+            price: "150",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "Vers citroensap 0.25",
+            price: "180",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "Vers sinaasappelsap 0.25",
+            price: "240",
+            ingredients: "Frisdranken",
+          },
+          {
+            name: "Vruchtensoda 0.33",
+            price: "150",
+            ingredients: "Frisdranken",
+          },
+        ],
+        // BIER
+        [
+          {
+            name: "Krali Marko 0.5",
+            price: "170",
+            ingredients: "Bier",
+          },
+          {
+            name: "Zlaten Dab 0.33",
+            price: "150",
+            ingredients: "Bier",
+          },
+          {
+            name: "Zlaten Dab van de tap 0.33",
+            price: "150",
+            ingredients: "Bier",
+          },
+          {
+            name: "Zlaten Dab van de tap 0.5",
+            price: "180",
+            ingredients: "Bier",
+          },
+          {
+            name: "Tuborg 0.33",
+            price: "210",
+            ingredients: "Bier",
+          },
+          {
+            name: "Carlsberg 0.33",
+            price: "240",
+            ingredients: "Bier",
+          },
+          {
+            name: "Corona 0.33",
+            price: "250",
+            ingredients: "Bier",
+          },
+          {
+            name: "Heineken 0.33",
+            price: "230",
+            ingredients: "Bier",
+          },
+        ],
+        // WIJNEN
+        [
+          {
+            name: "Kratosija (droog) - Lazar winery",
+            price: "1260",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Bukefal (droog) - Lazar winery",
+            price: "1800",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Belan (droog) - Lazar winery",
+            price: "1500",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Pinot grigio (droog) - Lazar winery",
+            price: "1260",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Grasevina (droog) - Lazar winery",
+            price: "1200",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Pearl blanc de blanc (droog) - Lazar winery",
+            price: "1560",
+            ingredients: "Mousserende wijnen",
+          },
+          {
+            name: "Pearl blanc de rose (droog) - Lazar winery",
+            price: "1200",
+            ingredients: "Mousserende wijnen",
+          },
+          {
+            name: "Korija temjanika (droog) - Venec winery",
+            price: "1800",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Chardonnay oak (droog) - Venec winery",
+            price: "1710",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Orle vranec (droog) - Venec winery",
+            price: "2600",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Shiraz (droog) - Venec winery",
+            price: "1560",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Prokupec (droog) - Venec winery",
+            price: "1560",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Stanushina (droog) - Venec winery",
+            price: "1650",
+            ingredients: "Rosé wijnen",
+          },
+          {
+            name: "Alexandria (droog) - Tikves winery",
+            price: "890",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "T’ga za jug (halfdroog) - Tikves winery",
+            price: "890",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Alexandria cuvee (droog) - Tikves winery",
+            price: "1500",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Barovo (droog) - Tikves winery",
+            price: "5400",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Alexandria (halfdroog) - Tikves winery",
+            price: "890",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Alexandria cuvee (droog) - Tikves winery",
+            price: "1500",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Luda mara temjanika (droog) - Tikves winery",
+            price: "1560",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Barovo (droog) - Tikves winery",
+            price: "4800",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Bela voda (droog) - Tikves winery",
+            price: "5400",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Barovo zilavka (droog) - Tikves winery",
+            price: "1950",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Barovo Grenache blanc (droog) - Tikves winery",
+            price: "1950",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Traminec (droog) - Tikves winery",
+            price: "930",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Alexandria (halfdroog) - Tikves winery",
+            price: "890",
+            ingredients: "Rosé wijnen",
+          },
+          {
+            name: "Alexandria cuvee (droog) - Tikves winery",
+            price: "1500",
+            ingredients: "Rosé wijnen",
+          },
+          {
+            name: "Vranec (droog) - Bovin winery",
+            price: "1650",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Pinot noir (droog) - Bovin winery",
+            price: "1710",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Cabernet sauvignon (droog) - Bovin winery",
+            price: "1710",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Merlot (droog) - Bovin winery",
+            price: "1710",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Imperator (halfdroog) - Bovin winery",
+            price: "4200",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Disan barique (droog) - Bovin winery",
+            price: "2700",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Sauvignon blanc (droog) - Bovin winery",
+            price: "1710",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Rizling (droog) - Bovin winery",
+            price: "1650",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Traminec (halfdroog) - Bovin winery",
+            price: "1710",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Chardonnay (droog) - Bovin winery",
+            price: "1800",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Muscat temjanika (halfdroog) - Bovin winery",
+            price: "1800",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Ana marija (halfdroog) - Bovin winery",
+            price: "1710",
+            ingredients: "Rosé wijnen",
+          },
+          {
+            name: "Dionis vranec barrique (droog) - Dalvina winery",
+            price: "2200",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Hermes vranec (droog) - Dalvina winery",
+            price: "1300",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Hermes cabernet sauvignon (droog) - Dalvina winery",
+            price: "1300",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Muscat temjanika (halfdroog) - Dalvina winery",
+            price: "1350",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Elegija zupljanka (droog) - Dalvina winery",
+            price: "1300",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Elegija syrah (droog) - Dalvina winery",
+            price: "1200",
+            ingredients: "Rosé wijnen",
+          },
+          {
+            name: "Cabernet sauvignon (droog) - Ohrid winery",
+            price: "1400",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Merlot (droog) - Ohrid winery",
+            price: "1400",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Vranec (droog) - Ohrid winery",
+            price: "1400",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Temjanika (droog) - Ohrid winery",
+            price: "1400",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Chardonnay (droog) - Ohrid winery",
+            price: "1400",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Sauvignon blanc (droog) - Ohrid winery",
+            price: "1400",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Temjanika (droog) - Monteko winery",
+            price: "1850",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Chardonnay (droog) - Monteko winery",
+            price: "1770",
+            ingredients: "Witte wijnen",
+          },
+          {
+            name: "Volcano premium cabernet sauvignon (droog) - Monteko winery",
+            price: "5250",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Vranec (droog) - Monteko winery",
+            price: "1850",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Merlot (droog) - Monteko winery",
+            price: "1770",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Cabernet sauvignon (droog) - Monteko winery",
+            price: "1850",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Nero (droog) - Monteko winery",
+            price: "1980",
+            ingredients: "Rode wijnen",
+          },
+          {
+            name: "Fillip (droog) - Monteko winery",
+            price: "1980",
+            ingredients: "Rode wijnen",
+          },
+        ],
+        // KOFFIE EN THEE
+        [
+          {
+            name: "Espresso",
+            price: "100",
+            ingredients: "Koffie",
+          },
+          {
+            name: "Macchiato",
+            price: "120",
+            ingredients: "Koffie",
+          },
+          {
+            name: "Grote macchiato",
+            price: "130",
+            ingredients: "Koffie",
+          },
+          {
+            name: "Cappuccino",
+            price: "150",
+            ingredients: "Koffie",
+          },
+          {
+            name: "Koude macchiato",
+            price: "130",
+            ingredients: "Koffie",
+          },
+          {
+            name: "Americano",
+            price: "150",
+            ingredients: "Koffie",
+          },
+          {
+            name: "Latte macchiato",
+            price: "180",
+            ingredients: "Koffie",
+          },
+          {
+            name: "Nescafé",
+            price: "150",
+            ingredients: "Koffie",
+          },
+          {
+            name: "Macedonische koffie",
+            price: "100",
+            ingredients: "Koffie",
+          },
+          {
+            name: "Thee",
+            price: "100",
+            ingredients: "Thee",
+          },
+        ],
+        // RAKIJA
+        [
+          {
+            name: "Lozova geel 0.05",
+            price: "130",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Lozova wit 0.05",
+            price: "130",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Dukat 0.04",
+            price: "160",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Mastika 0.04",
+            price: "120",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Bovin classic rakia 0.04",
+            price: "130",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Bovin premium rakia 0.04",
+            price: "180",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Bovin cherry brandy 0.04",
+            price: "200",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Badel Williams rakija 0.04",
+            price: "170",
+            ingredients: "Rakija",
+          },
+          {
+            name: "Slivovitz 0.04",
+            price: "240",
+            ingredients: "Rakija",
+          },
+        ],
+        // STERKE DRANKEN
+        [
+          {
+            name: "Smidgin / Craft gin 0.04",
+            price: "250",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Gin Gordons 0.04",
+            price: "210",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Gin Pink Gordons 0.04",
+            price: "210",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Smirnoff 0.04",
+            price: "200",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Jack Daniels 0.04",
+            price: "350",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Jameson 0.04",
+            price: "250",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Jameson Black 0.04",
+            price: "360",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Johnnie Red 0.04",
+            price: "200",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Johnnie Black 0.04",
+            price: "300",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Four Roses 0.04",
+            price: "260",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Rum Morgan 0.04",
+            price: "220",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Jagermeister 0.04",
+            price: "240",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Pelinkovac Badel 0.04",
+            price: "130",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Konjak Badel 0.04",
+            price: "130",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Stock 84 0.04",
+            price: "160",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Baileys 0.04",
+            price: "190",
+            ingredients: "Sterke dranken",
+          },
+          {
+            name: "Tequila Olmeca 0.04",
+            price: "200",
+            ingredients: "Sterke dranken",
+          },
+        ],
+        // SALADES
+        [
+          {
+            name: "Shopska salade",
+            price: "240",
+            ingredients: "Tomaten, komkommer, ui, witte kaas",
+          },
+          {
+            name: "Egeïsche salade",
+            price: "250",
+            ingredients: "Tomaten, komkommer, uiringen, kaasblokjes, oregano",
+          },
+          {
+            name: "Rakija salade",
+            price: "190",
+            ingredients: "Kool, komkommer, olijven",
+          },
+          {
+            name: "Taratur",
+            price: "260",
+            ingredients: "Salades",
+          },
+          {
+            name: "Gemengde salade",
+            price: "200",
+            ingredients: "Wortel, komkommer, tomaat, kool",
+          },
+          {
+            name: "Macedonische salade",
+            price: "270",
+            ingredients: "Tomaten, geroosterde paprika, ui",
+          },
+          {
+            name: "Galichica salade",
+            price: "350",
+            ingredients: "Geitenkaas, rucola, tomaat, gedroogd fruit, walnoten",
+          },
+          {
+            name: "Tonijnsalade",
+            price: "360",
+            ingredients: "Sla, tonijn, maïs, ui, olijven",
+          },
+          {
+            name: "Caesar salade",
+            price: "340",
+            ingredients: "Sla, kip 150 g, croutons, tomaten, parmezaan, dressing",
+          },
+        ],
+        // PLANKEN
+        [
+          {
+            name: "Macedonische mezeplank voor 4 personen",
+            price: "1800",
+            ingredients: "Ajvar, pindjur, makalo, lutenica, paprika in kajmak, schapenkaas, kachamak met spek, bieno-kaas, spek, huisgemaakt brood",
+          },
+          {
+            name: "Speciale plank voor 6 personen",
+            price: "3800",
+            ingredients: "Varkensschenkel, ovenribben, gerolde rib met kajmak, jonge rib, huisgemaakte worst, gerookt spek, gegrilde lever, gezouten vlees",
+          },
+        ],
+        // BIJGERECHTEN EN ONTBIJT
+        [
+          {
+            name: "Ohrid roerei",
+            price: "260",
+            ingredients: "3 eieren, tomaten, geroosterde paprika, kaas",
+          },
+          {
+            name: "Lychnidia ontbijt",
+            price: "390",
+            ingredients: "Gebakken brood met ei, gele kaas, spek, koemelkkaas, worst, ajvar",
+          },
+          {
+            name: "Omelet",
+            price: "260",
+            ingredients: "Uw combinatie naar keuze",
+          },
+          {
+            name: "Spiegeleieren met spek",
+            price: "260",
+            ingredients: "3 eieren, 100 g spek, brood",
+          },
+          {
+            name: "Spiegeleieren met ham",
+            price: "230",
+            ingredients: "3 eieren, 100 g ham, brood",
+          },
+          {
+            name: "Ochtend quesadilla",
+            price: "320",
+            ingredients: "Tortilla, gele kaas, cheddar, 1 spiegelei, spek, tomaat",
+          },
+          {
+            name: "Vissoep",
+            price: "290",
+            ingredients: "Soepen",
+          },
+          {
+            name: "Kalfsoep",
+            price: "320",
+            ingredients: "Soepen",
+          },
+        ],
+        // GERECHTEN MET GEHAKT
+        [
+          {
+            name: "Sharska pleskavica 300 g",
+            price: "380",
+            ingredients: "Gehakt 250 g, gele kaas 50 g",
+          },
+          {
+            name: "Lychnidia pleskavica",
+            price: "490",
+            ingredients: "Gehakt 250 g, spek 100 g, kajmak, ei",
+          },
+          {
+            name: "Gevulde pleskavica",
+            price: "470",
+            ingredients: "Gehakt 250 g, gele kaas, Zdenka kaas, champignons, ham",
+          },
+          {
+            name: "Kebapi 350 g",
+            price: "390",
+            ingredients: "Gerechten met gehakt",
+          },
+          {
+            name: "Kebapi met kajmak",
+            price: "460",
+            ingredients: "Gerechten met gehakt",
+          },
+        ],
+        // KALFSVLEESGERECHTEN
+        [
+          {
+            name: "Kalfsspier in champignonsaus 250 g",
+            price: "690",
+            ingredients: "Kalfsleesgerechten",
+          },
+          {
+            name: "Filet Stroganoff 250 g",
+            price: "1490",
+            ingredients: "Kalfsleesgerechten",
+          },
+        ],
+        // VARKENSVLEESGERECHTEN
+        [
+          {
+            name: "Varkensfilet met gele kaas en champignons 250 g",
+            price: "520",
+            ingredients: "Varkensvleesgerechten",
+          },
+          {
+            name: "Varkensvlees in champignon-tijmsaus 250 g",
+            price: "480",
+            ingredients: "Varkensvleesgerechten",
+          },
+          {
+            name: "Geglazuurde baby ribs 350 g",
+            price: "590",
+            ingredients: "Varkensvleesgerechten",
+          },
+          {
+            name: "Ovenribben 300 g",
+            price: "540",
+            ingredients: "Varkensvleesgerechten",
+          },
+          {
+            name: "Lihnidia rib 250 g",
+            price: "590",
+            ingredients: "Gerolde rib met kajmak",
+          },
+          {
+            name: "Veshalitsa 250 g",
+            price: "490",
+            ingredients: "Varkensvleesgerechten",
+          },
+          {
+            name: "Langzaam geroosterde varkensschenkel 400 g",
+            price: "620",
+            ingredients: "Varkensvleesgerechten",
+          },
+        ],
+        // KIPGERECHTEN
+        [
+          {
+            name: "Krokante kipsteak 250 g",
+            price: "370",
+            ingredients: "Kipgerechten",
+          },
+          {
+            name: "Kip op Aziatische wijze 250 g",
+            price: "380",
+            ingredients: "Courgette, champignons, ui, witte wijn, kerrie, sojasaus",
+          },
+          {
+            name: "Lychnidia kip",
+            price: "440",
+            ingredients: "Kipfilet 200 g, spek, olijfolie, boter, parmezaan, gedroogde tomaat, oregano, tijm, garnituur",
+          },
+          {
+            name: "Kip met champignons in witte saus 250 g",
+            price: "360",
+            ingredients: "Kipgerechten",
+          },
+          {
+            name: "Kipfingers 300 g",
+            price: "350",
+            ingredients: "Kipgerechten",
+          },
+          {
+            name: "Gegrilde kipsteak 250 g",
+            price: "350",
+            ingredients: "Kipgerechten",
+          },
+        ],
+        // TRADITIONELE MACEDONISCHE GERECHTEN
+        [
+          {
+            name: "Vlees op dorpswijze",
+            price: "540",
+            ingredients: "Varkensvlees, kip, gele kaas, champignons, ui, knoflook, paprika, tomaat",
+          },
+          {
+            name: "Champignons met spek en gele kaas",
+            price: "390",
+            ingredients: "Traditionele Macedonische gerechten",
+          },
+          {
+            name: "Tavče gravče",
+            price: "300",
+            ingredients: "Traditionele Macedonische gerechten",
+          },
+          {
+            name: "Tavče gravče met pleskavica/worst",
+            price: "390",
+            ingredients: "Traditionele Macedonische gerechten",
+          },
+          {
+            name: "Moussaka",
+            price: "340",
+            ingredients: "Traditionele Macedonische gerechten",
+          },
+          {
+            name: "Gevulde paprika",
+            price: "350",
+            ingredients: "Traditionele Macedonische gerechten",
+          },
+          {
+            name: "Lever op dorpswijze",
+            price: "420",
+            ingredients: "Ui, prei, knoflook, gedroogde paprika",
+          },
+          {
+            name: "Gegrilde lever 300 g",
+            price: "350",
+            ingredients: "Traditionele Macedonische gerechten",
+          },
+        ],
+        // RISOTTO EN PASTA
+        [
+          {
+            name: "Risotto met champignons",
+            price: "440",
+            ingredients: "Rijst, champignons, knoflook en ui, witte wijn, melk, boter, parmezaan",
+          },
+          {
+            name: "Risotto met zeevruchten",
+            price: "540",
+            ingredients: "Risotto en pasta",
+          },
+          {
+            name: "Spaghetti carbonara",
+            price: "420",
+            ingredients: "Spaghetti, spek, parmezaan, eigeel, peper",
+          },
+          {
+            name: "Spaghetti met zeevruchten",
+            price: "590",
+            ingredients: "Schelpdieren, garnalen, ui, knoflook, olijfolie, peterselie, dille, witte wijn, tomaat",
+          },
+          {
+            name: "Tortelloni met gorgonzola en pistachenoten",
+            price: "520",
+            ingredients: "Gorgonzola, pistachenoten, olijfolie, boter",
+          },
+        ],
+        // VOORGERECHTEN
+        [
+          {
+            name: "Huisgemaakte smeersels",
+            price: "180",
+            ingredients: "Ajvar, pindjur, lutenica, makalo",
+          },
+          {
+            name: "Paprika in kajmak",
+            price: "280",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Champignons in boter 250 g",
+            price: "260",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Gegrilde kaas 200 g",
+            price: "260",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Verse kaas 200 g",
+            price: "250",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Bieno-kaas met spek 150 g",
+            price: "340",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Bruschetta met tomaat en pesto",
+            price: "260",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Knoflookbroodjes",
+            price: "170",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Broodjes met feta en knoflook",
+            price: "190",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Broodje met kajmak",
+            price: "180",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Gegrilde courgette 200 g",
+            price: "220",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Gepaneerde gele kaas 150 g",
+            price: "240",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Gepaneerde Zdenka-kaas 150 g",
+            price: "220",
+            ingredients: "Voorgerechten",
+          },
+          {
+            name: "Gepaneerde ui 200 g",
+            price: "260",
+            ingredients: "Voorgerechten",
+          },
+        ],
+        // VIS
+        [
+          {
+            name: "Forel 1 kg",
+            price: "1700",
+            ingredients: "Vis",
+          },
+          {
+            name: "Zalm in wittewijnsaus 1 kg",
+            price: "2500",
+            ingredients: "Vis",
+          },
+          {
+            name: "Ohridforel 1 kg",
+            price: "2700",
+            ingredients: "Vis",
+          },
+          {
+            name: "Forel uit de pan 1 kg",
+            price: "2800",
+            ingredients: "Vis",
+          },
+          {
+            name: "Belvica 1 kg",
+            price: "2400",
+            ingredients: "Vis",
+          },
+        ],
+        // DESSERTS
+        [
+          {
+            name: "Tulumba",
+            price: "150",
+            ingredients: "Desserts",
+          },
+          {
+            name: "Baklava",
+            price: "180",
+            ingredients: "Desserts",
+          },
+          {
+            name: "Pannenkoek met Nutella, banaan en Plazma",
+            price: "240",
+            ingredients: "Desserts",
+          },
+          {
+            name: "Pannenkoek met pistachecrème",
+            price: "290",
+            ingredients: "Desserts",
+          },
+          {
+            name: "Ohrid-taart",
+            price: "220",
+            ingredients: "Desserts",
+          },
+        ],
+        // EXTRA'S
+        [
+          {
+            name: "Zoete paprika per stuk",
+            price: "50",
+            ingredients: "Extra’s",
+          },
+          {
+            name: "Hete paprika per stuk",
+            price: "50",
+            ingredients: "Extra’s",
+          },
+          {
+            name: "Broodje",
+            price: "50",
+            ingredients: "Extra’s",
+          },
+          {
+            name: "Olijven 100 g",
+            price: "120",
+            ingredients: "Extra’s",
+          },
+          {
+            name: "Saus",
+            price: "50",
+            ingredients: "Extra’s",
+          },
+          {
+            name: "Kajmak bolletje",
+            price: "130",
+            ingredients: "Extra’s",
+          },
+          {
+            name: "Parmezaan 50 g",
+            price: "120",
+            ingredients: "Extra’s",
+          },
+        ],
+        // COCKTAILS / MOCKTAILS / MILKSHAKES
+        [
+          {
+            name: "Tequila Sunrise",
+            price: "320",
+            ingredients: "Tequila, sinaasappelsap, grenadine",
+          },
+          {
+            name: "Mojito",
+            price: "320",
+            ingredients: "Witte rum, limoen, munt, suiker, soda",
+          },
+          {
+            name: "Strawberry Mojito",
+            price: "340",
+            ingredients: "Witte rum, limoen, munt, aardbei, soda",
+          },
+          {
+            name: "Sex on the Beach",
+            price: "340",
+            ingredients: "Wodka, perziklikeur, sinaasappelsap, cranberrysap",
+          },
+          {
+            name: "Mai Tai",
+            price: "360",
+            ingredients: "Witte rum, donkere rum, orange curaçao, limoen, amandelsiroop",
+          },
+          {
+            name: "Blue Lagoon",
+            price: "340",
+            ingredients: "Wodka, blue curaçao, limonade",
+          },
+          {
+            name: "Blue Hawaii",
+            price: "360",
+            ingredients: "Rum, wodka, blue curaçao, ananassap",
+          },
+          {
+            name: "Bahama Mama",
+            price: "360",
+            ingredients: "Rum, kokoslikeur, koffielikeur, ananassap",
+          },
+          {
+            name: "Aperol Spritz",
+            price: "340",
+            ingredients: "Aperol, prosecco, soda",
+          },
+          {
+            name: "Hurricane",
+            price: "360",
+            ingredients: "Lichte rum, donkere rum, passievrucht, sinaasappelsap, limoen",
+          },
+          {
+            name: "Long Island Iced Tea",
+            price: "420",
+            ingredients: "Wodka, gin, tequila, rum, triple sec, cola",
+          },
+          {
+            name: "Piña Colada",
+            price: "360",
+            ingredients: "Witte rum, kokosroom, ananassap",
+          },
+          {
+            name: "Gin Fizz",
+            price: "320",
+            ingredients: "Gin, citroensap, suiker, soda",
+          },
+          {
+            name: "AMF",
+            price: "420",
+            ingredients: "Wodka, gin, rum, tequila, blue curaçao, lemon-lime soda",
+          },
+          {
+            name: "Lychnidia Sunset",
+            price: "260",
+            ingredients: "Sinaasappelsap, ananassap, perziksiroop, grenadine, limoen",
+          },
+          {
+            name: "Ohrid Blue Lemonade",
+            price: "220",
+            ingredients: "Blue curaçao siroop, limonade, limoen, soda",
+          },
+          {
+            name: "Strawberry Mojito Mocktail",
+            price: "260",
+            ingredients: "Aardbei, munt, limoen, suiker, soda",
+          },
+          {
+            name: "Virgin Piña Colada",
+            price: "260",
+            ingredients: "Kokosroom, ananassap, room",
+          },
+          {
+            name: "Tropical Iced Tea",
+            price: "220",
+            ingredients: "IJsthee, perzik, citroen, sinaasappel, munt",
+          },
+          {
+            name: "Oreo Milkshake",
+            price: "290",
+            ingredients: "Melk, vanille-ijs, Oreo, slagroom",
+          },
+          {
+            name: "Strawberry Milkshake",
+            price: "290",
+            ingredients: "Melk, vanille-ijs, aardbei, slagroom",
+          },
+          {
+            name: "Vanilla Plazma Milkshake",
+            price: "290",
+            ingredients: "Melk, vanille-ijs, Plazma-koekje, slagroom",
+          },
+          {
+            name: "Chocolate Milkshake",
+            price: "290",
+            ingredients: "Melk, vanille-ijs, chocolade, slagroom",
+          },
+        ],
+        // SPECIAAL AANBOD
+        [
+        ],
+];
 
-                // Alcoholic beverages
-                [
-                {
-    "name": "Gin Badel 0.04",
-    "price": "130",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Smidgin 0.04",
-    "price": "250",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Beefeater Gin 0.04",
-    "price": "200",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Gordon’s Gin 0.04",
-    "price": "220",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Gordon’s Pink Gin 0.04",
-    "price": "220",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Vodka Badel 0.04",
-    "price": "140",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Baileys 0.04",
-    "price": "220",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Amaretto 0.04",
-    "price": "170",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Ballantine’s 0.04",
-    "price": "240",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Pelinkovac Badel 0.04",
-    "price": "130",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Cognac Badel 0.04",
-    "price": "140",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Rum Badel 0.04",
-    "price": "120",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Smirnoff 0.04",
-    "price": "200",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Jack Daniel’s 0.04",
-    "price": "350",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Jameson 0.04",
-    "price": "250",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Jameson Black 0.04",
-    "price": "400",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Johnnie Walker Red 0.04",
-    "price": "200",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Johnnie Walker Black 0.04",
-    "price": "300",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Four Roses Bourbon 0.04",
-    "price": "260",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Captain Morgan Rum 0.04",
-    "price": "200",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Jägermeister 0.04",
-    "price": "220",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Chivas Regal 12 0.04",
-    "price": "390",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Campari 0.04",
-    "price": "180",
-    "ingredients": "Alcoholische dranken"
-  },
-  {
-    "name": "Tequila Olmeca 0.04",
-    "price": "200",
-    "ingredients": "Alcoholische dranken"
-  }
-                ],
-                // САЛАТИ
-                [
-                [
-  {
-    "name": "Shopska Salade",
-    "price": "190",
-    "ingredients": "Tomaten, komkommer, ui, witte kaas"
-  },
-  {
-    "name": "Egeïsche Salade",
-    "price": "200",
-    "ingredients": "Tomaten, komkommer, uiringen, kaasblokjes, oregano"
-  },
-  {
-    "name": "Rakia Salade",
-    "price": "160",
-    "ingredients": "Kool, komkommer, olijven"
-  },
-  {
-    "name": "Macedonische Salade",
-    "price": "240",
-    "ingredients": "Tomaten, ui, geroosterde paprika"
-  },
-  {
-    "name": "Gemengde Salade",
-    "price": "170",
-    "ingredients": "Biet, wortel, komkommer, tomaat, kool"
-  },
-  {
-    "name": "Caesar Salade",
-    "price": "290",
-    "ingredients": "Sla, kip, croutons, tomaten, parmezaan, dressing"
-  },
-  {
-    "name": "Tonijn Salade",
-    "price": "340",
-    "ingredients": "Sla, tonijn, maïs, ui, olijven"
-  },
-  {
-    "name": "Ingelegde Groenten",
-    "price": "180",
-    "ingredients": "Kool, paprika, wortel, bloemkool, tomaat, komkommer"
-  },
-  {
-    "name": "Galicica Salade",
-    "price": "320",
-    "ingredients": "Geitenkaas, rucola, tomaat, gedroogd fruit, walnoten"
-  }
-]
-
-                ],
-                // DASHBOARDS
-                [
-  {
-    "name": "Speciale Plank voor 6 Personen",
-    "price": "3600",
-    "ingredients": "Varkensschenkel, ovenribben, gerolde rib, huisgemaakte worst, varkensvlees in eekhoorntjessaus, kebapi met kajmak, gegrilde lever, gezouten vlees"
-  },
-  {
-    "name": "Macedonische Meze Plank voor 4 Personen",
-    "price": "1800",
-    "ingredients": "Ajvar, pindjur, makalo, lutenica, ingelegde groenten, sarma, paprika met kajmak, schapenkaas, bieno kaas met spek, prški met kachamak, huisgemaakt brood"
-  },
-  {
-    "name": "Gepaneerde Plank voor 4 Personen",
-    "price": "2380",
-    "ingredients": "Zdenka kaas, ui, kipfingers, krokante kipfilet, gepaneerde gele kaas, piroshka, krokante gele kaas, gepaneerde kaas"
-  },
-  {
-    "name": "Gemengd Vlees voor 4 Personen",
-    "price": "2400",
-    "ingredients": "Kebapi, Sharska burger, spek, veshallitsa, kipfilet, varkensfilet"
-  }
-],
-
-                // PRILOZI I DORUCEK
-                [
-                {
-    "name": "Ohrid Roerei",
-    "price": "240",
-    "ingredients": "3 eieren, tomaten, geroosterde paprika, kaas"
-  },
-  {
-    "name": "Spiegeleieren met Spek",
-    "price": "240",
-    "ingredients": "3 eieren, 100g spek, brood"
-  },
-  {
-    "name": "Ochtend Quesadilla",
-    "price": "280",
-    "ingredients": "Tortilla, gele kaas, cheddar, 1 spiegelei, spek, tomaat"
-  },
-  {
-    "name": "Lihnidia Ontbijt",
-    "price": "330",
-    "ingredients": "Gebakken brood met ei, gele kaas, spek, worst, huisgemaakte koemelkkaas, ajvar"
-  },
-  {
-    "name": "Oma’s Omelet",
-    "price": "270",
-    "ingredients": "3 eieren, gedroogde paprika, ui, prei"
-  },
-  {
-    "name": "Omelet met Champignons en Gele Kaas",
-    "price": "230",
-    "ingredients": "3 eieren, champignons, gele kaas"
-  },
-  {
-    "name": "Omelet met Ajvar en Kaas",
-    "price": "250",
-    "ingredients": "Bijgerechten en ontbijt"
-  },
-  {
-    "name": "Spiegeleieren met Ham",
-    "price": "230",
-    "ingredients": "3 eieren, 100g ham, brood"
-  },
-  {
-    "name": "Vissoep",
-    "price": "250",
-    "ingredients": "(forel 150g, broodje, makalo, citroen, peperoni)"
-  },
-  {
-    "name": "Kalfsoep",
-    "price": "260",
-    "ingredients": "Bijgerechten en ontbijt"
-  },
-  {
-    "name": "Goulash",
-    "price": "280",
-    "ingredients": "(rundvlees, ui, kruiden, aardappelpuree/rijst, broodje)"
-  }
-                ],
-                // MINCED MEAT DISHES
-                [
-                {
-    "name": "Sharska Burger 300g",
-    "price": "320",
-    "ingredients": "Gehakt 250g, gele kaas 50g"
-  },
-  {
-    "name": "Kebapi met Kajmak",
-    "price": "380",
-    "ingredients": "Gerechten met gehakt"
-  },
-  {
-    "name": "Gehaktballetjes in Tomatensaus",
-    "price": "380",
-    "ingredients": "Gerechten met gehakt"
-  },
-  {
-    "name": "Ohrid Burger",
-    "price": "390",
-    "ingredients": "Gehakt 300g, ajvar, kaas, kajmak"
-  },
-  {
-    "name": "Gevulde Burger 500g",
-    "price": "430",
-    "ingredients": "Gehakt 300g, gele kaas, Zdenka kaas, champignons, ham"
-  },
-  {
-    "name": "Kebapi 350g",
-    "price": "330",
-    "ingredients": "Gerechten met gehakt"
-  },
-  {
-    "name": "Lihnidia Burger 400g",
-    "price": "420",
-    "ingredients": "Gehakt 250g, gele kaas 50g"
-  },
-  {
-    "name": "Burger 500g",
-    "price": "420",
-    "ingredients": "Gerechten met gehakt"
-  }
-                ],
-                // VEAL DISHES
-                [
-                {
-    "name": "Biefstuk met Boter en Rozemarijn 250g",
-    "price": "1420",
-    "ingredients": "Kalfsleesgerechten"
-  },
-  {
-    "name": "Stroganoff Filet 250g",
-    "price": "1490",
-    "ingredients": "Kalfsleesgerechten"
-  },
-  {
-    "name": "Biefstuk in Peperkorrelsaus 250g",
-    "price": "1550",
-    "ingredients": "Kalfsleesgerechten"
-  },
-  {
-    "name": "Kalfsspier in Saus 250g",
-    "price": "460",
-    "ingredients": "Kalfsleesgerechten"
-  }
-                ],
-                // PORK DISHES
-                [
-                {
-    "name": "Varkensfilet met Gele Kaas en Champignons 250g",
-    "price": "480",
-    "ingredients": "Varkensvleesgerechten"
-  },
-  {
-    "name": "Karbonade in Grillsaus en Sesam 250g",
-    "price": "430",
-    "ingredients": "Varkensvleesgerechten"
-  },
-  {
-    "name": "Veshalitsa 250g",
-    "price": "490",
-    "ingredients": "Varkensvleesgerechten"
-  },
-  {
-    "name": "Ovenribben 350g",
-    "price": "490",
-    "ingredients": "Varkensvleesgerechten"
-  },
-  {
-    "name": "Lihnidia Ribben 350g",
-    "price": "530",
-    "ingredients": "Gerolde ribben met kajmak"
-  },
-  {
-    "name": "Varkensschenkel 500g",
-    "price": "560",
-    "ingredients": "Varkensvleesgerechten"
-  },
-  {
-    "name": "Medaillons in Eekhoorntjesbrood-Tijmsaus 300g",
-    "price": "470",
-    "ingredients": "Varkensvleesgerechten"
-  },
-  {
-    "name": "Varkensvlees met Gedroogde Peper en Prei 300g",
-    "price": "450",
-    "ingredients": "Varkensvleesgerechten"
-  },
-  {
-    "name": "Huisgemaakte Worst 200g",
-    "price": "350",
-    "ingredients": "Varkensvleesgerechten"
-  },
-  {
-    "name": "Gegrilde Lever",
-    "price": "310",
-    "ingredients": "Varkensvleesgerechten"
-  }
-                ],
-                // CHICKEN DISHES
-                [
-                {
-    "name": "Lihnidia Kip",
-    "price": "360",
-    "ingredients": "Kipfilet 200g, spek, olijfolie, parmezaan, boter, gedroogde tomaat, oregano, tijm, garnering"
-  },
-  {
-    "name": "Krokante Kippensteak 300g",
-    "price": "350",
-    "ingredients": "Kipgerechten"
-  },
-  {
-    "name": "Kippensteak op Oosterse Wijze 300g",
-    "price": "340",
-    "ingredients": "Kip 250g, courgette, champignons, ui, sojasaus, kerrie, witte wijn"
-  },
-  {
-    "name": "Kipnuggets 300g",
-    "price": "330",
-    "ingredients": "Kipgerechten"
-  },
-  {
-    "name": "Kip Stroganoff",
-    "price": "380",
-    "ingredients": "Kip 250g, ui, augurken, champignons, zure room, mosterd"
-  },
-  {
-    "name": "Kip met Champignons in Witte Saus 250g",
-    "price": "320",
-    "ingredients": "Kipgerechten"
-  },
-  {
-    "name": "Kippensteak 250g",
-    "price": "310",
-    "ingredients": "Kipgerechten"
-  }
-                ],
-                // DISHES IN A PAN
-                
-                // makedonski tradicionalni
-                [
-                {
-    "name": "Vleesschotel op Dorpswijze",
-    "price": "460",
-    "ingredients": "(varkensvlees, kip, ui, champignons, tomaat, paprika, gele kaas)"
-  },
-  {
-    "name": "Moussaka",
-    "price": "320",
-    "ingredients": "Aardappel, gehakt, ui, melk, ei"
-  },
-  {
-    "name": "Tavče Gravče",
-    "price": "270",
-    "ingredients": "Witte bonen met gedroogde paprika, gebakken in een pan"
-  },
-  {
-    "name": "Gevulde Paprika",
-    "price": "330",
-    "ingredients": "Paprika, gehakt, ui, rijst, tomaat"
-  },
-  {
-    "name": "Tavče Gravče met Spek/Worst",
-    "price": "340",
-    "ingredients": "Witte bonen met gedroogde paprika, spek, worst"
-  },
-  {
-    "name": "Sarma",
-    "price": "340",
-    "ingredients": "Zuurkoolblad, gehakt, rijst, ui, yoghurt"
-  },
-  {
-    "name": "Lever op Dorpswijze",
-    "price": "340",
-    "ingredients": "Lever 300g, ui, knoflook, melk, kruiden"
-  },
-  {
-    "name": "Podvarok met Gerookt Vlees",
-    "price": "350",
-    "ingredients": "Traditioneel Macedonisch gerecht"
-  }
-                ],
-                // RISOTTO AND PASTA
-                [
-                {
-    "name": "Risotto met Eekhoorntjesbrood",
-    "price": "440",
-    "ingredients": "Rijst, eekhoorntjesbrood, knoflook en ui, witte wijn, melk, boter, parmezaan"
-  },
-  {
-    "name": "Spaghetti Carbonara",
-    "price": "380",
-    "ingredients": "Spaghetti, spek, parmezaan, eigeel, peper"
-  },
-  {
-    "name": "Risotto met Gorgonzola en Kip",
-    "price": "460",
-    "ingredients": "Rijst, schelpdieren, garnalen, knoflook en ui, olijfolie, witte wijn, dille"
-  },
-  {
-    "name": "Tortellini met Gorgonzola en Pistachenoten",
-    "price": "380",
-    "ingredients": "Rijst, boter, olijfolie, witte wijn, gorgonzola"
-  },
-  {
-    "name": "Spaghetti met Zeevruchten",
-    "price": "560",
-    "ingredients": "Schelpdieren, garnalen, ui, knoflook, olijfolie, peterselie, dille, witte wijn, tomaat"
-  }
-                ],
-                // APPETIZERS
-                [
-                {
-    "name": "Gegrilde Kaas 200g",
-    "price": "260",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Champignons in Boter 250g",
-    "price": "230",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Spekchips 200g",
-    "price": "290",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Knoflookbrood met Feta en Makalo",
-    "price": "180",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Broodje met Kajmak",
-    "price": "180",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Gegrilde Courgette 200g",
-    "price": "190",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Knoflook Makalo",
-    "price": "150",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Ajvar",
-    "price": "150",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Zachte Kaas met Spek 200g",
-    "price": "340",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Huisgemaakte Koemelkkaas 200g",
-    "price": "280",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Gevulde Champignons 350g",
-    "price": "290",
-    "ingredients": "Champignons, gele kaas, ham"
-  },
-  {
-    "name": "Gefrituurde Gele Kaas 150g",
-    "price": "170",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Gefrituurde Zdenka Kaas 200g",
-    "price": "190",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Gefrituurde Ui 200g",
-    "price": "220",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Lutenica",
-    "price": "150",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Pindzur",
-    "price": "150",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Verse Kaas 200g",
-    "price": "220",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Champignons met Spek en Gele Kaas 300g",
-    "price": "330",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Paprika met Kajmak",
-    "price": "190",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Ingelegde Paprika in Room",
-    "price": "150",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Broodhapjes met Ajvar en Kaas",
-    "price": "180",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Krokante Gele Kaas 200g",
-    "price": "230",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Piroshka 120g",
-    "price": "180",
-    "ingredients": "Voorgerechten"
-  },
-  {
-    "name": "Prški 100g",
-    "price": "180",
-    "ingredients": "Voorgerechten"
-  }
-                ],
-                // FISH
-                [
-                {
-    "name": "Rivierforel 500g",
-    "price": "590",
-    "ingredients": "Vis"
-  },
-  {
-    "name": "Ohrid Forel 400g",
-    "price": "1100",
-    "ingredients": "Vis"
-  },
-  {
-    "name": "Forel uit de Pan 400g",
-    "price": "1300",
-    "ingredients": "Forel, ui, paprika, tomaat, peterselie, knoflook"
-  },
-  {
-    "name": "Zalm in Wittewijnsaus 500g",
-    "price": "750",
-    "ingredients": "Vis"
-  },
-  {
-    "name": "Belvica 400g",
-    "price": "900",
-    "ingredients": "Vis"
-  }
-                ],
-                // DESSERTS
-                [
-                    {
-                        "name": "Tulumba",
-                        "price": "180",
-                        "ingredients": "Desserts",
-                    },
-                    {
-                        "name": "Baklava",
-                        "price": "190",
-                        "ingredients": "Desserts",
-                    },
-                    {
-                        "name": "Pannenkoek met Nutella, Plazma en Banaan",
-                        "price": "180",
-                        "ingredients": "Desserts",
-                    },
-                    {
-                        "name": "Pannenkoek met Pistachecrème",
-                        "price": "270",
-                        "ingredients": "Desserts",
-                    },
-                    {
-                        "name": "Ohrid-taart",
-                        "price": "210",
-                        "ingredients": "Desserts",
-                    },
-                ],
-                // SIDES
-                [
-                {
-    "name": "Paprikaplak",
-    "price": "50",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Pittige paprikaplak",
-    "price": "50",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Nafora met kaas",
-    "price": "180",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Olijven 100g",
-    "price": "120",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Broodje",
-    "price": "50",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Ei",
-    "price": "50",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Frietjes 100g",
-    "price": "100",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Saus",
-    "price": "50",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Ketchup, mayonaise",
-    "price": "40",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Kajmak (bol)",
-    "price": "130",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Parmezaan",
-    "price": "120",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Tomaatplak",
-    "price": "120",
-    "ingredients": "Extra’s"
-  },
-  {
-    "name": "Rijstbal",
-    "price": "70",
-    "ingredients": "Extra’s"
-  }
-                ],
-                // COCKTAILS
-                [
-                    {
-                        "name": "Margarita",
-                        "price": "300",
-                        "ingredients": "Tequila, triple sec, citroensap",
-                    },
-                    {
-                        "name": "Tequila Sunrise",
-                        "price": "270",
-                        "ingredients": "Tequila, grenadine, sinaasappelsap",
-                    },
-                    {
-                        "name": "Cuba Libre",
-                        "price": "290",
-                        "ingredients": "Rum, cola, verse limoen",
-                    },
-                    {
-                        "name": "Mojito",
-                        "price": "320",
-                        "ingredients": "Witte rum, bruine suiker, munt, ijs, soda",
-                    },
-                    {
-                        "name": "Sex on the Beach",
-                        "price": "300",
-                        "ingredients": "Wodka, archers, cranberrysap, sinaasappelsap",
-                    },
-                    {
-                        "name": "Mai Tai",
-                        "price": "350",
-                        "ingredients": "Witte rum, donkere rum, limoensap, sinaasappelsap",
-                    },
-                    {
-                        "name": "Cosmopolitan",
-                        "price": "320",
-                        "ingredients": "Wodka, triple sec, limoensap, cranberrysap",
-                    },
-                    {
-                        "name": "Hurricane",
-                        "price": "390",
-                        "ingredients": "Witte en donkere rum, passievruchtensap, limoensap, grenadine, suikersiroop",
-                    },
-                    {
-                        "name": "Long Island Iced Tea",
-                        "price": "380",
-                        "ingredients": "Witte rum, wodka, gin, tequila, citroensap, cola, suikersiroop",
-                    },
-                    {
-                        "name": "AMF",
-                        "price": "370",
-                        "ingredients": "Wodka, witte rum, tequila, gin, blue curaçao, citroen, suikersiroop",
-                    },
-                    {
-                        "name": "Piña Colada",
-                        "price": "350",
-                        "ingredients": "Witte rum, kokosroom, ananassap",
-                    },
-                    {
-                        "name": "Gin Fizz",
-                        "price": "260",
-                        "ingredients": "Gin, citroensap, suikersiroop, soda",
-                    },
-                    {
-                        "name": "Blue Lagoon",
-                        "price": "320",
-                        "ingredients": "Wodka, blue curaçao, 7Up",
-                    },
-                    {
-                        "name": "Bahama Mama",
-                        "price": "350",
-                        "ingredients": "Witte rum, malibu, kersenbrandewijn, sinaasappelsap, citroensap, suikersiroop",
-                    },
-                    {
-                        "name": "Aperol Spritz",
-                        "price": "300",
-                        "ingredients": "Aperol, prosecco, soda",
-                    },
-                    {
-                        "name": "Blue Hawaii",
-                        "price": "340",
-                        "ingredients": "Witte rum, wodka, blue curaçao, ananassap, citroensap, suikersiroop",
-                    },
-                    {
-                        "name": "Bloody Mary",
-                        "price": "390",
-                        "ingredients": "Wodka, tomatensap, citroensap, tabasco, worcestersaus, zout, zwarte peper",
-                    },
-                ],
-                [
-  {
-    "name": "Geroosterde Eend 2.3kg",
-    "price": "1800",
-    "ingredients": "Speciaal aanbod"
-  },
-  {
-    "name": "Geroosterd Lamsvlees 1kg",
-    "price": "1750",
-    "ingredients": "Speciaal aanbod"
-  },
-  {
-    "name": "Lamskoteletjes 0.5kg",
-    "price": "890",
-    "ingredients": "Speciaal aanbod"
-  }
-]
-
-            ];
 
             const productListElement = document.getElementById('product-list');
             const urlParams = new URLSearchParams(window.location.search);
